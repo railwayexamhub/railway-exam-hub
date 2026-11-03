@@ -3,83 +3,152 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Railway Exam Hub</title>
+<meta name="description" content="Prepare for Indian Railway exams with study materials, practice questions, mock tests and recruitment updates.">
+<title>Railway Exam Hub | Prepare. Practise. Succeed.</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f4f7fc;color:#172b4d}
-header{background:#102b50;color:white;padding:22px 6%}
-header h1{margin:0}
-header p{margin:7px 0 0;color:#dbe7f5}
-nav{background:#183c68;padding:13px 6%;display:flex;gap:22px;flex-wrap:wrap}
-nav a{color:white;text-decoration:none}
-.hero{background:#102b50;color:white;padding:55px 7%;text-align:center}
-.hero h2{font-size:32px;margin:0 0 12px}
-.hero p{line-height:1.6}
-main{padding:30px 6%}
-h2.section{margin-top:30px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
-.card{background:white;padding:20px;border-radius:10px;border:1px solid #dce4ef}
-.card h3{margin-top:0;color:#173e70}
-.card p{color:#52647b;line-height:1.5}
-.tag{color:#a56b00;font-weight:bold}
-footer{background:#102b50;color:white;text-align:center;padding:22px;margin-top:35px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f4f7fc;color:#17243b;line-height:1.6}
+header{background:#10264b;color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:23px;font-weight:bold}
+.logo span{color:#ffc83d}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:14px}
+nav a:hover{color:#ffc83d}
+.hero{background:linear-gradient(120deg,#10264b,#174d83);color:white;padding:65px 7%;text-align:center}
+.hero h1{font-size:42px;margin-bottom:12px}
+.hero h1 span{color:#ffc83d}
+.hero p{max-width:650px;margin:0 auto 24px;color:#e0e9f7}
+.search{max-width:520px;margin:auto;display:flex;background:white;border-radius:8px;overflow:hidden}
+.search input{flex:1;min-width:0;padding:15px;border:0;outline:0;font-size:15px}
+.search button{background:#ffc83d;border:0;padding:0 20px;font-weight:bold;cursor:pointer}
+main{max-width:1150px;margin:auto;padding:35px 20px}
+section{margin-bottom:42px}
+.section-title{text-align:center;margin-bottom:22px}
+.section-title h2{font-size:27px;color:#10264b}
+.section-title p{color:#64748b}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px}
+.card{background:white;border:1px solid #e0e7f0;border-radius:12px;padding:21px;box-shadow:0 3px 12px #10264b0b;transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 7px 20px #10264b16}
+.card .icon{font-size:28px;margin-bottom:8px}
+.card h3{color:#163b6a;margin-bottom:7px;font-size:18px}
+.card p{font-size:14px;color:#64748b;margin-bottom:12px}
+.card a{color:#1456a0;text-decoration:none;font-weight:bold;font-size:14px}
+.feature{background:#eaf1fb;border-radius:12px;padding:25px;text-align:center}
+.feature h3{color:#10264b;margin-bottom:7px}
+.notice{background:#fff8e5;border-left:4px solid #ffc83d;padding:18px;border-radius:6px}
+footer{background:#10264b;color:#dce7f5;text-align:center;padding:28px 15px;font-size:13px}
+footer a{color:#ffc83d;text-decoration:none}
+.hidden{display:none}
+@media(max-width:600px){
+ header{padding:16px 5%}
+ .hero{padding:48px 5%}
+ .hero h1{font-size:32px}
+ nav{gap:13px}
+ nav a{font-size:13px}
+ main{padding:28px 15px}
+}
 </style>
 </head>
 <body>
+
 <header>
-<h1>🚆 Railway Exam Hub</h1>
-<p>Your Complete Railway Exam Preparation Platform</p>
+ <div class="logo">🚆 Railway <span>Exam Hub</span></div>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#exams">Exams</a>
+  <a href="#study">Study Materials</a>
+  <a href="#updates">Updates</a>
+ </nav>
 </header>
 
-<nav>
-<a href="#exams">Exams</a>
-<a href="#study">Study Materials</a>
-<a href="#practice">Practice</a>
-<a href="#updates">Updates</a>
-</nav>
-
-<section class="hero">
-<h2>Dream. Prepare. Crack.</h2>
-<p>Prepare for Railway Recruitment Board examinations with study materials, practice questions and mock tests.</p>
-<p class="tag">Your Railway Exam Preparation Starts Here</p>
-</section>
+<div class="hero" id="home">
+ <h1>Dream. Prepare. <span>Crack.</span></h1>
+ <p>Your complete Railway Exam Preparation Platform.
+Learn concepts, practise questions and prepare for your railway career.</p>
+ <div class="search">
+  <input id="searchBox" type="text" placeholder="Search railway exams...">
+  <button onclick="searchExams()">Search</button>
+ </div>
+</div>
 
 <main>
-<h2 class="section" id="exams">Explore Railway Exams</h2>
-<div class="grid">
-<div class="card"><h3>RRB Group D</h3><p>Level 1 exam preparation.</p></div>
-<div class="card"><h3>RRB NTPC</h3><p>Undergraduate and Graduate preparation.</p></div>
-<div class="card"><h3>RRB ALP</h3><p>Assistant Loco Pilot preparation.</p></div>
-<div class="card"><h3>RRB Technician</h3><p>Grade I Signal and Grade III preparation.</p></div>
-<div class="card"><h3>RRB JE</h3><p>Junior Engineer preparation.</p></div>
-<div class="card"><h3>RPF</h3><p>Constable and Sub-Inspector preparation.</p></div>
-<div class="card"><h3>RRB Paramedical</h3><p>Paramedical recruitment preparation.</p></div>
-<div class="card"><h3>Other Railway Exams</h3><p>Section Controller, Ministerial and other categories.</p></div>
-</div>
+<section id="exams">
+ <div class="section-title">
+  <h2>Explore Railway Exams</h2>
+  <p>Choose your target examination and start preparing.</p>
+ </div>
+ <div class="grid" id="examGrid">
 
-<h2 class="section" id="study">Online Study Materials</h2>
-<div class="card">
-<h3>Learn by Subject</h3>
-<p>Mathematics, General Intelligence and Reasoning, General Science and General Awareness.</p>
-<p>Study lessons directly on the website.</p>
-</div>
+  <div class="card exam"><div class="icon">🚉</div><h3>RRB Group D</h3><p>Level 1 recruitment preparation.</p><a href="#study">Explore →</a></div>
+  <div class="card exam"><div class="icon">📋</div><h3>NTPC Undergraduate</h3><p>Preparation for undergraduate NTPC posts.</p><a href="#study">Explore →</a></div>
+  <div class="card exam"><div class="icon">🎓</div><h3>NTPC Graduate</h3><p>Preparation for graduate-level NTPC posts.</p><a href="#study">Explore →</a></div>
+  <div class="card exam"><div class="icon">🚄</div><h3>RRB ALP</h3><p>Assistant Loco Pilot examination.</p><a href="#study">Explore →</a></div>
+  <div class="card exam"><div class="icon">🔧</div><h3>RRB Technician</h3><p>Grade I Signal and Grade III preparation.</p><a href="#study">Explore →</a></div>
+  <div class="card exam"><div class="icon">⚙️</div><h3>RRB JE</h3><p>Junior Engineer examination preparation.</p><a href="#study">Explore →</a></div>
+  <div class="card exam"><div class="icon">📦</div><h3>DMS & CMA</h3><p>Depot Material Superintendent and Chemical & Metallurgical Assistant.</p><a href="#study">Explore →</a></div>
+  <div class="card exam"><div class="icon">🛡️</div><h3>RPF Constable</h3><p>Railway Protection Force constable preparation.</p><a href="#study">Explore →</a></div>
+  <div class="card exam"><div class="icon">👮</div><h3>RPF Sub-Inspector</h3><p>RPF SI examination preparation.</p><a href="#study">Explore →</a></div>
+  <div class="card exam"><div class="icon">🏥</div><h3>Paramedical</h3><p>Railway paramedical recruitment.</p><a href="#study">Explore →</a></div>
+  <div class="card exam"><div class="icon">📚</div><h3>Ministerial & Isolated</h3><p>Specialist and ministerial category posts.</p><a href="#study">Explore →</a></div>
+  <div class="card exam"><div class="icon">🚦</div><h3>Section Controller</h3><p>Section Controller recruitment preparation.</p><a href="#study">Explore →</a></div>
 
-<h2 class="section" id="practice">Practice and Mock Tests</h2>
-<div class="card">
-<h3>Test Your Preparation</h3>
-<p>Practice questions, previous-year question collections and mock tests will be added here.</p>
-</div>
+ </div>
+ <p id="noResults" class="hidden" style="text-align:center;padding:20px">No matching exam found.</p>
+</section>
 
-<h2 class="section" id="updates">Railway Recruitment Updates</h2>
-<div class="card">
-<h3>Latest Notifications</h3>
-<p>Official recruitment notifications and important exam updates will appear here.</p>
-</div>
+<section id="study">
+ <div class="section-title">
+  <h2>Study & Practice</h2>
+  <p>Build your knowledge with focused preparation.</p>
+ </div>
+ <div class="grid">
+  <div class="card"><div class="icon">📖</div><h3>Study Materials</h3><p>Chapter-wise notes, concepts and important formulas.</p><a href="#updates">Coming soon →</a></div>
+  <div class="card"><div class="icon">✍️</div><h3>Practice Questions</h3><p>Subject-wise questions with answers and explanations.</p><a href="#updates">Coming soon →</a></div>
+  <div class="card"><div class="icon">⏱️</div><h3>Mock Tests</h3><p>Test your preparation with timed practice tests.</p><a href="#updates">Coming soon →</a></div>
+  <div class="card"><div class="icon">📝</div><h3>Previous Year Papers</h3><p>Practise questions from past examinations.</p><a href="#updates">Coming soon →</a></div>
+ </div>
+</section>
+
+<section id="updates">
+ <div class="section-title">
+  <h2>Railway Recruitment Updates</h2>
+  <p>Stay informed about official notifications and examination news.</p>
+ </div>
+ <div class="notice">
+  <strong>Official Railway Recruitment Boards</strong>
+  <p>Always verify vacancies, eligibility, dates and syllabus through official notifications.</p>
+  <a href="https://rrb.indianrailways.gov.in/" target="_blank" rel="noopener">Visit Official RRB Website →</a>
+ </div>
+</section>
+
+<section>
+ <div class="feature">
+  <h3>Your Railway Preparation Starts Here!</h3>
+  <p>Learn every day. Practise regularly. Move closer to your goal.</p>
+ </div>
+</section>
 </main>
 
 <footer>
-<p>© 2026 Railway Exam Hub</p>
-<p>Learn • Practice • Prepare</p>
+ <p><strong>Railway Exam Hub</strong> — Dream. Prepare. Crack.</p>
+ <p>Independent educational preparation platform. Not an official Railway Recruitment Board website.</p>
+ <p>© 2026 Railway Exam Hub</p>
 </footer>
+
+<script>
+function searchExams(){
+ const query=document.getElementById("searchBox").value.toLowerCase().trim();
+ const cards=document.querySelectorAll(".exam");
+ let count=0;
+ cards.forEach(card=>{
+  const match=card.innerText.toLowerCase().includes(query);
+  card.classList.toggle("hidden",!match);
+  if(match)count++;
+ });
+ document.getElementById("noResults").classList.toggle("hidden",count!==0);
+}
+document.getElementById("searchBox").addEventListener("input",searchExams);
+</script>
+
 </body>
 </html>
