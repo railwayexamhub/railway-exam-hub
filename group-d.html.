@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Prepare for RRB Group D with syllabus, subject-wise lessons and practice questions.">
+<title>RRB Group D Preparation | Railway Exam Hub</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f4f7fc;color:#17243b;line-height:1.6}
+header{background:#10264b;color:white;padding:17px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+header a{color:#ffc83d;text-decoration:none}
+main{max-width:1050px;margin:auto;padding:30px 18px}
+.hero{background:linear-gradient(120deg,#10264b,#174d83);color:white;text-align:center;padding:45px 20px;border-radius:12px}
+.hero h1{font-size:34px;margin-bottom:10px}
+.hero p{color:#e0e9f7}
+h2{color:#10264b;margin:30px 0 15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
+.card{background:white;padding:20px;border:1px solid #e0e7f0;border-radius:10px}
+.card h3{color:#174d83;margin-bottom:8px}
+.card p{font-size:14px;color:#64748b}
+ul{padding-left:22px}
+li{margin:7px 0}
+.notice{background:#fff8e5;padding:17px;border-left:4px solid #ffc83d;border-radius:6px;margin-top:15px}
+a.button{display:inline-block;background:#ffc83d;color:#10264b;padding:10px 17px;border-radius:6px;text-decoration:none;font-weight:bold;margin-top:12px}
+footer{background:#10264b;color:white;text-align:center;padding:25px;margin-top:30px}
+@media(max-width:600px){.hero h1{font-size:27px}}
+</style>
+</head>
+<body>
+
+<header>
+<strong>🚆 Railway Exam Hub</strong>
+<a href="index.html">← Back to Home</a>
+</header>
+
+<main>
+<div class="hero">
+<h1>RRB Group D Preparation</h1>
+<p>Learn concepts. Practise questions. Prepare with confidence.</p>
+<a class="button" href="#subjects">Start Learning</a>
+</div>
+
+<h2>About the Examination</h2>
+<div class="card">
+<p>RRB Group D, also known as Level 1 recruitment, is conducted by Railway Recruitment Boards for various railway posts. Check the relevant official notification for vacancies, eligibility, selection stages and exam pattern.</p>
+</div>
+
+<h2>Subjects and Syllabus</h2>
+<div class="grid" id="subjects">
+<div class="card">
+<h3>🔢 Mathematics</h3>
+<p>Number System, BODMAS, LCM, HCF, Fractions, Percentage, Ratio, Profit and Loss, Interest, Time and Work, Speed and Distance, Mensuration and more.</p>
+<a class="button" href="#mathematics">View Chapters</a>
+</div>
+<div class="card">
+<h3>🧠 General Intelligence & Reasoning</h3>
+<p>Analogy, Series, Coding-Decoding, Classification, Directions, Relationships, Venn Diagrams and logical reasoning.</p>
+</div>
+<div class="card">
+<h3>🔬 General Science</h3>
+<p>Physics, Chemistry and Life Science topics generally based on school-level concepts. Check the official notification.</p>
+</div>
+<div class="card">
+<h3>🌍 General Awareness</h3>
+<p>Current affairs, Indian history, geography, polity, economy, sports, culture and important events.</p>
+</div>
+</div>
+
+<h2 id="mathematics">Mathematics — 20 Chapters</h2>
+<div class="card">
+<ol>
+<li>Number System</li>
+<li>BODMAS and Simplification</li>
+<li>LCM and HCF</li>
+<li>Fractions and Decimals</li>
+<li>Ratio and Proportion</li>
+<li>Percentage</li>
+<li>Profit, Loss and Discount</li>
+<li>Simple and Compound Interest</li>
+<li>Average</li>
+<li>Time and Work</li>
+<li>Pipes and Cisterns</li>
+<li>Time, Speed and Distance</li>
+<li>Train Problems</li>
+<li>Mensuration</li>
+<li>Algebra</li>
+<li>Geometry</li>
+<li>Trigonometry</li>
+<li>Statistics</li>
+<li>Problems on Ages</li>
+<li>Calendar and Clock</li>
+</ol>
+</div>
+
+<h2>Practice and Test Preparation</h2>
+<div class="grid">
+<div class="card"><h3>📝 Practice Questions</h3><p>Subject-wise practice with answers and explanations.</p></div>
+<div class="card"><h3>⏱️ Mock Tests</h3><p>Timed tests to improve speed and accuracy.</p></div>
+<div class="card"><h3>📚 Previous Year Papers</h3><p>Practise verified previous examination questions.</p></div>
+</div>
+
+<div class="notice">
+<strong>Important:</strong> This is an independent educational website, not an official RRB website. Always verify the current syllabus, exam pattern and eligibility in the official recruitment notification.
+<br><br>
+<a href="https://rrb.indianrailways.gov.in/" target="_blank" rel="noopener">Official RRB Website →</a>
+</div>
+</main>
+
+<footer>
+<p>Railway Exam Hub | RRB Group D Preparation</p>
+<p>Independent educational platform</p>
+</footer>
+
+</body>
+</html>
