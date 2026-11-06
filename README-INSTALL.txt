@@ -1,38 +1,22 @@
-RAILWAY EXAM HUB — CHAPTERS 05 TO 20
-======================================
+RAILWAY EXAM HUB — TWO GROUP D MOCK TESTS
 
-This ZIP contains 16 standalone HTML chapter pages. Each has chapter notes, formulas, 3 solved examples and a 25-question interactive quiz.
+Files:
+- mock-tests.html       (landing page)
+- mock-test-01.html     (100-question test)
+- mock-test-02.html     (100-question test)
 
-UPLOAD INSTRUCTIONS
--------------------
-1. Extract this ZIP on your laptop.
-2. Open the railway-exam-hub GitHub repository.
-3. Choose Add file > Upload files.
-4. Select all 16 HTML files from the extracted folder.
-5. Keep filenames exactly as shown; upload them into the same folder as group-d.html.
-6. Commit directly to the main branch and wait for GitHub Pages deployment to show Success.
+Install:
+1. Upload all three HTML files into the same GitHub repository folder as group-d.html.
+2. Commit the files.
+3. Open the live mock-tests.html page after GitHub Pages deployment.
+4. Add a link from group-d.html to mock-tests.html labelled "Mock Tests".
 
-IMPORTANT
----------
-- Do not delete or replace index.html, group-d.html, number-system.html, bodmas-simplification.html, lcm-hcf.html or fractions-decimals.html.
-- These filenames match the chapter links already present on your website.
-- Some quiz questions are core arithmetic review checks; verify all material against the official exam syllabus before relying on it as your only study source.
+Test format:
+- 100 questions; 90-minute timer.
+- Mathematics: 25; General Science: 25.
+- General Intelligence & Reasoning: 30; General Awareness: 20.
+- +1 correct; -1/3 incorrect; 0 unanswered.
+- The two tests use different questions.
 
-FILES
------
-05. ratio-proportion.html — Ratio and Proportion
-06. percentage.html — Percentage
-07. profit-loss-discount.html — Profit, Loss and Discount
-08. simple-compound-interest.html — Simple and Compound Interest
-09. average.html — Average
-10. time-work.html — Time and Work
-11. pipes-cisterns.html — Pipes and Cisterns
-12. time-speed-distance.html — Time, Speed and Distance
-13. train-problems.html — Train Problems
-14. mensuration.html — Mensuration
-15. algebra.html — Algebra
-16. geometry.html — Geometry
-17. trigonometry.html — Trigonometry
-18. statistics.html — Statistics
-19. age-problems.html — Age Problems
-20. calendar-clock.html — Calendar and Clock
+Important content note:
+The supplied CSV contains 4,800 records, but some rows have blank question text or missing options. These two tests use only complete rows with all four options and a valid answer key, and duplicate question text was removed before selection. The CSV does not include written explanations, so the test result provides answer review rather than invented explanations.
