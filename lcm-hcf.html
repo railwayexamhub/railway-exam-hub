@@ -1,33 +1,235 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LCM and HCF | Railway Exam Hub</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font:16px/1.6 Arial,sans-serif;background:#f4f7fc;color:#17243b}
-header{background:#10264b;color:white;text-align:center;padding:22px 15px}main{max-width:950px;margin:auto;padding:16px}
-.card{background:white;padding:20px;margin:16px 0;border-radius:10px;box-shadow:0 2px 8px #dce3ed}
-h2{color:#10264b}h3{color:#174d83}.formula{background:#eef5ff;padding:12px;border-left:4px solid #1764a3;margin:12px 0}
-button{background:#1764a3;color:white;border:0;padding:11px 16px;border-radius:6px;cursor:pointer;margin:5px}
-.option{display:block;background:#f2f5fa;padding:10px;margin:8px 0;border-radius:6px}
-.feedback{margin:8px 0;padding:9px;background:#f3f6fa;border-radius:6px}a{color:#1764a3}footer{text-align:center;padding:20px;color:#667}
-</style></head><body>
-<header><h1>LCM and HCF</h1><p>RRB Group D Mathematics · Chapter 03</p></header>
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 Arial,sans-serif;background:#f4f7fc;color:#17243b}
+header{background:#10264b;color:#fff;text-align:center;padding:26px 16px}
+header h1{margin:0 0 6px;font-size:clamp(25px,4vw,36px)}
+header p{margin:0;color:#e5edfa}
+main{max-width:980px;margin:auto;padding:16px}
+.card{background:#fff;padding:20px;margin:16px 0;border-radius:10px;box-shadow:0 2px 8px #dce3ed}
+h2{color:#10264b;margin-top:0}
+h3{color:#174d83;margin-bottom:8px}
+.formula{background:#eef5ff;padding:12px 14px;border-left:4px solid #1764a3;margin:12px 0;border-radius:4px}
+.example{padding:12px 0;border-bottom:1px solid #e5eaf1}
+.example:last-child{border-bottom:0}
+.steps{background:#f7f9fc;padding:10px 14px;border-radius:7px}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{border:1px solid #dbe3ee;padding:9px;text-align:left}
+th{background:#eef5ff}
+button{background:#1764a3;color:white;border:0;padding:11px 16px;border-radius:6px;cursor:pointer;margin:6px 6px 6px 0;font-size:15px}
+button:hover{background:#104d82}
+.option{display:block;background:#f2f5fa;padding:10px;margin:8px 0;border-radius:6px;cursor:pointer}
+.option input{margin-right:8px}
+.question{background:#fff;border:1px solid #dce5f0;border-left:4px solid #1764a3;padding:14px;margin:14px 0;border-radius:7px}
+.feedback{margin:9px 0;padding:10px;background:#f3f6fa;border-radius:6px}
+.correct{border-left:4px solid #218653;background:#effaf3}
+.incorrect{border-left:4px solid #bd4545;background:#fff3f2}
+.small{color:#52627a;font-size:14px}
+.badge{display:inline-block;background:#e7f1ff;color:#174d83;padding:3px 9px;border-radius:20px;font-size:13px;margin:2px}
+a{color:#1764a3}
+footer{text-align:center;padding:20px;color:#667}
+@media(max-width:600px){main{padding:10px}.card{padding:15px}table{font-size:14px}}
+</style>
+</head>
+<body>
+<header>
+<h1>LCM and HCF</h1>
+<p>RRB Group D Mathematics · Chapter 03</p>
+</header>
 <main>
-<section class="card"><h2>About this chapter</h2><p>Factors, multiples, prime factorisation, HCF, LCM and word problems. This chapter page is designed for online revision and practice on Railway Exam Hub.</p></section>
-<section class="card"><h2>Key concepts and rules</h2><ul><li>A factor divides a number exactly.</li><li>A multiple is obtained by multiplying a number by an integer.</li><li>HCF is the greatest common factor shared by the given numbers.</li><li>LCM is the smallest positive common multiple.</li><li>For two positive integers: product = HCF × LCM.</li></ul></section>
-<section class="card"><h2>Important formulas and reminders</h2>
-<div class='formula'>A factor divides a number exactly.</div><div class='formula'>A multiple is obtained by multiplying a number by an integer.</div><div class='formula'>HCF is the greatest common factor shared by the given numbers.</div><div class='formula'>LCM is the smallest positive common multiple.</div><div class='formula'>For two positive integers: product = HCF × LCM.</div>
+<section class="card">
+<h2>About this chapter</h2>
+<p>Learn factors, multiples, prime factorisation, HCF (Highest Common Factor), LCM (Least Common Multiple), the division method and common exam-style word problems. Study the methods first, then attempt the 25-question practice test.</p>
+<p><span class="badge">Foundation</span><span class="badge">Solved examples</span><span class="badge">25 MCQs</span></p>
 </section>
-<section class="card"><h2>Solved examples</h2><article class='example'><h3>Practice concept 1</h3><p>Find the HCF of 18 and 24.</p><p><strong>Answer: 6</strong></p><p>18 = 2 × 3² and 24 = 2³ × 3. Common prime factors with the lowest powers give 2 × 3 = 6.</p></article><article class='example'><h3>Practice concept 2</h3><p>Find the LCM of 6 and 8.</p><p><strong>Answer: 24</strong></p><p>6 = 2 × 3 and 8 = 2³. Take the highest powers: 2³ × 3 = 24.</p></article><article class='example'><h3>Practice concept 3</h3><p>The product of two numbers is 180 and their HCF is 3. Find their LCM.</p><p><strong>Answer: 60</strong></p><p>LCM = product ÷ HCF = 180 ÷ 3 = 60.</p></article></section>
-<section class="card"><h2>Practice MCQ quiz</h2><p>Choose an answer for each question, then submit to see your score and explanations.</p>
-<div id="quiz"></div><button onclick="gradeQuiz()">Submit answers</button><button onclick="resetQuiz()">Try again</button><div id="score" aria-live="polite"></div>
+
+<section class="card">
+<h2>1. Key concepts</h2>
+<ul>
+<li><strong>Factor:</strong> A whole number that divides another number exactly. For example, 1, 2, 3 and 6 are factors of 6.</li>
+<li><strong>Multiple:</strong> A number obtained by multiplying a given number by a whole number. Multiples of 4 include 4, 8, 12 and 16.</li>
+<li><strong>Prime number:</strong> A whole number greater than 1 with exactly two factors: 1 and itself.</li>
+<li><strong>Prime factorisation:</strong> Expressing a number as a product of prime numbers. Example: 60 = 2² × 3 × 5.</li>
+<li><strong>HCF:</strong> The greatest positive integer that divides each of the given numbers exactly.</li>
+<li><strong>LCM:</strong> The smallest positive integer that is a multiple of every number in the given set.</li>
+<li><strong>Co-prime numbers:</strong> Two integers whose HCF is 1. They do not need to be prime themselves; for example, 8 and 15.</li>
+</ul>
 </section>
-<section class="card"><h2>Chapter navigation</h2><p><a href="group-d.html">← Back to Group D Mathematics chapters</a></p></section>
-</main><footer>Railway Exam Hub · RRB Group D and NTPC Mathematics</footer>
+
+<section class="card">
+<h2>2. Methods to find HCF and LCM</h2>
+<h3>Method A: Prime factorisation</h3>
+<p>Write each number as a product of primes.</p>
+<ul>
+<li>For <strong>HCF</strong>, multiply only the prime factors common to all numbers, using the <strong>smallest power</strong> of each.</li>
+<li>For <strong>LCM</strong>, include every prime factor that appears, using the <strong>greatest power</strong> of each.</li>
+</ul>
+<div class="formula"><strong>Example:</strong> 36 = 2² × 3² and 48 = 2⁴ × 3<br>HCF = 2² × 3 = 12<br>LCM = 2⁴ × 3² = 144</div>
+
+<h3>Method B: Division method for HCF</h3>
+<p>Divide the larger number by the smaller number. Then divide the previous divisor by the remainder. Continue until the remainder is zero. The last non-zero remainder (or final divisor) is the HCF.</p>
+<div class="formula"><strong>Example:</strong> HCF of 84 and 30<br>84 = 30 × 2 + 24<br>30 = 24 × 1 + 6<br>24 = 6 × 4 + 0<br><strong>HCF = 6</strong></div>
+
+<h3>Method C: Listing multiples (useful for small numbers)</h3>
+<p>List the multiples of each number. The first common positive multiple is the LCM.</p>
+<div class="formula">Multiples of 6: 6, 12, 18, 24, ...<br>Multiples of 8: 8, 16, 24, ...<br><strong>LCM = 24</strong></div>
+</section>
+
+<section class="card">
+<h2>3. Important formulas and reminders</h2>
+<div class="formula"><strong>For two positive integers only:</strong><br>HCF × LCM = Product of the two numbers</div>
+<div class="formula"><strong>Therefore:</strong><br>LCM = (First number × Second number) ÷ HCF</div>
+<div class="formula"><strong>For two co-prime positive integers:</strong><br>HCF = 1 and LCM = their product</div>
+<div class="formula"><strong>Fractions in lowest terms:</strong><br>HCF of fractions = HCF of numerators ÷ LCM of denominators<br>LCM of fractions = LCM of numerators ÷ HCF of denominators<br><span class="small">Use this rule for positive fractions after expressing them in their lowest terms.</span></div>
+<div class="formula"><strong>Word-problem clue:</strong><br>“Together again”, “at the same time” or repeating intervals usually indicates LCM. “Largest possible equal size/group” usually indicates HCF.</div>
+<p><strong>Remember:</strong> The product relation HCF × LCM = product applies directly to two positive integers. Do not apply it as a general formula to three or more numbers.</p>
+</section>
+
+<section class="card">
+<h2>4. Solved examples</h2>
+<article class="example">
+<h3>Example 1 — Find HCF by prime factorisation</h3>
+<p>Find the HCF of 24 and 36.</p>
+<div class="steps">24 = 2³ × 3<br>36 = 2² × 3²<br>Common factors with smallest powers = 2² × 3 = 12.<br><strong>Answer: 12</strong></div>
+</article>
+<article class="example">
+<h3>Example 2 — Find LCM by prime factorisation</h3>
+<p>Find the LCM of 12 and 18.</p>
+<div class="steps">12 = 2² × 3; 18 = 2 × 3².<br>Take the greatest powers: 2² × 3² = 4 × 9.<br><strong>Answer: 36</strong></div>
+</article>
+<article class="example">
+<h3>Example 3 — HCF by division method</h3>
+<p>Find the HCF of 96 and 36.</p>
+<div class="steps">96 = 36 × 2 + 24<br>36 = 24 × 1 + 12<br>24 = 12 × 2 + 0<br><strong>Answer: 12</strong></div>
+</article>
+<article class="example">
+<h3>Example 4 — Use the HCF–LCM relation</h3>
+<p>The HCF of two numbers is 8 and their product is 3,840. Find their LCM.</p>
+<div class="steps">LCM = product ÷ HCF = 3,840 ÷ 8.<br><strong>Answer: 480</strong></div>
+</article>
+<article class="example">
+<h3>Example 5 — Co-prime numbers</h3>
+<p>Find the HCF and LCM of 9 and 16.</p>
+<div class="steps">9 and 16 have no common factor other than 1.<br>HCF = 1; LCM = 9 × 16.<br><strong>Answer: HCF = 1, LCM = 144</strong></div>
+</article>
+<article class="example">
+<h3>Example 6 — Three numbers</h3>
+<p>Find the HCF of 18, 30 and 42.</p>
+<div class="steps">Factors common to all three include 1, 2 and 3.<br>The greatest common factor is 2 × 3.<br><strong>Answer: 6</strong></div>
+</article>
+<article class="example">
+<h3>Example 7 — Bells ringing together</h3>
+<p>Three bells ring at intervals of 6, 8 and 12 minutes. If they ring together now, after how many minutes will they next ring together?</p>
+<div class="steps">Find LCM(6, 8, 12).<br>6 = 2 × 3; 8 = 2³; 12 = 2² × 3.<br>LCM = 2³ × 3 = 24.<br><strong>Answer: 24 minutes</strong></div>
+</article>
+<article class="example">
+<h3>Example 8 — Largest equal groups</h3>
+<p>48 red beads and 60 blue beads are to be divided into identical groups, with no beads left over. What is the greatest possible number of groups?</p>
+<div class="steps">The number of groups must divide both 48 and 60.<br>HCF(48, 60) = 12.<br><strong>Answer: 12 groups</strong></div>
+</article>
+<article class="example">
+<h3>Example 9 — Same remainder</h3>
+<p>Find the greatest number that divides 83 and 127 leaving the same remainder in each case.</p>
+<div class="steps">If the remainders are equal, the divisor must divide the difference.<br>127 − 83 = 44.<br>The greatest possible divisor is 44.<br><strong>Answer: 44</strong> (remainder 39)</div>
+</article>
+<article class="example">
+<h3>Example 10 — Smallest number divisible by several numbers</h3>
+<p>Find the smallest positive number exactly divisible by 4, 6 and 10.</p>
+<div class="steps">4 = 2²; 6 = 2 × 3; 10 = 2 × 5.<br>LCM = 2² × 3 × 5 = 60.<br><strong>Answer: 60</strong></div>
+</article>
+</section>
+
+<section class="card">
+<h2>5. Quick revision table</h2>
+<table>
+<thead><tr><th>Question wording</th><th>Usually use</th><th>Reason</th></tr></thead>
+<tbody>
+<tr><td>Greatest possible equal groups or largest equal pieces</td><td>HCF</td><td>Find the greatest common divisor.</td></tr>
+<tr><td>Events repeat and happen together again</td><td>LCM</td><td>Find the first common repeat interval.</td></tr>
+<tr><td>Smallest number divisible by several given numbers</td><td>LCM</td><td>It must be a common multiple.</td></tr>
+<tr><td>Largest number that divides given numbers exactly</td><td>HCF</td><td>It must be a common factor.</td></tr>
+<tr><td>Two numbers, their product and HCF are given</td><td>LCM relation</td><td>LCM = product ÷ HCF.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="card">
+<h2>6. Practice MCQ quiz — 25 questions</h2>
+<p>Choose one answer for every question, then select <strong>Submit answers</strong>. Your score and an explanation for each answer will appear below.</p>
+<div id="quiz"></div>
+<button type="button" onclick="gradeQuiz()">Submit answers</button>
+<button type="button" onclick="resetQuiz()">Try again</button>
+<div id="score" aria-live="polite"></div>
+</section>
+
+<section class="card">
+<h2>Chapter navigation</h2>
+<p><a href="group-d.html#mathematics">← Back to Group D Mathematics chapters</a></p>
+</section>
+</main>
+<footer>Railway Exam Hub · RRB Group D and NTPC Mathematics</footer>
 <script>
-const questions=[{"q": "Find the HCF of 18 and 24.", "options": ["3", "6", "12", "72"], "correct": 1, "answer": "6", "explanation": "18 = 2 × 3² and 24 = 2³ × 3. Common prime factors with the lowest powers give 2 × 3 = 6."}, {"q": "Find the LCM of 6 and 8.", "options": ["12", "18", "24", "48"], "correct": 2, "answer": "24", "explanation": "6 = 2 × 3 and 8 = 2³. Take the highest powers: 2³ × 3 = 24."}, {"q": "The product of two numbers is 180 and their HCF is 3. Find their LCM.", "options": ["30", "45", "60", "90"], "correct": 2, "answer": "60", "explanation": "LCM = product ÷ HCF = 180 ÷ 3 = 60."}];
-const quiz=document.getElementById('quiz');
-function renderQuiz(){quiz.innerHTML='';questions.forEach((q,i)=>{let box=document.createElement('div');box.className='formula';let h=document.createElement('strong');h.textContent=(i+1)+'. '+q.q;box.appendChild(h);q.options.forEach((opt,j)=>{let label=document.createElement('label');label.className='option';let input=document.createElement('input');input.type='radio';input.name='q'+i;input.value=j;label.appendChild(input);label.append(' '+opt);box.appendChild(label);});let fb=document.createElement('div');fb.id='fb'+i;fb.className='feedback';fb.hidden=true;box.appendChild(fb);quiz.appendChild(box);});}
-function gradeQuiz(){let score=0;questions.forEach((q,i)=>{let chosen=document.querySelector('input[name="q'+i+'"]:checked');let fb=document.getElementById('fb'+i);fb.hidden=false;if(chosen&&Number(chosen.value)===q.correct){score++;fb.textContent='Correct. '+q.explanation;}else{fb.textContent='Correct answer: '+q.answer+'. '+q.explanation;}});document.getElementById('score').textContent='Your score: '+score+' / '+questions.length;}
-function resetQuiz(){renderQuiz();document.getElementById('score').textContent='';}
+const questions = [
+{q:"Find the HCF of 18 and 24.",o:["3","6","12","72"],a:1,e:"18 = 2 × 3² and 24 = 2³ × 3. The common prime factors with the lowest powers are 2 × 3 = 6."},
+{q:"Find the LCM of 6 and 8.",o:["12","18","24","48"],a:2,e:"6 = 2 × 3 and 8 = 2³. LCM = 2³ × 3 = 24."},
+{q:"Find the HCF of 36 and 48.",o:["6","8","12","16"],a:2,e:"36 = 2² × 3² and 48 = 2⁴ × 3. HCF = 2² × 3 = 12."},
+{q:"Find the LCM of 12 and 18.",o:["24","30","36","72"],a:2,e:"12 = 2² × 3 and 18 = 2 × 3². LCM = 2² × 3² = 36."},
+{q:"Which pair is co-prime?",o:["8 and 12","9 and 16","15 and 25","21 and 28"],a:1,e:"9 and 16 have HCF 1, so they are co-prime."},
+{q:"Find the HCF of 84 and 30.",o:["3","6","12","14"],a:1,e:"84 = 30 × 2 + 24; 30 = 24 × 1 + 6; 24 = 6 × 4. The last non-zero remainder is 6."},
+{q:"Find the LCM of 4, 6 and 10.",o:["30","40","60","120"],a:2,e:"4 = 2², 6 = 2 × 3 and 10 = 2 × 5. LCM = 2² × 3 × 5 = 60."},
+{q:"The HCF of two numbers is 5 and their product is 600. Find their LCM.",o:["60","100","120","150"],a:2,e:"For two positive integers, HCF × LCM = product. LCM = 600 ÷ 5 = 120."},
+{q:"Find the HCF of 18, 30 and 42.",o:["3","6","9","12"],a:1,e:"The greatest number dividing all three is 6."},
+{q:"Find the LCM of 9 and 15.",o:["30","36","45","90"],a:2,e:"9 = 3² and 15 = 3 × 5. LCM = 3² × 5 = 45."},
+{q:"Two bells ring at intervals of 8 and 12 minutes. After how many minutes will they next ring together?",o:["16","20","24","48"],a:2,e:"The first common interval is LCM(8,12) = 24 minutes."},
+{q:"What is the greatest number of identical groups that can be made from 32 red and 48 blue objects, with none left over?",o:["8","12","16","24"],a:2,e:"The greatest number of groups is HCF(32,48) = 16."},
+{q:"Find the prime factorisation of 60.",o:["2 × 3 × 10","2² × 3 × 5","2 × 3² × 5","2² × 15"],a:1,e:"60 = 2 × 30 = 2 × 2 × 15 = 2² × 3 × 5."},
+{q:"If two positive integers are co-prime, their HCF is:",o:["0","1","Their sum","Their product"],a:1,e:"Co-prime integers are defined as integers whose HCF is 1."},
+{q:"Find the LCM of 5, 10 and 15.",o:["15","20","30","60"],a:2,e:"LCM = 2 × 3 × 5 = 30."},
+{q:"Find the HCF of 96 and 144.",o:["12","24","36","48"],a:3,e:"96 = 2⁵ × 3 and 144 = 2⁴ × 3². HCF = 2⁴ × 3 = 48."},
+{q:"The product of two numbers is 1,080 and their HCF is 6. Find their LCM.",o:["90","120","180","240"],a:2,e:"LCM = 1,080 ÷ 6 = 180."},
+{q:"What is the smallest positive number divisible by both 14 and 21?",o:["28","35","42","84"],a:2,e:"14 = 2 × 7 and 21 = 3 × 7. LCM = 2 × 3 × 7 = 42."},
+{q:"Find the greatest number that divides 83 and 127 leaving the same remainder.",o:["11","22","44","88"],a:2,e:"The divisor must divide the difference 127 − 83 = 44. The greatest possible divisor is 44; both numbers leave remainder 39."},
+{q:"If HCF( a, b ) = 1, what are a and b called?",o:["Equal numbers","Co-prime numbers","Consecutive multiples","Prime factors"],a:1,e:"Two integers with HCF 1 are called co-prime or relatively prime."},
+{q:"Find the HCF of 45 and 75.",o:["5","10","15","25"],a:2,e:"45 = 3² × 5 and 75 = 3 × 5². HCF = 3 × 5 = 15."},
+{q:"Find the LCM of 16 and 20.",o:["40","60","80","160"],a:2,e:"16 = 2⁴ and 20 = 2² × 5. LCM = 2⁴ × 5 = 80."},
+{q:"Three lights flash every 6, 9 and 12 seconds. If they flash together now, when will they next flash together?",o:["18 seconds","24 seconds","36 seconds","72 seconds"],a:2,e:"LCM(6,9,12) = 2² × 3² = 36 seconds."},
+{q:"Find the HCF of 105 and 140.",o:["7","14","21","35"],a:3,e:"105 = 3 × 5 × 7 and 140 = 2² × 5 × 7. HCF = 5 × 7 = 35."},
+{q:"Which statement is correct for two positive integers m and n?",o:["HCF + LCM = m × n","HCF × LCM = m × n","HCF = LCM always","LCM is always smaller than HCF"],a:1,e:"For two positive integers, HCF multiplied by LCM equals the product of the two integers."}
+];
+const quiz = document.getElementById("quiz");
+function renderQuiz(){
+ quiz.innerHTML="";
+ questions.forEach((q,i)=>{
+  const box=document.createElement("div"); box.className="question";
+  const title=document.createElement("strong"); title.textContent=(i+1)+". "+q.q; box.appendChild(title);
+  q.o.forEach((opt,j)=>{
+   const label=document.createElement("label"); label.className="option";
+   const input=document.createElement("input"); input.type="radio"; input.name="q"+i; input.value=j;
+   label.appendChild(input); label.appendChild(document.createTextNode(opt)); box.appendChild(label);
+  });
+  const fb=document.createElement("div"); fb.id="fb"+i; fb.className="feedback"; fb.hidden=true; box.appendChild(fb);
+  quiz.appendChild(box);
+ });
+}
+function gradeQuiz(){
+ let score=0;
+ questions.forEach((q,i)=>{
+  const chosen=document.querySelector('input[name="q'+i+'"]:checked');
+  const fb=document.getElementById("fb"+i); fb.hidden=false;
+  if(chosen && Number(chosen.value)===q.a){score++;fb.className="feedback correct";fb.textContent="Correct. "+q.e;}
+  else{fb.className="feedback incorrect";fb.textContent="Correct answer: "+q.o[q.a]+". "+q.e;}
+ });
+ const out=document.getElementById("score");
+ out.className="formula";
+ out.textContent="Your score: "+score+" / "+questions.length+" ("+Math.round(score/questions.length*100)+"%). Review the explanations above, then try again.";
+}
+function resetQuiz(){renderQuiz();const out=document.getElementById("score");out.textContent="";out.className="";}
 renderQuiz();
-</script></body></html>
+</script>
+</body>
+</html>
