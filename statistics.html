@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elementary Statistics | Railway Exam Hub</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 Arial,sans-serif;background:#f4f7fc;color:#17243b}
+header{background:#10264b;color:white;text-align:center;padding:22px 15px}main{max-width:950px;margin:auto;padding:16px}
+.card{background:white;padding:20px;margin:16px 0;border-radius:10px;box-shadow:0 2px 8px #dce3ed}
+h2{color:#10264b}h3{color:#174d83}.formula{background:#eef5ff;padding:12px;border-left:4px solid #1764a3;margin:12px 0}
+button{background:#1764a3;color:white;border:0;padding:11px 16px;border-radius:6px;cursor:pointer;margin:5px}
+.option{display:block;background:#f2f5fa;padding:10px;margin:8px 0;border-radius:6px}
+.feedback{margin:8px 0;padding:9px;background:#f3f6fa;border-radius:6px}a{color:#1764a3}footer{text-align:center;padding:20px;color:#667}
+</style></head><body>
+<header><h1>Elementary Statistics</h1><p>RRB Group D Mathematics · Chapter 18</p></header>
+<main>
+<section class="card"><h2>About this chapter</h2><p>Mean, median, mode, range and reading simple data. This chapter page is designed for online revision and practice on Railway Exam Hub.</p></section>
+<section class="card"><h2>Key concepts and rules</h2><ul><li>Mean = sum of observations ÷ number of observations.</li><li>Median is the middle value after arranging data in order.</li><li>Mode is the most frequently occurring value.</li><li>Range = maximum value − minimum value.</li><li>For an even number of observations, median is the mean of the two middle values.</li></ul></section>
+<section class="card"><h2>Important formulas and reminders</h2>
+<div class='formula'>Mean = sum of observations ÷ number of observations.</div><div class='formula'>Median is the middle value after arranging data in order.</div><div class='formula'>Mode is the most frequently occurring value.</div><div class='formula'>Range = maximum value − minimum value.</div><div class='formula'>For an even number of observations, median is the mean of the two middle values.</div>
+</section>
+<section class="card"><h2>Solved examples</h2><article class='example'><h3>Practice concept 1</h3><p>Find the mean of 2, 4 and 6.</p><p><strong>Answer: 4</strong></p><p>Mean = (2+4+6)/3 = 12/3 = 4.</p></article><article class='example'><h3>Practice concept 2</h3><p>Find the median of 3, 7, 9.</p><p><strong>Answer: 7</strong></p><p>The middle value in the ordered list is 7.</p></article><article class='example'><h3>Practice concept 3</h3><p>Find the mode of 2, 3, 3, 5.</p><p><strong>Answer: 3</strong></p><p>3 occurs more often than any other value.</p></article></section>
+<section class="card"><h2>Practice MCQ quiz</h2><p>Choose an answer for each question, then submit to see your score and explanations.</p>
+<div id="quiz"></div><button onclick="gradeQuiz()">Submit answers</button><button onclick="resetQuiz()">Try again</button><div id="score" aria-live="polite"></div>
+</section>
+<section class="card"><h2>Chapter navigation</h2><p><a href="group-d.html">← Back to Group D Mathematics chapters</a></p></section>
+</main><footer>Railway Exam Hub · RRB Group D and NTPC Mathematics</footer>
+<script>
+const questions=[{"q": "Find the mean of 2, 4 and 6.", "options": ["2", "3", "4", "6"], "correct": 2, "answer": "4", "explanation": "Mean = (2+4+6)/3 = 12/3 = 4."}, {"q": "Find the median of 3, 7, 9.", "options": ["3", "7", "8", "9"], "correct": 1, "answer": "7", "explanation": "The middle value in the ordered list is 7."}, {"q": "Find the mode of 2, 3, 3, 5.", "options": ["2", "3", "4", "5"], "correct": 1, "answer": "3", "explanation": "3 occurs more often than any other value."}];
+const quiz=document.getElementById('quiz');
+function renderQuiz(){quiz.innerHTML='';questions.forEach((q,i)=>{let box=document.createElement('div');box.className='formula';let h=document.createElement('strong');h.textContent=(i+1)+'. '+q.q;box.appendChild(h);q.options.forEach((opt,j)=>{let label=document.createElement('label');label.className='option';let input=document.createElement('input');input.type='radio';input.name='q'+i;input.value=j;label.appendChild(input);label.append(' '+opt);box.appendChild(label);});let fb=document.createElement('div');fb.id='fb'+i;fb.className='feedback';fb.hidden=true;box.appendChild(fb);quiz.appendChild(box);});}
+function gradeQuiz(){let score=0;questions.forEach((q,i)=>{let chosen=document.querySelector('input[name="q'+i+'"]:checked');let fb=document.getElementById('fb'+i);fb.hidden=false;if(chosen&&Number(chosen.value)===q.correct){score++;fb.textContent='Correct. '+q.explanation;}else{fb.textContent='Correct answer: '+q.answer+'. '+q.explanation;}});document.getElementById('score').textContent='Your score: '+score+' / '+questions.length;}
+function resetQuiz(){renderQuiz();document.getElementById('score').textContent='';}
+renderQuiz();
+</script></body></html>

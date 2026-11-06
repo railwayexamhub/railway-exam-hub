@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pipes and Cisterns | Railway Exam Hub</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 Arial,sans-serif;background:#f4f7fc;color:#17243b}
+header{background:#10264b;color:white;text-align:center;padding:22px 15px}main{max-width:950px;margin:auto;padding:16px}
+.card{background:white;padding:20px;margin:16px 0;border-radius:10px;box-shadow:0 2px 8px #dce3ed}
+h2{color:#10264b}h3{color:#174d83}.formula{background:#eef5ff;padding:12px;border-left:4px solid #1764a3;margin:12px 0}
+button{background:#1764a3;color:white;border:0;padding:11px 16px;border-radius:6px;cursor:pointer;margin:5px}
+.option{display:block;background:#f2f5fa;padding:10px;margin:8px 0;border-radius:6px}
+.feedback{margin:8px 0;padding:9px;background:#f3f6fa;border-radius:6px}a{color:#1764a3}footer{text-align:center;padding:20px;color:#667}
+</style></head><body>
+<header><h1>Pipes and Cisterns</h1><p>RRB Group D Mathematics · Chapter 11</p></header>
+<main>
+<section class="card"><h2>About this chapter</h2><p>Inlet and outlet rates, filling and emptying tanks, and combined pipes. This chapter page is designed for online revision and practice on Railway Exam Hub.</p></section>
+<section class="card"><h2>Key concepts and rules</h2><ul><li>An inlet adds water; an outlet removes water.</li><li>If a pipe fills a tank in x hours, its rate is 1/x tank per hour.</li><li>For an outlet, use a negative rate.</li><li>Net rate = sum of inlet rates − sum of outlet rates.</li><li>Time to fill = 1 ÷ net filling rate.</li></ul></section>
+<section class="card"><h2>Important formulas and reminders</h2>
+<div class='formula'>An inlet adds water; an outlet removes water.</div><div class='formula'>If a pipe fills a tank in x hours, its rate is 1/x tank per hour.</div><div class='formula'>For an outlet, use a negative rate.</div><div class='formula'>Net rate = sum of inlet rates − sum of outlet rates.</div><div class='formula'>Time to fill = 1 ÷ net filling rate.</div>
+</section>
+<section class="card"><h2>Solved examples</h2><article class='example'><h3>Practice concept 1</h3><p>A pipe fills a tank in 4 hours. What fraction does it fill in one hour?</p><p><strong>Answer: 1/4</strong></p><p>One-hour filling rate is 1/4 of the tank.</p></article><article class='example'><h3>Practice concept 2</h3><p>Two pipes fill a tank in 6 and 3 hours. Together they take:</p><p><strong>Answer: 2 hours</strong></p><p>Combined rate = 1/6 + 1/3 = 1/2 tank/hour. Time = 2 hours.</p></article><article class='example'><h3>Practice concept 3</h3><p>An inlet fills 1/5 tank per hour and an outlet empties 1/10 per hour. Net rate is:</p><p><strong>Answer: 1/10 tank/hour</strong></p><p>Net rate = 1/5 − 1/10 = 1/10 tank per hour.</p></article></section>
+<section class="card"><h2>Practice MCQ quiz</h2><p>Choose an answer for each question, then submit to see your score and explanations.</p>
+<div id="quiz"></div><button onclick="gradeQuiz()">Submit answers</button><button onclick="resetQuiz()">Try again</button><div id="score" aria-live="polite"></div>
+</section>
+<section class="card"><h2>Chapter navigation</h2><p><a href="group-d.html">← Back to Group D Mathematics chapters</a></p></section>
+</main><footer>Railway Exam Hub · RRB Group D and NTPC Mathematics</footer>
+<script>
+const questions=[{"q": "A pipe fills a tank in 4 hours. What fraction does it fill in one hour?", "options": ["1/2", "1/3", "1/4", "4"], "correct": 2, "answer": "1/4", "explanation": "One-hour filling rate is 1/4 of the tank."}, {"q": "Two pipes fill a tank in 6 and 3 hours. Together they take:", "options": ["1.5 hours", "2 hours", "3 hours", "4 hours"], "correct": 1, "answer": "2 hours", "explanation": "Combined rate = 1/6 + 1/3 = 1/2 tank/hour. Time = 2 hours."}, {"q": "An inlet fills 1/5 tank per hour and an outlet empties 1/10 per hour. Net rate is:", "options": ["1/2", "1/5", "1/10", "3/10"], "correct": 2, "answer": "1/10 tank/hour", "explanation": "Net rate = 1/5 − 1/10 = 1/10 tank per hour."}];
+const quiz=document.getElementById('quiz');
+function renderQuiz(){quiz.innerHTML='';questions.forEach((q,i)=>{let box=document.createElement('div');box.className='formula';let h=document.createElement('strong');h.textContent=(i+1)+'. '+q.q;box.appendChild(h);q.options.forEach((opt,j)=>{let label=document.createElement('label');label.className='option';let input=document.createElement('input');input.type='radio';input.name='q'+i;input.value=j;label.appendChild(input);label.append(' '+opt);box.appendChild(label);});let fb=document.createElement('div');fb.id='fb'+i;fb.className='feedback';fb.hidden=true;box.appendChild(fb);quiz.appendChild(box);});}
+function gradeQuiz(){let score=0;questions.forEach((q,i)=>{let chosen=document.querySelector('input[name="q'+i+'"]:checked');let fb=document.getElementById('fb'+i);fb.hidden=false;if(chosen&&Number(chosen.value)===q.correct){score++;fb.textContent='Correct. '+q.explanation;}else{fb.textContent='Correct answer: '+q.answer+'. '+q.explanation;}});document.getElementById('score').textContent='Your score: '+score+' / '+questions.length;}
+function resetQuiz(){renderQuiz();document.getElementById('score').textContent='';}
+renderQuiz();
+</script></body></html>

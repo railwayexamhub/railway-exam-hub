@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profit, Loss and Discount | Railway Exam Hub</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 Arial,sans-serif;background:#f4f7fc;color:#17243b}
+header{background:#10264b;color:white;text-align:center;padding:22px 15px}main{max-width:950px;margin:auto;padding:16px}
+.card{background:white;padding:20px;margin:16px 0;border-radius:10px;box-shadow:0 2px 8px #dce3ed}
+h2{color:#10264b}h3{color:#174d83}.formula{background:#eef5ff;padding:12px;border-left:4px solid #1764a3;margin:12px 0}
+button{background:#1764a3;color:white;border:0;padding:11px 16px;border-radius:6px;cursor:pointer;margin:5px}
+.option{display:block;background:#f2f5fa;padding:10px;margin:8px 0;border-radius:6px}
+.feedback{margin:8px 0;padding:9px;background:#f3f6fa;border-radius:6px}a{color:#1764a3}footer{text-align:center;padding:20px;color:#667}
+</style></head><body>
+<header><h1>Profit, Loss and Discount</h1><p>RRB Group D Mathematics · Chapter 07</p></header>
+<main>
+<section class="card"><h2>About this chapter</h2><p>Cost price, selling price, profit, loss, marked price and discount calculations. This chapter page is designed for online revision and practice on Railway Exam Hub.</p></section>
+<section class="card"><h2>Key concepts and rules</h2><ul><li>Profit = Selling Price − Cost Price.</li><li>Loss = Cost Price − Selling Price.</li><li>Profit% = (Profit ÷ Cost Price) × 100.</li><li>Loss% = (Loss ÷ Cost Price) × 100.</li><li>Discount = Marked Price − Selling Price; Discount% is calculated on Marked Price.</li></ul></section>
+<section class="card"><h2>Important formulas and reminders</h2>
+<div class='formula'>Profit = Selling Price − Cost Price.</div><div class='formula'>Loss = Cost Price − Selling Price.</div><div class='formula'>Profit% = (Profit ÷ Cost Price) × 100.</div><div class='formula'>Loss% = (Loss ÷ Cost Price) × 100.</div><div class='formula'>Discount = Marked Price − Selling Price; Discount% is calculated on Marked Price.</div>
+</section>
+<section class="card"><h2>Solved examples</h2><article class='example'><h3>Practice concept 1</h3><p>An article costs ₹400 and sells for ₹460. Find the profit.</p><p><strong>Answer: ₹60</strong></p><p>Profit = 460 − 400 = ₹60.</p></article><article class='example'><h3>Practice concept 2</h3><p>Cost price is ₹500 and loss is 10%. Find selling price.</p><p><strong>Answer: ₹450</strong></p><p>Loss = 10% of 500 = ₹50. Selling price = 500 − 50 = ₹450.</p></article><article class='example'><h3>Practice concept 3</h3><p>Marked price is ₹800 with a 15% discount. Find selling price.</p><p><strong>Answer: ₹680</strong></p><p>Discount = 15% of 800 = ₹120. Selling price = 800 − 120 = ₹680.</p></article></section>
+<section class="card"><h2>Practice MCQ quiz</h2><p>Choose an answer for each question, then submit to see your score and explanations.</p>
+<div id="quiz"></div><button onclick="gradeQuiz()">Submit answers</button><button onclick="resetQuiz()">Try again</button><div id="score" aria-live="polite"></div>
+</section>
+<section class="card"><h2>Chapter navigation</h2><p><a href="group-d.html">← Back to Group D Mathematics chapters</a></p></section>
+</main><footer>Railway Exam Hub · RRB Group D and NTPC Mathematics</footer>
+<script>
+const questions=[{"q": "An article costs ₹400 and sells for ₹460. Find the profit.", "options": ["₹40", "₹50", "₹60", "₹80"], "correct": 2, "answer": "₹60", "explanation": "Profit = 460 − 400 = ₹60."}, {"q": "Cost price is ₹500 and loss is 10%. Find selling price.", "options": ["₹400", "₹440", "₹450", "₹550"], "correct": 2, "answer": "₹450", "explanation": "Loss = 10% of 500 = ₹50. Selling price = 500 − 50 = ₹450."}, {"q": "Marked price is ₹800 with a 15% discount. Find selling price.", "options": ["₹620", "₹660", "₹680", "₹700"], "correct": 2, "answer": "₹680", "explanation": "Discount = 15% of 800 = ₹120. Selling price = 800 − 120 = ₹680."}];
+const quiz=document.getElementById('quiz');
+function renderQuiz(){quiz.innerHTML='';questions.forEach((q,i)=>{let box=document.createElement('div');box.className='formula';let h=document.createElement('strong');h.textContent=(i+1)+'. '+q.q;box.appendChild(h);q.options.forEach((opt,j)=>{let label=document.createElement('label');label.className='option';let input=document.createElement('input');input.type='radio';input.name='q'+i;input.value=j;label.appendChild(input);label.append(' '+opt);box.appendChild(label);});let fb=document.createElement('div');fb.id='fb'+i;fb.className='feedback';fb.hidden=true;box.appendChild(fb);quiz.appendChild(box);});}
+function gradeQuiz(){let score=0;questions.forEach((q,i)=>{let chosen=document.querySelector('input[name="q'+i+'"]:checked');let fb=document.getElementById('fb'+i);fb.hidden=false;if(chosen&&Number(chosen.value)===q.correct){score++;fb.textContent='Correct. '+q.explanation;}else{fb.textContent='Correct answer: '+q.answer+'. '+q.explanation;}});document.getElementById('score').textContent='Your score: '+score+' / '+questions.length;}
+function resetQuiz(){renderQuiz();document.getElementById('score').textContent='';}
+renderQuiz();
+</script></body></html>

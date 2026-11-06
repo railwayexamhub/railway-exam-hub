@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fractions and Decimals | Railway Exam Hub</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 Arial,sans-serif;background:#f4f7fc;color:#17243b}
+header{background:#10264b;color:white;text-align:center;padding:22px 15px}main{max-width:950px;margin:auto;padding:16px}
+.card{background:white;padding:20px;margin:16px 0;border-radius:10px;box-shadow:0 2px 8px #dce3ed}
+h2{color:#10264b}h3{color:#174d83}.formula{background:#eef5ff;padding:12px;border-left:4px solid #1764a3;margin:12px 0}
+button{background:#1764a3;color:white;border:0;padding:11px 16px;border-radius:6px;cursor:pointer;margin:5px}
+.option{display:block;background:#f2f5fa;padding:10px;margin:8px 0;border-radius:6px}
+.feedback{margin:8px 0;padding:9px;background:#f3f6fa;border-radius:6px}a{color:#1764a3}footer{text-align:center;padding:20px;color:#667}
+</style></head><body>
+<header><h1>Fractions and Decimals</h1><p>RRB Group D Mathematics · Chapter 04</p></header>
+<main>
+<section class="card"><h2>About this chapter</h2><p>Types of fractions, equivalent fractions, operations, recurring decimals and conversions. This chapter page is designed for online revision and practice on Railway Exam Hub.</p></section>
+<section class="card"><h2>Key concepts and rules</h2><ul><li>To add or subtract fractions, use a common denominator.</li><li>Multiply fractions by multiplying numerators and denominators.</li><li>Divide by a fraction by multiplying by its reciprocal.</li><li>To convert a terminating decimal to a fraction, write it over 10, 100, 1000, etc., then simplify.</li><li>A recurring decimal can be converted to a fraction using place-value algebra.</li></ul></section>
+<section class="card"><h2>Important formulas and reminders</h2>
+<div class='formula'>To add or subtract fractions, use a common denominator.</div><div class='formula'>Multiply fractions by multiplying numerators and denominators.</div><div class='formula'>Divide by a fraction by multiplying by its reciprocal.</div><div class='formula'>To convert a terminating decimal to a fraction, write it over 10, 100, 1000, etc., then simplify.</div><div class='formula'>A recurring decimal can be converted to a fraction using place-value algebra.</div>
+</section>
+<section class="card"><h2>Solved examples</h2><article class='example'><h3>Practice concept 1</h3><p>What is 1/2 + 1/4?</p><p><strong>Answer: 3/4</strong></p><p>Use denominator 4: 1/2 = 2/4. Then 2/4 + 1/4 = 3/4.</p></article><article class='example'><h3>Practice concept 2</h3><p>Convert 0.75 into a fraction in simplest form.</p><p><strong>Answer: 3/4</strong></p><p>0.75 = 75/100. Divide numerator and denominator by 25 to get 3/4.</p></article><article class='example'><h3>Practice concept 3</h3><p>Find 2/3 × 3/5.</p><p><strong>Answer: 2/5</strong></p><p>Multiply: (2 × 3)/(3 × 5). Cancel 3 to obtain 2/5.</p></article></section>
+<section class="card"><h2>Practice MCQ quiz</h2><p>Choose an answer for each question, then submit to see your score and explanations.</p>
+<div id="quiz"></div><button onclick="gradeQuiz()">Submit answers</button><button onclick="resetQuiz()">Try again</button><div id="score" aria-live="polite"></div>
+</section>
+<section class="card"><h2>Chapter navigation</h2><p><a href="group-d.html">← Back to Group D Mathematics chapters</a></p></section>
+</main><footer>Railway Exam Hub · RRB Group D and NTPC Mathematics</footer>
+<script>
+const questions=[{"q": "What is 1/2 + 1/4?", "options": ["1/4", "2/6", "3/4", "1"], "correct": 2, "answer": "3/4", "explanation": "Use denominator 4: 1/2 = 2/4. Then 2/4 + 1/4 = 3/4."}, {"q": "Convert 0.75 into a fraction in simplest form.", "options": ["1/4", "2/3", "3/4", "7/5"], "correct": 2, "answer": "3/4", "explanation": "0.75 = 75/100. Divide numerator and denominator by 25 to get 3/4."}, {"q": "Find 2/3 × 3/5.", "options": ["1/5", "2/5", "5/2", "6/8"], "correct": 1, "answer": "2/5", "explanation": "Multiply: (2 × 3)/(3 × 5). Cancel 3 to obtain 2/5."}];
+const quiz=document.getElementById('quiz');
+function renderQuiz(){quiz.innerHTML='';questions.forEach((q,i)=>{let box=document.createElement('div');box.className='formula';let h=document.createElement('strong');h.textContent=(i+1)+'. '+q.q;box.appendChild(h);q.options.forEach((opt,j)=>{let label=document.createElement('label');label.className='option';let input=document.createElement('input');input.type='radio';input.name='q'+i;input.value=j;label.appendChild(input);label.append(' '+opt);box.appendChild(label);});let fb=document.createElement('div');fb.id='fb'+i;fb.className='feedback';fb.hidden=true;box.appendChild(fb);quiz.appendChild(box);});}
+function gradeQuiz(){let score=0;questions.forEach((q,i)=>{let chosen=document.querySelector('input[name="q'+i+'"]:checked');let fb=document.getElementById('fb'+i);fb.hidden=false;if(chosen&&Number(chosen.value)===q.correct){score++;fb.textContent='Correct. '+q.explanation;}else{fb.textContent='Correct answer: '+q.answer+'. '+q.explanation;}});document.getElementById('score').textContent='Your score: '+score+' / '+questions.length;}
+function resetQuiz(){renderQuiz();document.getElementById('score').textContent='';}
+renderQuiz();
+</script></body></html>

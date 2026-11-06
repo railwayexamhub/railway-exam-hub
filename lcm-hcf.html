@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LCM and HCF | Railway Exam Hub</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 Arial,sans-serif;background:#f4f7fc;color:#17243b}
+header{background:#10264b;color:white;text-align:center;padding:22px 15px}main{max-width:950px;margin:auto;padding:16px}
+.card{background:white;padding:20px;margin:16px 0;border-radius:10px;box-shadow:0 2px 8px #dce3ed}
+h2{color:#10264b}h3{color:#174d83}.formula{background:#eef5ff;padding:12px;border-left:4px solid #1764a3;margin:12px 0}
+button{background:#1764a3;color:white;border:0;padding:11px 16px;border-radius:6px;cursor:pointer;margin:5px}
+.option{display:block;background:#f2f5fa;padding:10px;margin:8px 0;border-radius:6px}
+.feedback{margin:8px 0;padding:9px;background:#f3f6fa;border-radius:6px}a{color:#1764a3}footer{text-align:center;padding:20px;color:#667}
+</style></head><body>
+<header><h1>LCM and HCF</h1><p>RRB Group D Mathematics · Chapter 03</p></header>
+<main>
+<section class="card"><h2>About this chapter</h2><p>Factors, multiples, prime factorisation, HCF, LCM and word problems. This chapter page is designed for online revision and practice on Railway Exam Hub.</p></section>
+<section class="card"><h2>Key concepts and rules</h2><ul><li>A factor divides a number exactly.</li><li>A multiple is obtained by multiplying a number by an integer.</li><li>HCF is the greatest common factor shared by the given numbers.</li><li>LCM is the smallest positive common multiple.</li><li>For two positive integers: product = HCF × LCM.</li></ul></section>
+<section class="card"><h2>Important formulas and reminders</h2>
+<div class='formula'>A factor divides a number exactly.</div><div class='formula'>A multiple is obtained by multiplying a number by an integer.</div><div class='formula'>HCF is the greatest common factor shared by the given numbers.</div><div class='formula'>LCM is the smallest positive common multiple.</div><div class='formula'>For two positive integers: product = HCF × LCM.</div>
+</section>
+<section class="card"><h2>Solved examples</h2><article class='example'><h3>Practice concept 1</h3><p>Find the HCF of 18 and 24.</p><p><strong>Answer: 6</strong></p><p>18 = 2 × 3² and 24 = 2³ × 3. Common prime factors with the lowest powers give 2 × 3 = 6.</p></article><article class='example'><h3>Practice concept 2</h3><p>Find the LCM of 6 and 8.</p><p><strong>Answer: 24</strong></p><p>6 = 2 × 3 and 8 = 2³. Take the highest powers: 2³ × 3 = 24.</p></article><article class='example'><h3>Practice concept 3</h3><p>The product of two numbers is 180 and their HCF is 3. Find their LCM.</p><p><strong>Answer: 60</strong></p><p>LCM = product ÷ HCF = 180 ÷ 3 = 60.</p></article></section>
+<section class="card"><h2>Practice MCQ quiz</h2><p>Choose an answer for each question, then submit to see your score and explanations.</p>
+<div id="quiz"></div><button onclick="gradeQuiz()">Submit answers</button><button onclick="resetQuiz()">Try again</button><div id="score" aria-live="polite"></div>
+</section>
+<section class="card"><h2>Chapter navigation</h2><p><a href="group-d.html">← Back to Group D Mathematics chapters</a></p></section>
+</main><footer>Railway Exam Hub · RRB Group D and NTPC Mathematics</footer>
+<script>
+const questions=[{"q": "Find the HCF of 18 and 24.", "options": ["3", "6", "12", "72"], "correct": 1, "answer": "6", "explanation": "18 = 2 × 3² and 24 = 2³ × 3. Common prime factors with the lowest powers give 2 × 3 = 6."}, {"q": "Find the LCM of 6 and 8.", "options": ["12", "18", "24", "48"], "correct": 2, "answer": "24", "explanation": "6 = 2 × 3 and 8 = 2³. Take the highest powers: 2³ × 3 = 24."}, {"q": "The product of two numbers is 180 and their HCF is 3. Find their LCM.", "options": ["30", "45", "60", "90"], "correct": 2, "answer": "60", "explanation": "LCM = product ÷ HCF = 180 ÷ 3 = 60."}];
+const quiz=document.getElementById('quiz');
+function renderQuiz(){quiz.innerHTML='';questions.forEach((q,i)=>{let box=document.createElement('div');box.className='formula';let h=document.createElement('strong');h.textContent=(i+1)+'. '+q.q;box.appendChild(h);q.options.forEach((opt,j)=>{let label=document.createElement('label');label.className='option';let input=document.createElement('input');input.type='radio';input.name='q'+i;input.value=j;label.appendChild(input);label.append(' '+opt);box.appendChild(label);});let fb=document.createElement('div');fb.id='fb'+i;fb.className='feedback';fb.hidden=true;box.appendChild(fb);quiz.appendChild(box);});}
+function gradeQuiz(){let score=0;questions.forEach((q,i)=>{let chosen=document.querySelector('input[name="q'+i+'"]:checked');let fb=document.getElementById('fb'+i);fb.hidden=false;if(chosen&&Number(chosen.value)===q.correct){score++;fb.textContent='Correct. '+q.explanation;}else{fb.textContent='Correct answer: '+q.answer+'. '+q.explanation;}});document.getElementById('score').textContent='Your score: '+score+' / '+questions.length;}
+function resetQuiz(){renderQuiz();document.getElementById('score').textContent='';}
+renderQuiz();
+</script></body></html>

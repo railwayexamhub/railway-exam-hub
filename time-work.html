@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time and Work | Railway Exam Hub</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 Arial,sans-serif;background:#f4f7fc;color:#17243b}
+header{background:#10264b;color:white;text-align:center;padding:22px 15px}main{max-width:950px;margin:auto;padding:16px}
+.card{background:white;padding:20px;margin:16px 0;border-radius:10px;box-shadow:0 2px 8px #dce3ed}
+h2{color:#10264b}h3{color:#174d83}.formula{background:#eef5ff;padding:12px;border-left:4px solid #1764a3;margin:12px 0}
+button{background:#1764a3;color:white;border:0;padding:11px 16px;border-radius:6px;cursor:pointer;margin:5px}
+.option{display:block;background:#f2f5fa;padding:10px;margin:8px 0;border-radius:6px}
+.feedback{margin:8px 0;padding:9px;background:#f3f6fa;border-radius:6px}a{color:#1764a3}footer{text-align:center;padding:20px;color:#667}
+</style></head><body>
+<header><h1>Time and Work</h1><p>RRB Group D Mathematics · Chapter 10</p></header>
+<main>
+<section class="card"><h2>About this chapter</h2><p>Work rates, combined work, efficiency and work completed in given time. This chapter page is designed for online revision and practice on Railway Exam Hub.</p></section>
+<section class="card"><h2>Key concepts and rules</h2><ul><li>If a person completes a job in x days, one-day work = 1/x.</li><li>Combined rate = sum of individual rates when working together.</li><li>Time = Total work ÷ Work rate.</li><li>Efficiency is inversely proportional to time for the same work.</li></ul></section>
+<section class="card"><h2>Important formulas and reminders</h2>
+<div class='formula'>If a person completes a job in x days, one-day work = 1/x.</div><div class='formula'>Combined rate = sum of individual rates when working together.</div><div class='formula'>Time = Total work ÷ Work rate.</div><div class='formula'>Efficiency is inversely proportional to time for the same work.</div>
+</section>
+<section class="card"><h2>Solved examples</h2><article class='example'><h3>Practice concept 1</h3><p>A completes a job in 10 days. What fraction is completed in one day?</p><p><strong>Answer: 1/10</strong></p><p>One-day work is the reciprocal of the total days: 1/10.</p></article><article class='example'><h3>Practice concept 2</h3><p>A can finish in 6 days and B in 3 days. Together, how many days?</p><p><strong>Answer: 2 days</strong></p><p>Combined rate = 1/6 + 1/3 = 1/2 job per day. Time = 2 days.</p></article><article class='example'><h3>Practice concept 3</h3><p>If 4 workers finish a job in 6 days, how many worker-days are needed?</p><p><strong>Answer: 24</strong></p><p>Worker-days = 4 × 6 = 24.</p></article></section>
+<section class="card"><h2>Practice MCQ quiz</h2><p>Choose an answer for each question, then submit to see your score and explanations.</p>
+<div id="quiz"></div><button onclick="gradeQuiz()">Submit answers</button><button onclick="resetQuiz()">Try again</button><div id="score" aria-live="polite"></div>
+</section>
+<section class="card"><h2>Chapter navigation</h2><p><a href="group-d.html">← Back to Group D Mathematics chapters</a></p></section>
+</main><footer>Railway Exam Hub · RRB Group D and NTPC Mathematics</footer>
+<script>
+const questions=[{"q": "A completes a job in 10 days. What fraction is completed in one day?", "options": ["1/5", "1/10", "1/20", "10"], "correct": 1, "answer": "1/10", "explanation": "One-day work is the reciprocal of the total days: 1/10."}, {"q": "A can finish in 6 days and B in 3 days. Together, how many days?", "options": ["1 day", "2 days", "3 days", "4 days"], "correct": 1, "answer": "2 days", "explanation": "Combined rate = 1/6 + 1/3 = 1/2 job per day. Time = 2 days."}, {"q": "If 4 workers finish a job in 6 days, how many worker-days are needed?", "options": ["10", "18", "24", "30"], "correct": 2, "answer": "24", "explanation": "Worker-days = 4 × 6 = 24."}];
+const quiz=document.getElementById('quiz');
+function renderQuiz(){quiz.innerHTML='';questions.forEach((q,i)=>{let box=document.createElement('div');box.className='formula';let h=document.createElement('strong');h.textContent=(i+1)+'. '+q.q;box.appendChild(h);q.options.forEach((opt,j)=>{let label=document.createElement('label');label.className='option';let input=document.createElement('input');input.type='radio';input.name='q'+i;input.value=j;label.appendChild(input);label.append(' '+opt);box.appendChild(label);});let fb=document.createElement('div');fb.id='fb'+i;fb.className='feedback';fb.hidden=true;box.appendChild(fb);quiz.appendChild(box);});}
+function gradeQuiz(){let score=0;questions.forEach((q,i)=>{let chosen=document.querySelector('input[name="q'+i+'"]:checked');let fb=document.getElementById('fb'+i);fb.hidden=false;if(chosen&&Number(chosen.value)===q.correct){score++;fb.textContent='Correct. '+q.explanation;}else{fb.textContent='Correct answer: '+q.answer+'. '+q.explanation;}});document.getElementById('score').textContent='Your score: '+score+' / '+questions.length;}
+function resetQuiz(){renderQuiz();document.getElementById('score').textContent='';}
+renderQuiz();
+</script></body></html>

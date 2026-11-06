@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problems on Ages | Railway Exam Hub</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 Arial,sans-serif;background:#f4f7fc;color:#17243b}
+header{background:#10264b;color:white;text-align:center;padding:22px 15px}main{max-width:950px;margin:auto;padding:16px}
+.card{background:white;padding:20px;margin:16px 0;border-radius:10px;box-shadow:0 2px 8px #dce3ed}
+h2{color:#10264b}h3{color:#174d83}.formula{background:#eef5ff;padding:12px;border-left:4px solid #1764a3;margin:12px 0}
+button{background:#1764a3;color:white;border:0;padding:11px 16px;border-radius:6px;cursor:pointer;margin:5px}
+.option{display:block;background:#f2f5fa;padding:10px;margin:8px 0;border-radius:6px}
+.feedback{margin:8px 0;padding:9px;background:#f3f6fa;border-radius:6px}a{color:#1764a3}footer{text-align:center;padding:20px;color:#667}
+</style></head><body>
+<header><h1>Problems on Ages</h1><p>RRB Group D Mathematics · Chapter 19</p></header>
+<main>
+<section class="card"><h2>About this chapter</h2><p>Present ages, age differences, past and future ages and equations. This chapter page is designed for online revision and practice on Railway Exam Hub.</p></section>
+<section class="card"><h2>Key concepts and rules</h2><ul><li>If present age is x, age after n years is x+n.</li><li>Age n years ago is x−n.</li><li>The age difference between two people remains constant.</li><li>Translate age statements into equations before solving.</li></ul></section>
+<section class="card"><h2>Important formulas and reminders</h2>
+<div class='formula'>If present age is x, age after n years is x+n.</div><div class='formula'>Age n years ago is x−n.</div><div class='formula'>The age difference between two people remains constant.</div><div class='formula'>Translate age statements into equations before solving.</div>
+</section>
+<section class="card"><h2>Solved examples</h2><article class='example'><h3>Practice concept 1</h3><p>A person&#x27;s present age is 20. What will it be after 5 years?</p><p><strong>Answer: 25 years</strong></p><p>Future age = 20 + 5 = 25 years.</p></article><article class='example'><h3>Practice concept 2</h3><p>A father is 40 and his son is 10. What is their age difference?</p><p><strong>Answer: 30 years</strong></p><p>Difference = 40 − 10 = 30 years.</p></article><article class='example'><h3>Practice concept 3</h3><p>A person was 18 years old 4 years ago. Present age?</p><p><strong>Answer: 22 years</strong></p><p>Present age = 18 + 4 = 22 years.</p></article></section>
+<section class="card"><h2>Practice MCQ quiz</h2><p>Choose an answer for each question, then submit to see your score and explanations.</p>
+<div id="quiz"></div><button onclick="gradeQuiz()">Submit answers</button><button onclick="resetQuiz()">Try again</button><div id="score" aria-live="polite"></div>
+</section>
+<section class="card"><h2>Chapter navigation</h2><p><a href="group-d.html">← Back to Group D Mathematics chapters</a></p></section>
+</main><footer>Railway Exam Hub · RRB Group D and NTPC Mathematics</footer>
+<script>
+const questions=[{"q": "A person's present age is 20. What will it be after 5 years?", "options": ["15 years", "20 years", "25 years", "30 years"], "correct": 2, "answer": "25 years", "explanation": "Future age = 20 + 5 = 25 years."}, {"q": "A father is 40 and his son is 10. What is their age difference?", "options": ["20 years", "25 years", "30 years", "50 years"], "correct": 2, "answer": "30 years", "explanation": "Difference = 40 − 10 = 30 years."}, {"q": "A person was 18 years old 4 years ago. Present age?", "options": ["14 years", "18 years", "20 years", "22 years"], "correct": 3, "answer": "22 years", "explanation": "Present age = 18 + 4 = 22 years."}];
+const quiz=document.getElementById('quiz');
+function renderQuiz(){quiz.innerHTML='';questions.forEach((q,i)=>{let box=document.createElement('div');box.className='formula';let h=document.createElement('strong');h.textContent=(i+1)+'. '+q.q;box.appendChild(h);q.options.forEach((opt,j)=>{let label=document.createElement('label');label.className='option';let input=document.createElement('input');input.type='radio';input.name='q'+i;input.value=j;label.appendChild(input);label.append(' '+opt);box.appendChild(label);});let fb=document.createElement('div');fb.id='fb'+i;fb.className='feedback';fb.hidden=true;box.appendChild(fb);quiz.appendChild(box);});}
+function gradeQuiz(){let score=0;questions.forEach((q,i)=>{let chosen=document.querySelector('input[name="q'+i+'"]:checked');let fb=document.getElementById('fb'+i);fb.hidden=false;if(chosen&&Number(chosen.value)===q.correct){score++;fb.textContent='Correct. '+q.explanation;}else{fb.textContent='Correct answer: '+q.answer+'. '+q.explanation;}});document.getElementById('score').textContent='Your score: '+score+' / '+questions.length;}
+function resetQuiz(){renderQuiz();document.getElementById('score').textContent='';}
+renderQuiz();
+</script></body></html>
