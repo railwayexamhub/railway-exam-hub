@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BODMAS and Simplification | Railway Exam Hub</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fc;color:#17243b;line-height:1.6}
+header{background:#10264b;color:white;padding:18px;text-align:center}
+main{max-width:950px;margin:auto;padding:20px}
+.card{background:white;padding:20px;margin:15px 0;border-radius:10px;box-shadow:0 2px 8px #ddd}
+h2{color:#10264b}
+h3{color:#174d83}
+.formula{background:#eef5ff;padding:12px;border-left:4px solid #1764a3;margin:12px 0}
+button{background:#1764a3;color:white;border:0;padding:10px 16px;border-radius:6px;cursor:pointer;margin:5px}
+button:hover{background:#10264b}
+.option{display:block;background:#f2f5fa;padding:10px;margin:7px 0;border-radius:6px;cursor:pointer}
+.correct{background:#d7f5df}
+.wrong{background:#ffe0e0}
+#result{font-weight:bold;margin-top:12px}
+a{color:#1764a3}
+footer{text-align:center;padding:20px;color:#666}
+</style>
+</head>
+<body>
+
+<header>
+<h1>BODMAS and Simplification</h1>
+<p>RRB Group D Mathematics – Chapter 2</p>
+</header>
+
+<main>
+
+<div class="card">
+<h2>1. Introduction</h2>
+<p>Simplification means reducing a mathematical expression into its simplest form by following the correct order of operations.</p>
+<p>BODMAS helps us solve expressions without making mistakes.</p>
+</div>
+
+<div class="card">
+<h2>2. BODMAS Rule</h2>
+<div class="formula">
+<strong>B – Brackets</strong><br>
+<strong>O – Orders</strong> (Powers and Roots)<br>
+<strong>D – Division</strong><br>
+<strong>M – Multiplication</strong><br>
+<strong>A – Addition</strong><br>
+<strong>S – Subtraction</strong>
+</div>
+<p>Important: Division and multiplication have equal priority. Solve from left to right. Addition and subtraction also have equal priority and are solved from left to right.</p>
+</div>
+
+<div class="card">
+<h2>3. Types of Brackets</h2>
+<ul>
+<li>( ) – Small brackets or parentheses</li>
+<li>{ } – Curly brackets</li>
+<li>[ ] – Square brackets</li>
+</ul>
+<p>Solve the innermost brackets first.</p>
+</div>
+
+<div class="card">
+<h2>4. Important Rules</h2>
+<div class="formula">a + 0 = a</div>
+<div class="formula">a × 1 = a</div>
+<div class="formula">a × 0 = 0</div>
+<div class="formula">a ÷ 1 = a</div>
+<div class="formula">a - a = 0</div>
+<div class="formula">a² = a × a</div>
+</div>
+
+<div class="card">
+<h2>5. Solved Examples</h2>
+
+<h3>Example 1</h3>
+<p>Solve: 20 + 12 ÷ 4 × 2</p>
+<p>Step 1: Division and multiplication from left to right.</p>
+<p>= 20 + 3 × 2</p>
+<p>= 20 + 6</p>
+<strong>Answer = 26</strong>
+
+<h3>Example 2</h3>
+<p>Solve: 50 - (12 + 8) ÷ 4</p>
+<p>= 50 - 20 ÷ 4</p>
+<p>= 50 - 5</p>
+<strong>Answer = 45</strong>
+
+<h3>Example 3</h3>
+<p>Solve: 5² + 24 ÷ 6</p>
+<p>= 25 + 4</p>
+<strong>Answer = 29</strong>
+
+<h3>Example 4</h3>
+<p>Solve: 100 ÷ [5 × (2 + 3)]</p>
+<p>= 100 ÷ [5 × 5]</p>
+<p>= 100 ÷ 25</p>
+<strong>Answer = 4</strong>
+</div>
+
+<div class="card">
+<h2>6. Practice Questions – Railway Group D</h2>
+<p>Select the correct answer. Press Submit to check your result.</p>
+
+<div id="quiz"></div>
+<button onclick="checkAnswers()">Submit Answers</button>
+<button onclick="location.reload()">Restart Quiz</button>
+<div id="result"></div>
+</div>
+
+<div class="card">
+<h2>7. Quick Revision</h2>
+<ul>
+<li>Always solve brackets first.</li>
+<li>Solve powers and roots next.</li>
+<li>Division and multiplication: left to right.</li>
+<li>Addition and subtraction: left to right.</li>
+<li>Never solve strictly from left to right when operations have different priorities.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Chapter Navigation</h2>
+<a href="group-d.html">← Back to Mathematics Chapters</a>
+</div>
+
+</main>
+
+<footer>
+<p>Railway Exam Hub | RRB Group D Preparation</p>
+</footer>
+
+<script>
+const questions = [
+{q:"15 + 25 ÷ 5 × 2 = ?",o:["16","25","20","30"],a:1},
+{q:"40 - 12 ÷ 3 = ?",o:["36","28","24","32"],a:0},
+{q:"(15 + 5) × 3 = ?",o:["50","60","45","55"],a:1},
+{q:"100 ÷ 10 × 5 = ?",o:["2","20","50","100"],a:2},
+{q:"8² - 24 ÷ 6 = ?",o:["60","64","56","52"],a:2},
+{q:"50 + 30 - 20 = ?",o:["40","50","60","70"],a:2},
+{q:"72 ÷ (6 × 2) = ?",o:["6","12","8","9"],a:0},
+{q:"25 × 4 ÷ 10 = ?",o:["5","10","15","20"],a:1},
+{q:"100 - [20 + (10 × 2)] = ?",o:["40","50","60","70"],a:2},
+{q:"(36 ÷ 6) + (8 × 2) = ?",o:["18","20","22","24"],a:1}
+];
+
+const quiz = document.getElementById("quiz");
+
+questions.forEach((q,i)=>{
+let html = `<div class="formula"><strong>${i+1}. ${q.q}</strong>`;
+q.o.forEach((op,j)=>{
+html += `<label class="option"><input type="radio" name="q${i}" value="${j}"> ${op}</label>`;
+});
+html += `</div>`;
+quiz.innerHTML += html;
+});
+
+function checkAnswers(){
+let score=0;
+questions.forEach((q,i)=>{
+let selected=document.querySelector(`input[name="q${i}"]:checked`);
+if(selected && Number(selected.value)===q.a) score++;
+});
+document.getElementById("result").innerText =
+"Your Score: "+score+" / "+questions.length;
+}
+</script>
+
+</body>
+</html>
