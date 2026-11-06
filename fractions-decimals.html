@@ -1,33 +1,189 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Fractions and Decimals study notes, worked examples and practice quiz for RRB Group D Mathematics.">
 <title>Fractions and Decimals | Railway Exam Hub</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font:16px/1.6 Arial,sans-serif;background:#f4f7fc;color:#17243b}
-header{background:#10264b;color:white;text-align:center;padding:22px 15px}main{max-width:950px;margin:auto;padding:16px}
-.card{background:white;padding:20px;margin:16px 0;border-radius:10px;box-shadow:0 2px 8px #dce3ed}
-h2{color:#10264b}h3{color:#174d83}.formula{background:#eef5ff;padding:12px;border-left:4px solid #1764a3;margin:12px 0}
-button{background:#1764a3;color:white;border:0;padding:11px 16px;border-radius:6px;cursor:pointer;margin:5px}
-.option{display:block;background:#f2f5fa;padding:10px;margin:8px 0;border-radius:6px}
-.feedback{margin:8px 0;padding:9px;background:#f3f6fa;border-radius:6px}a{color:#1764a3}footer{text-align:center;padding:20px;color:#667}
-</style></head><body>
-<header><h1>Fractions and Decimals</h1><p>RRB Group D Mathematics · Chapter 04</p></header>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f7fc;color:#243247;line-height:1.65}
+header{background:linear-gradient(120deg,#102a4c,#174d78);color:#fff;padding:38px 18px;text-align:center}
+header h1{margin:0 0 8px;font-size:clamp(27px,5vw,40px)}header p{margin:0;color:#e5eff8}
+main{max-width:960px;margin:26px auto;padding:0 16px}.card{background:#fff;border:1px solid #e0e8f1;border-radius:14px;padding:22px;margin:18px 0;box-shadow:0 3px 12px rgba(20,50,80,.05)}
+h2{color:#174d78;margin:0 0 14px;font-size:23px}h3{color:#23628d;margin:18px 0 8px;font-size:18px}
+.callout{border-left:4px solid #3186b7;background:#f0f7fc;padding:12px 15px;margin:12px 0;border-radius:5px}
+.formula{font-weight:bold;color:#153e63;background:#f3f7fb;padding:10px 13px;border-radius:7px;margin:8px 0}
+.example{border-top:1px solid #e7edf3;padding:12px 0}.answer{font-weight:bold;color:#17633e}
+.question{border-left:4px solid #3186b7;background:#fbfdff;padding:14px;margin:14px 0;border-radius:6px}
+.option{display:block;padding:5px 0;cursor:pointer}.option input{margin-right:8px}
+button{background:#1976ad;color:#fff;border:0;border-radius:8px;padding:11px 18px;font-size:15px;cursor:pointer;margin:8px 8px 0 0}button:hover{background:#125d8a}
+#result{font-weight:bold;margin-top:14px;padding:12px;border-radius:8px;background:#edf6fc}
+nav a{color:#176da4}footer{text-align:center;color:#68788b;padding:22px;font-size:14px}
+@media(max-width:600px){.card{padding:17px}header{padding:30px 14px}}
+</style>
+</head>
+<body>
+<header>
+<h1>Fractions and Decimals</h1>
+<p>RRB Group D Mathematics • Chapter 4</p>
+</header>
 <main>
-<section class="card"><h2>About this chapter</h2><p>Types of fractions, equivalent fractions, operations, recurring decimals and conversions. This chapter page is designed for online revision and practice on Railway Exam Hub.</p></section>
-<section class="card"><h2>Key concepts and rules</h2><ul><li>To add or subtract fractions, use a common denominator.</li><li>Multiply fractions by multiplying numerators and denominators.</li><li>Divide by a fraction by multiplying by its reciprocal.</li><li>To convert a terminating decimal to a fraction, write it over 10, 100, 1000, etc., then simplify.</li><li>A recurring decimal can be converted to a fraction using place-value algebra.</li></ul></section>
-<section class="card"><h2>Important formulas and reminders</h2>
-<div class='formula'>To add or subtract fractions, use a common denominator.</div><div class='formula'>Multiply fractions by multiplying numerators and denominators.</div><div class='formula'>Divide by a fraction by multiplying by its reciprocal.</div><div class='formula'>To convert a terminating decimal to a fraction, write it over 10, 100, 1000, etc., then simplify.</div><div class='formula'>A recurring decimal can be converted to a fraction using place-value algebra.</div>
+<section class="card">
+<h2>About this chapter</h2>
+<p>Learn how to compare, simplify and calculate with fractions and decimals. These skills are useful in arithmetic questions involving quantities, money, measurements, percentages and ratios.</p>
+<div class="callout"><strong>Study order:</strong> Understand fractions → practise operations → convert fractions and decimals → solve mixed questions.</div>
 </section>
-<section class="card"><h2>Solved examples</h2><article class='example'><h3>Practice concept 1</h3><p>What is 1/2 + 1/4?</p><p><strong>Answer: 3/4</strong></p><p>Use denominator 4: 1/2 = 2/4. Then 2/4 + 1/4 = 3/4.</p></article><article class='example'><h3>Practice concept 2</h3><p>Convert 0.75 into a fraction in simplest form.</p><p><strong>Answer: 3/4</strong></p><p>0.75 = 75/100. Divide numerator and denominator by 25 to get 3/4.</p></article><article class='example'><h3>Practice concept 3</h3><p>Find 2/3 × 3/5.</p><p><strong>Answer: 2/5</strong></p><p>Multiply: (2 × 3)/(3 × 5). Cancel 3 to obtain 2/5.</p></article></section>
-<section class="card"><h2>Practice MCQ quiz</h2><p>Choose an answer for each question, then submit to see your score and explanations.</p>
-<div id="quiz"></div><button onclick="gradeQuiz()">Submit answers</button><button onclick="resetQuiz()">Try again</button><div id="score" aria-live="polite"></div>
+
+<section class="card">
+<h2>1. Key concepts</h2>
+<ul>
+<li><strong>Numerator:</strong> the number above the fraction bar.</li>
+<li><strong>Denominator:</strong> the number below the fraction bar; it cannot be zero.</li>
+<li><strong>Proper fraction:</strong> numerator is smaller than denominator, for example 3/5.</li>
+<li><strong>Improper fraction:</strong> numerator is equal to or greater than denominator, for example 7/4.</li>
+<li><strong>Mixed number:</strong> a whole number and a proper fraction, for example 1 3/4.</li>
+<li><strong>Equivalent fractions:</strong> fractions with the same value, such as 1/2 and 2/4.</li>
+<li><strong>Like fractions:</strong> fractions with the same denominator.</li>
+<li><strong>Terminating decimal:</strong> a decimal that ends, such as 0.25.</li>
+</ul>
 </section>
-<section class="card"><h2>Chapter navigation</h2><p><a href="group-d.html">← Back to Group D Mathematics chapters</a></p></section>
-</main><footer>Railway Exam Hub · RRB Group D and NTPC Mathematics</footer>
+
+<section class="card">
+<h2>2. Important rules and formulas</h2>
+<div class="formula">Equivalent fraction: a/b = (a × n)/(b × n), where n ≠ 0</div>
+<div class="formula">Addition: a/b + c/d = (ad + bc)/bd</div>
+<div class="formula">Subtraction: a/b − c/d = (ad − bc)/bd</div>
+<div class="formula">Multiplication: a/b × c/d = ac/bd</div>
+<div class="formula">Division: a/b ÷ c/d = a/b × d/c, where c ≠ 0</div>
+<div class="formula">Fraction to percentage = fraction × 100%</div>
+<div class="formula">Decimal to percentage = decimal × 100%</div>
+<div class="formula">Percentage to decimal = percentage ÷ 100</div>
+<div class="callout"><strong>Remember:</strong> For addition or subtraction, first make the denominators equal. For multiplication, multiply numerators and denominators. For division, invert the second fraction and multiply.</div>
+</section>
+
+<section class="card">
+<h2>3. Fraction operations</h2>
+<h3>Addition with unlike denominators</h3>
+<p>Find the LCM of the denominators, convert both fractions to equivalent fractions, then add the numerators.</p>
+<h3>Simplification</h3>
+<p>Divide the numerator and denominator by their greatest common factor (HCF) until the fraction is in its lowest terms.</p>
+<h3>Mixed numbers</h3>
+<p>Convert a mixed number to an improper fraction before multiplying or dividing. For example, 2 1/3 = (2 × 3 + 1)/3 = 7/3.</p>
+</section>
+
+<section class="card">
+<h2>4. Decimal operations and conversions</h2>
+<ul>
+<li>To add or subtract decimals, align the decimal points and then calculate.</li>
+<li>To multiply decimals, multiply as whole numbers first, then place the decimal point using the total number of decimal places in the factors.</li>
+<li>To divide by a decimal, move the decimal point in both numbers the same number of places until the divisor is a whole number.</li>
+<li>To convert a terminating decimal to a fraction, write it over 10, 100, 1000, etc., and simplify.</li>
+</ul>
+<div class="formula">0.6 = 6/10 = 3/5</div>
+<div class="formula">3/8 = 0.375</div>
+<div class="formula">0.45 = 45/100 = 9/20</div>
+</section>
+
+<section class="card">
+<h2>5. Solved examples</h2>
+<div class="example"><h3>Example 1: Add 2/3 and 1/4</h3><p>LCM of 3 and 4 is 12. Therefore, 2/3 = 8/12 and 1/4 = 3/12.</p><p class="answer">Answer: 8/12 + 3/12 = 11/12.</p></div>
+<div class="example"><h3>Example 2: Subtract 5/6 − 1/3</h3><p>Convert 1/3 to 2/6. Then 5/6 − 2/6 = 3/6.</p><p class="answer">Answer: 1/2.</p></div>
+<div class="example"><h3>Example 3: Multiply 3/5 × 10/9</h3><p>Multiply: (3 × 10)/(5 × 9) = 30/45. Simplify by 15.</p><p class="answer">Answer: 2/3.</p></div>
+<div class="example"><h3>Example 4: Divide 4/7 by 2/3</h3><p>Invert the second fraction: 4/7 × 3/2 = 12/14.</p><p class="answer">Answer: 6/7.</p></div>
+<div class="example"><h3>Example 5: Convert 2 3/5 to an improper fraction</h3><p>(2 × 5 + 3)/5 = 13/5.</p><p class="answer">Answer: 13/5.</p></div>
+<div class="example"><h3>Example 6: Convert 0.375 to a fraction</h3><p>0.375 = 375/1000. Divide numerator and denominator by 125.</p><p class="answer">Answer: 3/8.</p></div>
+<div class="example"><h3>Example 7: Convert 7/20 to a decimal</h3><p>7 ÷ 20 = 0.35.</p><p class="answer">Answer: 0.35.</p></div>
+<div class="example"><h3>Example 8: Find 0.4 + 1.25</h3><p>Write 0.4 as 0.40, then add 0.40 + 1.25.</p><p class="answer">Answer: 1.65.</p></div>
+<div class="example"><h3>Example 9: Find 2.4 × 0.5</h3><p>24 × 5 = 120. There are two decimal places in total.</p><p class="answer">Answer: 1.20 = 1.2.</p></div>
+<div class="example"><h3>Example 10: Find 3/4 of 80</h3><p>(3/4) × 80 = 3 × 20.</p><p class="answer">Answer: 60.</p></div>
+</section>
+
+<section class="card">
+<h2>6. Exam tips and common mistakes</h2>
+<ul>
+<li>Never add denominators directly when adding fractions.</li>
+<li>Always simplify the final fraction if possible.</li>
+<li>In division, invert only the second fraction.</li>
+<li>When comparing positive fractions, cross-multiplication can help: compare a × d with c × b for a/b and c/d.</li>
+<li>Keep decimal points aligned in addition and subtraction.</li>
+<li>Estimate the answer to check whether the result is reasonable.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>7. Practice MCQ quiz</h2>
+<p>Choose one answer for each question, then submit to see your score and explanations.</p>
+<form id="quiz">
+<div id="questions"></div>
+<button type="button" onclick="gradeQuiz()">Submit answers</button>
+<button type="button" onclick="resetQuiz()">Try again</button>
+</form>
+<div id="result" aria-live="polite" hidden></div>
+</section>
+
+<section class="card">
+<h2>Chapter navigation</h2>
+<p><a href="group-d.html#mathematics">← Back to Group D Mathematics chapters</a></p>
+<p><a href="ratio-proportion.html">Next chapter: Ratio and Proportion →</a></p>
+</section>
+</main>
+<footer>Railway Exam Hub • RRB Group D Mathematics</footer>
 <script>
-const questions=[{"q": "What is 1/2 + 1/4?", "options": ["1/4", "2/6", "3/4", "1"], "correct": 2, "answer": "3/4", "explanation": "Use denominator 4: 1/2 = 2/4. Then 2/4 + 1/4 = 3/4."}, {"q": "Convert 0.75 into a fraction in simplest form.", "options": ["1/4", "2/3", "3/4", "7/5"], "correct": 2, "answer": "3/4", "explanation": "0.75 = 75/100. Divide numerator and denominator by 25 to get 3/4."}, {"q": "Find 2/3 × 3/5.", "options": ["1/5", "2/5", "5/2", "6/8"], "correct": 1, "answer": "2/5", "explanation": "Multiply: (2 × 3)/(3 × 5). Cancel 3 to obtain 2/5."}];
-const quiz=document.getElementById('quiz');
-function renderQuiz(){quiz.innerHTML='';questions.forEach((q,i)=>{let box=document.createElement('div');box.className='formula';let h=document.createElement('strong');h.textContent=(i+1)+'. '+q.q;box.appendChild(h);q.options.forEach((opt,j)=>{let label=document.createElement('label');label.className='option';let input=document.createElement('input');input.type='radio';input.name='q'+i;input.value=j;label.appendChild(input);label.append(' '+opt);box.appendChild(label);});let fb=document.createElement('div');fb.id='fb'+i;fb.className='feedback';fb.hidden=true;box.appendChild(fb);quiz.appendChild(box);});}
-function gradeQuiz(){let score=0;questions.forEach((q,i)=>{let chosen=document.querySelector('input[name="q'+i+'"]:checked');let fb=document.getElementById('fb'+i);fb.hidden=false;if(chosen&&Number(chosen.value)===q.correct){score++;fb.textContent='Correct. '+q.explanation;}else{fb.textContent='Correct answer: '+q.answer+'. '+q.explanation;}});document.getElementById('score').textContent='Your score: '+score+' / '+questions.length;}
-function resetQuiz(){renderQuiz();document.getElementById('score').textContent='';}
-renderQuiz();
-</script></body></html>
+const quiz = [
+{q:"What is the simplest form of 12/18?",o:["2/3","3/4","4/5","6/9"],a:0,e:"The HCF of 12 and 18 is 6. Divide both by 6 to get 2/3."},
+{q:"Find 1/2 + 1/3.",o:["2/5","5/6","1/6","3/6"],a:1,e:"The LCM of 2 and 3 is 6. So 3/6 + 2/6 = 5/6."},
+{q:"Find 3/4 − 1/8.",o:["1/8","2/8","5/8","7/8"],a:2,e:"3/4 = 6/8. Then 6/8 − 1/8 = 5/8."},
+{q:"Find 2/5 × 15/4.",o:["3/2","2/3","5/4","6/5"],a:0,e:"(2 × 15)/(5 × 4) = 30/20 = 3/2."},
+{q:"Find 3/7 ÷ 6/14.",o:["1/2","1","2","3/4"],a:1,e:"3/7 × 14/6 = 42/42 = 1."},
+{q:"Convert 0.25 into a fraction in lowest terms.",o:["1/2","1/4","2/5","25/10"],a:1,e:"0.25 = 25/100 = 1/4."},
+{q:"Convert 3/5 into a decimal.",o:["0.3","0.5","0.6","0.8"],a:2,e:"3 ÷ 5 = 0.6."},
+{q:"Convert 0.8 into a percentage.",o:["8%","18%","80%","800%"],a:2,e:"0.8 × 100 = 80%."},
+{q:"Which is the greatest fraction?",o:["2/3","3/5","5/8","1/2"],a:0,e:"2/3 ≈ 0.667, which is greater than 0.6, 0.625 and 0.5."},
+{q:"Convert 1 2/3 into an improper fraction.",o:["3/5","5/3","4/3","7/3"],a:1,e:"(1 × 3 + 2)/3 = 5/3."},
+{q:"Find 0.7 + 0.08.",o:["0.15","0.78","0.708","0.87"],a:1,e:"0.70 + 0.08 = 0.78."},
+{q:"Find 2.5 − 0.75.",o:["1.25","1.5","1.75","2.25"],a:2,e:"2.50 − 0.75 = 1.75."},
+{q:"Find 0.6 × 0.4.",o:["2.4","0.24","0.024","1.0"],a:1,e:"6 × 4 = 24. Place two decimal places: 0.24."},
+{q:"Find 1.2 ÷ 0.3.",o:["0.4","4","40","3"],a:1,e:"1.2 ÷ 0.3 = 12 ÷ 3 = 4."},
+{q:"What is 3/8 as a percentage?",o:["30%","35%","37.5%","38%"],a:2,e:"3/8 × 100 = 37.5%."},
+{q:"Find 2/3 of  ninety.",o:["30","45","60","75"],a:2,e:"2/3 × 90 = 2 × 30 = 60."},
+{q:"Which fraction is equivalent to 4/7?",o:["8/21","12/21","16/21","4/14"],a:1,e:"Multiply numerator and denominator by 3: 4/7 = 12/21."},
+{q:"The denominator of a fraction can be:",o:["Zero","Any non-zero number","Only one","Always negative"],a:1,e:"A fraction's denominator must not be zero."},
+{q:"Convert 45/100 into a decimal.",o:["4.5","0.045","0.45","45.0"],a:2,e:"45/100 = 0.45."},
+{q:"Find the HCF of 24 and 36 to simplify 24/36.",o:["4","6","12","18"],a:2,e:"The HCF is 12. Dividing both terms by 12 gives 2/3."},
+{q:"Find 5/6 + 1/6.",o:["1","5/12","6/12","2"],a:0,e:"The denominators are equal: (5 + 1)/6 = 6/6 = 1."},
+{q:"Find 7/10 − 2/5.",o:["1/10","2/10","3/10","5/10"],a:2,e:"2/5 = 4/10. Then 7/10 − 4/10 = 3/10."},
+{q:"A value is 0.125. What is it as a fraction in lowest terms?",o:["1/4","1/8","1/5","1/10"],a:1,e:"0.125 = 125/1000 = 1/8."},
+{q:"Find 25% of 64.",o:["8","12","16","20"],a:2,e:"25% = 1/4. One-fourth of 64 is 16."},
+{q:"A bottle contains 3/4 litre. How much is this in millilitres?",o:["250 ml","500 ml","750 ml","900 ml"],a:2,e:"1 litre = 1000 ml. 3/4 × 1000 = 750 ml."}
+];
+const host=document.getElementById("questions");
+quiz.forEach((item,i)=>{
+ const box=document.createElement("div");box.className="question";
+ const title=document.createElement("strong");title.textContent=(i+1)+". "+item.q;box.appendChild(title);
+ item.o.forEach((opt,j)=>{
+  const label=document.createElement("label");label.className="option";
+  const radio=document.createElement("input");radio.type="radio";radio.name="q"+i;radio.value=j;
+  label.appendChild(radio);label.appendChild(document.createTextNode(opt));box.appendChild(label);
+ });
+ host.appendChild(box);
+});
+function gradeQuiz(){
+ let score=0,details=[];
+ quiz.forEach((item,i)=>{
+  const selected=document.querySelector('input[name="q'+i+'"]:checked');
+  const ok=selected && Number(selected.value)===item.a;
+  if(ok)score++;
+  details.push((i+1)+". "+(ok?"Correct. ":"Incorrect. Correct answer: "+item.o[item.a]+". ")+item.e);
+ });
+ const result=document.getElementById("result");result.hidden=false;
+ result.innerHTML="<strong>Your score: "+score+" / "+quiz.length+"</strong><br><br>"+details.map(x=>"<div style='margin:8px 0'>"+x+"</div>").join("");
+ result.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function resetQuiz(){
+ document.getElementById("quiz").reset();
+ const result=document.getElementById("result");result.hidden=true;result.innerHTML="";
+ window.scrollTo({top:document.querySelector("h2").offsetTop,behavior:"smooth"});
+}
+</script>
+</body>
+</html>
