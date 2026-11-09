@@ -1,48 +1,69 @@
 import os
 import json
 import re
+import html
 import urllib.request
-import urllib.parse
+import urllib.error
 import xml.etree.ElementTree as ET
+
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from pathlib import Path
 
+# Railway Exam Hub configuration
+
 IST = ZoneInfo("Asia/Kolkata")
+
+MODEL = "gemini-3.5-flash-lite"
 
 PIB_FEED = (
     "https://pib.gov.in/RssMain.aspx"
     "?ModId=6&Lang=1&Regid=3"
 )
 
-MODEL = "gemini-3.5-flash-lite"
 
 def fetch_news():
+
+    print("Collecting official PIB news...")
+
     request = urllib.request.Request(
         PIB_FEED,
-        headers={"User-Agent": "RailwayExamHub/1.0"}
+        headers={
+            "User-Agent": "RailwayExamHub/1.0"
+        }
     )
 
-    with urllib.request.urlopen(request, timeout=30) as response:
+    with urllib.request.urlopen(
+        request, timeout=30
+    ) as response:
+
         root = ET.fromstring(response.read())
 
     articles = []
     seen = set()
 
     for item in root.findall(".//item"):
+
         title = item.findtext("title", "").strip()
         link = item.findtext("link", "").strip()
-        description = item.findtext("description", "").strip()
+
+        description = item.findtext(
+            "description", ""
+        ).strip()
+
         pub_date = item.findtext("pubDate", "")
 
-        if not title or not link or link in seen:
+        if not title or not link:
+            continue
+
+        if link in seen:
             continue
 
         seen.add(link)
 
-        description = re.sub(
-            r"<[^>]+>", " ", description
-        ).strip()
+        description = html.unescape(
+            re.sub(r"<[^>]+>", " ", description)
+        )
 
         articles.append({
             "title": title,
@@ -52,34 +73,63 @@ def fetch_news():
             "published": pub_date
         })
 
+    print("News collected:", len(articles))
+
     return articles[:30]
 
 
 def generate_with_gemini(articles):
+
     api_key = os.environ.get("GEMINI_API_KEY")
 
     if not api_key:
-        print("Gemini key unavailable. Saving news only.")
+        print("Gemini API key unavailable.")
         return None
 
+    if not articles:
+        print("No news available for Gemini.")
+        return None
+
+    print("Sending selected news to Gemini...")
+
     prompt = """
-You are an educational content assistant for Indian
-Railway recruitment examinations.
+You are a professional Indian Railway examination
+current affairs content creator.
+
+Prepare educational material for:
+
+RRB Group D
+RRB NTPC
+RRB ALP
+RRB Technician
+RRB JE
+Station Master
 
 Use ONLY the supplied news articles.
 
-Create:
+Create the following:
+
 1. Important current affairs summaries.
-2. Exactly 20 MCQs if sufficient facts exist.
+2. Up to 20 multiple-choice questions.
 3. Four options per question.
-4. Correct answer and short explanation.
-5. Original source URL for each question.
+4. Correct answer.
+5. Short explanation.
+6. Original source URL.
 
-Do not invent facts, dates, statistics or events.
-Do not use outside knowledge to fill missing facts.
-If information is insufficient, create fewer questions.
+Questions must be factually correct.
 
-Return valid JSON only, in this structure:
+IMPORTANT RULES:
+
+- Never invent news or statistics.
+- Never invent dates or government schemes.
+- Do not use facts absent from the supplied news.
+- Do not create duplicate questions.
+- If there is insufficient information,
+  create fewer questions.
+- Keep source URLs for verification.
+
+Return valid JSON only:
+
 {
   "summary": [],
   "questions": [
@@ -93,19 +143,28 @@ Return valid JSON only, in this structure:
   ]
 }
 
-NEWS:
-""" + json.dumps(articles, ensure_ascii=False)
+NEWS ARTICLES:
+
+""" + json.dumps(
+        articles,
+        ensure_ascii=False
+    )
 
     url = (
-        "https://generativelanguage.googleapis.com/v1beta/"
-        "models/" + MODEL + ":generateContent?"
-        + urllib.parse.urlencode({"key": api_key})
+        "https://generativelanguage.googleapis.com/"
+        "v1beta/models/"
+        + MODEL
+        + ":generateContent"
     )
 
     payload = {
-        "contents": [{
-            "parts": [{"text": prompt}]
-        }],
+        "contents": [
+            {
+                "parts": [
+                    {"text": prompt}
+                ]
+            }
+        ],
         "generationConfig": {
             "temperature": 0.2,
             "responseMimeType": "application/json",
@@ -116,37 +175,59 @@ NEWS:
     request = urllib.request.Request(
         url,
         data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
+        headers={
+            "Content-Type": "application/json",
+            "x-goog-api-key": api_key
+        },
         method="POST"
     )
 
-    with urllib.request.urlopen(request, timeout=90) as response:
+    with urllib.request.urlopen(
+        request, timeout=90
+    ) as response:
+
         result = json.loads(response.read())
 
-    text = result["candidates"][0]["content"]["parts"][0]["text"]
+    response_text = (
+        result["candidates"][0]
+        ["content"]["parts"][0]["text"]
+    )
 
-    return json.loads(text)
+    generated = json.loads(response_text)
+
+    questions = generated.get("questions", [])
+
+    valid_questions = []
+
+    for question in questions:
+
+        options = question.get("options", [])
+
+        if (
+            question.get("question")
+            and len(options) == 4
+            and question.get("answer")
+            and question.get("explanation")
+            and question.get("source_url")
+        ):
+            valid_questions.append(question)
+
+    generated["questions"] = valid_questions[:20]
+
+    print(
+        "Gemini generated questions:",
+        len(valid_questions)
+    )
+
+    return generated
 
 
-def main():
+def save_data(articles, ai_content):
+
     now = datetime.now(IST)
 
-    print("Railway Exam Hub: Daily Current Affairs")
-    print("Date:", now.strftime("%d-%m-%Y"))
-
-    articles = fetch_news()
-    print("Articles collected:", len(articles))
-
-    ai_content = None
-
-    try:
-        ai_content = generate_with_gemini(articles)
-        print("Gemini generation completed.")
-    except Exception as error:
-        print("Gemini unavailable:", str(error))
-        print("Continuing with collected news.")
-
     output = {
+        "website": "Railway Exam Hub",
         "date": now.strftime("%Y-%m-%d"),
         "updated": now.isoformat(),
         "source": "PIB",
@@ -156,17 +237,59 @@ def main():
     }
 
     folder = Path("current-affairs-data")
+
     folder.mkdir(exist_ok=True)
 
     output_file = folder / "daily.json"
 
     output_file.write_text(
-        json.dumps(output, ensure_ascii=False, indent=2),
+        json.dumps(
+            output,
+            ensure_ascii=False,
+            indent=2
+        ),
         encoding="utf-8"
     )
 
-    print("Saved:", output_file)
+    print("Daily data saved:", output_file)
+
+
+def main():
+
+    print("--------------------------------")
+    print("RAILWAY EXAM HUB")
+    print("DAILY CURRENT AFFAIRS")
+    print("--------------------------------")
+
+    now = datetime.now(IST)
+
+    print("Date:", now.strftime("%d-%m-%Y"))
+
+    articles = fetch_news()
+
+    ai_content = None
+
+    try:
+
+        ai_content = generate_with_gemini(
+            articles
+        )
+
+        print("Gemini processing completed.")
+
+    except Exception as error:
+
+        print("Gemini unavailable:", str(error))
+
+        print(
+            "Using Python news collection backup."
+        )
+
+    save_data(articles, ai_content)
+
+    print("Automation completed.")
 
 
 if __name__ == "__main__":
+
     main()
