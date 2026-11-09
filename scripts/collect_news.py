@@ -18,7 +18,7 @@ MODEL = "gemini-3.5-flash-lite"
 
 PIB_FEED = (
     "https://pib.gov.in/RssMain.aspx"
-    "?ModId=6&Lang=1&Regid=3"
+    "?ModId=6&Lang=1&Regid=1"
 )
 
 
