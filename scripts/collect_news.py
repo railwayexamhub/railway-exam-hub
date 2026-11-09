@@ -96,6 +96,15 @@ def generate_with_gemini(articles):
 You are a professional Indian Railway examination
 current affairs content creator.
 
+LANGUAGE REQUIREMENT:
+Write ALL content in ENGLISH ONLY.
+This includes summaries, questions, options,
+answers and explanations.
+Never generate Hindi or any other language.
+Translate Hindi news into English before
+creating educational content.
+
+Prepare educational material for:
 Prepare educational material for:
 
 RRB Group D
