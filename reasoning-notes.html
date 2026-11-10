@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Complete Reasoning notes for RRB Group D, NTPC, ALP, JE and RPF: rules, memory tricks, worked examples and practice questions for every topic.">
+<title>Reasoning Notes for Railway Exams | Railway Exam Hub</title>
+<style>*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f4f7fc;color:#17243b;line-height:1.7}
+header{background:#10264b;color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:23px;font-weight:bold;color:white;text-decoration:none}.logo span{color:#ffc83d}
+nav{display:flex;gap:20px;flex-wrap:wrap}nav a{color:white;text-decoration:none;font-size:14px}nav a:hover,nav a:focus{color:#ffc83d}
+main{max-width:900px;margin:auto;padding:36px 20px}
+h1{font-size:32px;color:#10264b;margin-bottom:10px}h2{font-size:22px;color:#163b6a;margin:32px 0 8px;padding-top:6px;border-top:2px solid #e0e7f0}h3{font-size:17px;color:#163b6a;margin:16px 0 4px}
+p,li{font-size:16px;color:#2b3a52}p{margin-bottom:12px}ul{padding-left:22px;margin-bottom:12px}.cols{columns:2;column-gap:32px}.cols li{break-inside:avoid;margin-bottom:4px}
+a{color:#1456a0}.notice{background:#fff8e5;border-left:4px solid #ffc83d;padding:16px;border-radius:6px;margin:18px 0}
+.ref{background:#eaf1fb;border-radius:10px;padding:18px 20px;margin:18px 0}.ref li{margin-bottom:6px}
+table{border-collapse:collapse;width:100%;margin:10px 0 16px;background:white}th,td{border:1px solid #d5deea;padding:9px 12px;text-align:left;font-size:15px}th{background:#10264b;color:white}
+.hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px}
+.card{background:white;border:1px solid #e0e7f0;border-radius:12px;padding:18px}.card h3{margin-top:0}.card p{font-size:14px;color:#64748b}
+footer{background:#10264b;color:#dce7f5;text-align:center;padding:28px 15px;font-size:13px}footer a{color:#ffc83d;text-decoration:none;margin:0 8px}
+a:focus-visible{outline:3px solid #ffc83d;outline-offset:2px}
+@media(max-width:600px){header{padding:16px 5%}h1{font-size:26px}.cols{columns:1}}details{margin:4px 0 10px}summary{cursor:pointer;color:#1456a0;font-size:14px}ol{padding-left:22px}ol li{margin-bottom:10px}
+.trick{background:#e8f6ee;border-left:4px solid #1e8449;padding:14px 16px;border-radius:6px;margin:14px 0}.trick h3{margin:0 0 6px;color:#1e6b3f}
+.ex{background:#fff;border:1px solid #d5deea;border-radius:8px;padding:12px 16px;margin:10px 0}.ex p{margin-bottom:6px}
+.card{background:#fff8e5;border:2px solid #ffc83d;border-radius:10px;padding:16px 20px;margin:16px 0}
+table.t td,table.t th{font-size:14px;padding:6px 10px}.mono{font-family:monospace;font-size:14px}
+.sq{columns:3;font-size:14px}@media(max-width:600px){.sq{columns:2}}</style>
+</head>
+<body>
+<header>
+<a class="logo" href="index.html">🚆 Railway <span>Exam Hub</span></a>
+<nav><a href="index.html">Home</a><a href="index.html#exams">Exams</a><a href="reasoning-notes.html">Reasoning</a><a href="study-materials.html">Study Guides</a><a href="mock-tests.html">Mock Tests</a><a href="about.html">About</a></nav>
+</header>
+<main>
+<h1>Reasoning Notes for All Railway Exams</h1>
+<p>Complete Reasoning notes for Group D, NTPC, ALP, JE, RPF and other RRB exams: rules, memory tricks, worked examples and practice questions with answers for every topic.</p>
+<div class="notice"><strong>How to use:</strong> Read the Quick Revision Card first. Then take one topic a day: read the rules, learn the trick, study the worked examples, then solve the practice questions before opening the answers.</div>
+<div class="card"><h2 style="border:0;margin-top:0">Quick Revision Card</h2>
+<h3>Alphabet</h3><p><strong>A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 P16 Q17 R18 S19 T20 U21 V22 W23 X24 Y25 Z26</strong><br>EJOTY = 5, 10, 15, 20, 25. Opposite letters add to 27. Position from right = 27 − position from left.</p>
+<h3>Directions and distances</h3><p>Clockwise: N, E, S, W. Triples: 3-4-5, 5-12-13, 8-15-17, 7-24-25, 6-8-10, 9-12-15.</p>
+<h3>Key formulas</h3>
+<ul><li>Rank: total = top + bottom − 1</li><li>Clock angle = |30H − 5.5M|</li><li>Calendar odd days: 100 yrs = 5, 200 = 3, 300 = 1, 400 = 0</li><li>Painted cube (n): 8 corners, 12(n−2) edges, 6(n−2)² faces, (n−2)³ inner</li><li>Squares in n × n: n(n+1)(2n+1)/6, rectangles in m × n: m(m+1)n(n+1)/4</li><li>Syllogism: A+A=A, A+E=E, I+A=I, I+E=O</li><li>Venn (2 sets): A + B − both. (3 sets): A+B+C − pairs + all three</li></ul>
+<h3>Squares 1 to 30</h3><p class="sq">1²=1, 2²=4, 3²=9, 4²=16, 5²=25, 6²=36, 7²=49, 8²=64, 9²=81, 10²=100, 11²=121, 12²=144, 13²=169, 14²=196, 15²=225, 16²=256, 17²=289, 18²=324, 19²=361, 20²=400, 21²=441, 22²=484, 23²=529, 24²=576, 25²=625, 26²=676, 27²=729, 28²=784, 29²=841, 30²=900</p><h3>Cubes 1 to 15</h3><p class="sq">1³=1, 2³=8, 3³=27, 4³=64, 5³=125, 6³=216, 7³=343, 8³=512, 9³=729, 10³=1000, 11³=1331, 12³=1728, 13³=2197, 14³=2744, 15³=3375</p></div>
+<h2>Topics</h2>
+<ul class="cols" style="columns:2"><li><a href="#analogy">1. Analogy</a></li><li><a href="#classification">2. Classification (Odd One Out)</a></li><li><a href="#series">3. Number Series</a></li><li><a href="#letters">4. Letter Series and Alphabet Position</a></li><li><a href="#coding">5. Coding and Decoding</a></li><li><a href="#blood">6. Blood Relations</a></li><li><a href="#direction">7. Direction Sense</a></li><li><a href="#ranking">8. Ranking and Order</a></li><li><a href="#seating">9. Seating Arrangement</a></li><li><a href="#syllogism">10. Syllogism</a></li><li><a href="#venn">11. Venn Diagrams</a></li><li><a href="#statement">12. Statements: Conclusions, Assumptions, Arguments, Course of Action</a></li><li><a href="#operations">13. Mathematical Operations</a></li><li><a href="#inequality">14. Inequality (Symbol Reasoning)</a></li><li><a href="#missing">15. Missing Numbers (Matrix and Figure)</a></li><li><a href="#puzzles">16. Puzzles</a></li><li><a href="#sufficiency">17. Data Sufficiency</a></li><li><a href="#calendar">18. Calendar</a></li><li><a href="#clock">19. Clock</a></li><li><a href="#cube">20. Cubes and Dice</a></li><li><a href="#counting">21. Counting Figures</a></li><li><a href="#images">22. Mirror Image, Water Image and Paper Folding</a></li><li><a href="#order">23. Logical Order and Dictionary Order</a></li></ul>
+<section id="analogy">
+<h2>1. Analogy</h2>
+<h3>What you need to know</h3><ul><li>Find the exact relation between the first pair, then apply it to the second pair.</li><li>Common relations: object and use (Pen : Write), part and whole (Wheel : Car), worker and tool (Carpenter : Saw), worker and workplace (Doctor : Hospital), cause and effect (Fire : Smoke), animal and young one (Cat : Kitten), animal and sound (Dog : Bark), animal and home (Bird : Nest).</li><li>Number analogies: check square, cube, multiple and prime relations. Letter analogies: check shifts of letters.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Say the relation as a sentence: 'A is the ___ of B'. Use the same sentence for the second pair.</li><li>If two options fit, make the sentence more exact (for example 'tool used to cut' instead of 'tool').</li><li>For numbers test in order: add or multiply, square, cube. For letters convert to positions.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. 8 : 64 :: 9 : ?</strong></p><p>8² = 64, so the relation is square. 9² = 81.</p></div>
+<div class="ex"><p><strong>Q. ACE : FHJ :: BDF : ?</strong></p><p>Each letter moves 5 steps forward (A to F, C to H, E to J). B to G, D to I, F to K. Answer: GIK.</p></div>
+<h3>Practice questions</h3><ol><li>Pilot : Aeroplane :: Driver : ?<details><summary>Show answer</summary><p>Car.</p></details></li><li>Bee : Hive :: Bird : ?<details><summary>Show answer</summary><p>Nest.</p></details></li><li>4 : 16 :: 7 : ?<details><summary>Show answer</summary><p>49.</p></details></li><li>CAT : DBU :: DOG : ?<details><summary>Show answer</summary><p>EPH (each letter +1).</p></details></li><li>Eye : See :: Ear : ?<details><summary>Show answer</summary><p>Hear.</p></details></li></ol>
+</section>
+<section id="classification">
+<h2>2. Classification (Odd One Out)</h2>
+<h3>What you need to know</h3><ul><li>Find what most items share and pick the one that does not.</li><li>Check meaning (category), number property (prime, square, cube, multiple, digit sum) and letter pattern (steps between letters).</li><li>Words: check whether items are living or non-living, fruit or vegetable, 2D or 3D, and so on.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Test three things in order: meaning, number property, letter steps.</li><li>For numbers write the property next to each: 8 (cube), 27 (cube), 64 (cube), 100 (not a cube).</li><li>If all numbers seem different, check the digit sum or the difference between the digits.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. 8, 27, 64, 100 (find the odd one)</strong></p><p>8, 27 and 64 are cubes (2³, 3³, 4³). 100 is not. Answer: 100.</p></div>
+<div class="ex"><p><strong>Q. ACE, GIK, MOQ, PRU</strong></p><p>ACE, GIK and MOQ move +2, +2. PRU moves +2, +3 (P=16, R=18, U=21). Answer: PRU.</p></div>
+<h3>Practice questions</h3><ol><li>Rose, Lotus, Jasmine, Mango (odd one)<details><summary>Show answer</summary><p>Mango, a fruit. The others are flowers.</p></details></li><li>3, 5, 11, 14, 17<details><summary>Show answer</summary><p>14. The others are prime.</p></details></li><li>Square, Circle, Triangle, Cube<details><summary>Show answer</summary><p>Cube. The others are flat 2D shapes.</p></details></li><li>21, 35, 49, 56, 65<details><summary>Show answer</summary><p>65. The others are multiples of 7.</p></details></li></ol>
+</section>
+<section id="series">
+<h2>3. Number Series</h2>
+<h3>What you need to know</h3><ul><li>Types: arithmetic (add a fixed number), geometric (multiply by a fixed number), squares and cubes (n² ± k, n³ ± k), primes, alternating (two series mixed), second-level differences, and patterns like ×a + b.</li><li>In a 'wrong number' series, find the pattern from the first terms and spot the term that breaks it.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Use the order D-R-S-P: Difference first, then Ratio, then Squares or cubes, then Primes.</li><li>If the differences are not equal, find the difference of the differences.</li><li>If the series looks mixed up, split it into odd-place and even-place terms.</li><li>Learn squares to 30 and cubes to 15 (listed in the Quick Revision Card above). They solve about half of all series.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. 5, 11, 23, 47, ?</strong></p><p>The pattern is ×2 + 1. 47 × 2 + 1 = 95.</p></div>
+<div class="ex"><p><strong>Q. 1, 2, 6, 24, 120, ?</strong></p><p>Multiply by 2, 3, 4, 5, then 6. 120 × 6 = 720.</p></div>
+<div class="ex"><p><strong>Q. 3, 5, 6, 10, 9, 15, 12, ?</strong></p><p>Odd places: 3, 6, 9, 12 (+3). Even places: 5, 10, 15, then 20. Answer: 20.</p></div>
+<h3>Practice questions</h3><ol><li>7, 14, 28, 56, ?<details><summary>Show answer</summary><p>112 (×2).</p></details></li><li>3, 8, 15, 24, 35, ?<details><summary>Show answer</summary><p>48. These are n² − 1 for n = 2, 3, 4 ... 7.</p></details></li><li>2, 5, 10, 17, 26, ?<details><summary>Show answer</summary><p>37. These are n² + 1.</p></details></li><li>1, 8, 27, 64, ?<details><summary>Show answer</summary><p>125 (cubes).</p></details></li><li>10, 9, 7, 4, ?<details><summary>Show answer</summary><p>0. The differences are −1, −2, −3, −4.</p></details></li></ol>
+</section>
+<section id="letters">
+<h2>4. Letter Series and Alphabet Position</h2>
+<h3>What you need to know</h3><ul><li>Convert letters to positions (A=1 ... Z=26) and treat them like a number series.</li><li>Opposite letters add to 27 (A and Z, B and Y ... M and N).</li><li>Position from the right = 27 − position from the left. Letters between two letters = difference of positions − 1.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Memorise EJOTY: E=5, J=10, O=15, T=20, Y=25 (multiples of 5). Count from the nearest anchor.</li><li>Memorise the 27 rule for opposite letters and positions from the right.</li><li>Write the alphabet with numbers under it at the start of the paper: A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 P16 Q17 R18 S19 T20 U21 V22 W23 X24 Y25 Z26.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. A, D, G, J, ?</strong></p><p>Positions 1, 4, 7, 10, so +3 each time. Next is 13 = M.</p></div>
+<div class="ex"><p><strong>Q. How many letters lie between B and J?</strong></p><p>J is 10, B is 2. 10 − 2 − 1 = 7 letters.</p></div>
+<h3>Practice questions</h3><ol><li>Z, X, V, T, ?<details><summary>Show answer</summary><p>R (−2 each time).</p></details></li><li>AZ, BY, CX, ?<details><summary>Show answer</summary><p>DW (first letter +1, second letter −1).</p></details></li><li>B, E, I, N, ?<details><summary>Show answer</summary><p>T. The gaps are +3, +4, +5, +6.</p></details></li><li>Which letter is the 10th from the right?<details><summary>Show answer</summary><p>27 − 10 = 17, which is Q.</p></details></li><li>Which letter is the 5th to the right of the 12th letter from the left?<details><summary>Show answer</summary><p>The 12th is L. Five steps right gives the 17th letter, Q.</p></details></li></ol>
+</section>
+<section id="coding">
+<h2>5. Coding and Decoding</h2>
+<h3>What you need to know</h3><ul><li>Types: letter shift (+n or −n), reverse alphabet (A=Z, B=Y), letters to numbers (A=1), symbol substitution, and mixed codes.</li><li>To decode, write the original word and the code one under the other and compare letter by letter.</li><li>Reverse alphabet: code of a letter = 27 − its position.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Compare the first letter pair to find the shift, then check it on the second pair before using it.</li><li>Reverse alphabet shortcut: pairs add to 27, so A-Z, B-Y, C-X ... M-N.</li><li>If the code has the same number of letters, it is a shift or reverse. If it has more, check the sum or product of positions.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. If TRAIN is coded SQZHM, code PLANE.</strong></p><p>Each letter moves one step back (T to S, R to Q, A to Z). P to O, L to K, A to Z, N to M, E to D. Answer: OKZMD.</p></div>
+<div class="ex"><p><strong>Q. If CAT is coded XZG (reverse alphabet), code DOG.</strong></p><p>D (4) to W (23), O (15) to L (12), G (7) to T (20). Answer: WLT.</p></div>
+<h3>Practice questions</h3><ol><li>Code BAT by moving each letter 1 forward.<details><summary>Show answer</summary><p>CBU.</p></details></li><li>Code ROAD by moving each letter 2 forward.<details><summary>Show answer</summary><p>TQCF.</p></details></li><li>Code FIRE in reverse alphabet.<details><summary>Show answer</summary><p>URIV (F to U, I to R, R to I, E to V).</p></details></li><li>If A=1, B=2, C=3, find the value of CAB.<details><summary>Show answer</summary><p>3 + 1 + 2 = 6.</p></details></li><li>If SUN = 19-21-14, write MOON.<details><summary>Show answer</summary><p>M=13, O=15, O=15, N=14, so 13-15-15-14.</p></details></li></ol>
+</section>
+<section id="blood">
+<h2>6. Blood Relations</h2>
+<h3>What you need to know</h3><ul><li>Draw a family tree. Use a square for males and a circle for females, and put each generation on its own level.</li><li>Paternal means father's side and maternal means mother's side.</li><li>Terms: spouse's brother or sister's husband = brother-in-law; father's brother = uncle; mother's brother = maternal uncle; uncle's or aunt's child = cousin.</li><li>Do not assume gender. Use only what the statement says.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Work backwards from the last relation to the first. Solve one small piece at a time.</li><li>'My father's only son' means 'I' (if the speaker is male).</li><li>'My mother's only child' means 'I'. 'Only daughter of my mother' means the speaker (if female).</li><li>Use + for male and − for female next to each person to avoid gender mistakes.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. Pointing to a photograph, Raju says, 'He is the son of my father's only son.' Whose photograph?</strong></p><p>Raju's father's only son is Raju himself. The son of Raju is Raju's own son.</p></div>
+<div class="ex"><p><strong>Q. A is B's sister. C is B's mother. D is C's father. How is A related to D?</strong></p><p>D is the father of A's mother, so A is D's granddaughter.</p></div>
+<h3>Practice questions</h3><ol><li>My father's father's only son's wife is my ___.<details><summary>Show answer</summary><p>Father's father's only son is my father. His wife is my mother.</p></details></li><li>Pointing to a girl, Ramesh says, 'She is the daughter of my mother's only child.' How is the girl related to Ramesh?<details><summary>Show answer</summary><p>My mother's only child is Ramesh. So she is his daughter.</p></details></li><li>My mother's mother's only daughter's husband is my ___.<details><summary>Show answer</summary><p>Mother's mother's only daughter is my mother. Her husband is my father.</p></details></li><li>A's mother is B's sister. How is B related to A?<details><summary>Show answer</summary><p>B is A's maternal uncle or aunt.</p></details></li></ol>
+</section>
+<section id="direction">
+<h2>7. Direction Sense</h2>
+<h3>What you need to know</h3><ul><li>The four main directions run clockwise: North, East, South, West (remember 'Never Eat Soggy Waffles'). Between them: NE, SE, SW, NW.</li><li>A right turn means a 90° clockwise turn. A left turn means a 90° anticlockwise turn.</li><li>Shadow rule: in the morning the sun is in the east, so shadows fall west. In the evening shadows fall east.</li><li>Net distance uses Pythagoras. Memorise triples: 3-4-5, 5-12-13, 8-15-17, 7-24-25, 6-8-10, 9-12-15.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Draw every move on a rough map with North at the top, and always return to the start point.</li><li>If the legs are 3 and 4, 5 and 12, or 8 and 15, the answer is the hypotenuse without calculation.</li><li>Facing east in the morning (towards the sun): your right hand is south and your left hand is north.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. A man walks 8 km north, then turns right and walks 6 km. How far is he from the start and in which direction?</strong></p><p>After the right turn he moves east. The legs are 8 and 6, so the distance is 10 km (6-8-10), towards the north-east.</p></div>
+<div class="ex"><p><strong>Q. In the morning Raju faces the sun. Where is his right hand pointing?</strong></p><p>The sun is in the east, so he faces east. His right hand points south.</p></div>
+<h3>Practice questions</h3><ol><li>A man walks 12 m south and then 5 m east. How far is he from the start?<details><summary>Show answer</summary><p>13 m (5-12-13).</p></details></li><li>Facing west, you turn left. Which direction do you face?<details><summary>Show answer</summary><p>South.</p></details></li><li>X goes 10 m east, 10 m north, then 10 m west. How far is he from the start?<details><summary>Show answer</summary><p>10 m north.</p></details></li><li>After sunrise, Ram faces a pole and its shadow falls to his right. Which direction is he facing?<details><summary>Show answer</summary><p>In the morning shadows fall west, so his right is west. He faces south.</p></details></li></ol>
+</section>
+<section id="ranking">
+<h2>8. Ranking and Order</h2>
+<h3>What you need to know</h3><ul><li>Total persons = rank from top + rank from bottom − 1.</li><li>Position from the other end = total − position + 1.</li><li>Persons between two people = difference of their positions − 1.</li><li>If two people swap places, the total number of people stays the same.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Draw a line of boxes and mark the known positions.</li><li>For swap questions, mark the new position of one person to find the old position of the other.</li><li>Use total = top + bottom − 1 instead of drawing for simple questions.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. Rank 12 from the top and 25 from the bottom. How many students?</strong></p><p>12 + 25 − 1 = 36.</p></div>
+<div class="ex"><p><strong>Q. Ravi is 9th from the left and Sita is 7th from the right. After they exchange places, Ravi is 15th from the left. How many people are in the row?</strong></p><p>Sita's original place was 15th from the left (Ravi's new place). Total = 15 + 7 − 1 = 21.</p></div>
+<h3>Practice questions</h3><ol><li>8th from the top and 17th from the bottom. Total?<details><summary>Show answer</summary><p>8 + 17 − 1 = 24.</p></details></li><li>In a row of 35, Meena is 14th from the left. What is her position from the right?<details><summary>Show answer</summary><p>35 − 14 + 1 = 22nd.</p></details></li><li>In a row of 30, find how many people stand between the 6th from the left and the 9th from the right.<details><summary>Show answer</summary><p>9th from the right is 22nd from the left. Between: 22 − 6 − 1 = 15.</p></details></li></ol>
+</section>
+<section id="seating">
+<h2>9. Seating Arrangement</h2>
+<h3>What you need to know</h3><ul><li>Linear: people in a row, facing north or south. If they face north, their left is west.</li><li>Circular: if people face the centre, a person's right is anticlockwise and left is clockwise. If they face outward, it is the opposite.</li><li>Number of arrangements: row of n = n!, circle of n = (n−1)!.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Draw the arrangement and fill definite clues first ('at the extreme end', 'exactly in the middle', 'opposite to').</li><li>Then add relative clues one by one and cross out impossible options.</li><li>In a circle, 'opposite' means n/2 seats away (for an even number of people).</li><li>Re-read the question and check the direction people face.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. Five friends P, Q, R, S, T sit in a row facing north. P is at the left end, T is at the right end, R sits next to P, and Q sits immediately to the left of T. Who is in the middle?</strong></p><p>P is seat 1 and T is seat 5. R is seat 2 (next to P). Q is seat 4 (immediate left of T). S is left for seat 3. Order: P R S Q T. S is in the middle.</p></div>
+<div class="ex"><p><strong>Q. A, B, C, D sit around a table facing the centre. A is opposite C. B is on A's left. Who is on A's right?</strong></p><p>Put A south, C north. A faces north, so A's left is west (B) and right is east. D is on A's right.</p></div>
+<h3>Practice questions</h3><ol><li>In a row of 7 people, X is exactly in the middle. Y sits second to the right of X. How many people sit between X and Y?<details><summary>Show answer</summary><p>1 person.</p></details></li><li>People sit in a circle facing the centre. B is on A's right. Then A is on B's ___ side.<details><summary>Show answer</summary><p>Left.</p></details></li><li>In how many ways can 5 people sit in a row, and around a circle?<details><summary>Show answer</summary><p>5! = 120 in a row, and (5−1)! = 24 in a circle.</p></details></li></ol>
+</section>
+<section id="syllogism">
+<h2>10. Syllogism</h2>
+<h3>What you need to know</h3><ul><li>A statement gives a relation between two groups: All (A), No (E), Some (I) or Some not (O).</li><li>Draw Venn circles: 'All' puts one circle inside the other, 'Some' makes circles overlap, 'No' keeps them apart.</li><li>A conclusion follows only if it is true in every possible drawing.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Memorise the four conclusion rules (middle term removed):</li><li>All + All gives All (A + A = A).</li><li>All + No gives No (A + E = E).</li><li>Some + All gives Some (I + A = I).</li><li>Some + No gives Some not (I + E = O).</li><li>Conversion: 'Some A are B' also means 'Some B are A', and 'No A is B' also means 'No B is A'. But 'All A are B' does not mean 'All B are A'. A conclusion that needs 'All' when you only have 'Some' does not follow.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. All A are B. All B are C. Conclusion: All A are C.</strong></p><p>A inside B, B inside C, so A is inside C. It follows (A + A = A).</p></div>
+<div class="ex"><p><strong>Q. All dogs are animals. Some animals are cats. Conclusions: I. Some dogs are cats. II. Some cats are dogs.</strong></p><p>Dogs and cats are both inside animals but may not overlap. Neither follows.</p></div>
+<h3>Practice questions</h3><ol><li>All books are pens. All pens are pencils. Conclusion: All books are pencils.<details><summary>Show answer</summary><p>Follows.</p></details></li><li>Some doctors are engineers. All engineers are teachers. Conclusion: Some doctors are teachers.<details><summary>Show answer</summary><p>Follows (I + A = I).</p></details></li><li>All roses are flowers. No flower is a stone. Conclusion: No rose is a stone.<details><summary>Show answer</summary><p>Follows (A + E = E).</p></details></li><li>Some bats are balls. Some balls are bags. Conclusion: Some bats are bags.<details><summary>Show answer</summary><p>Does not follow (Some + Some gives nothing).</p></details></li></ol>
+</section>
+<section id="venn">
+<h2>11. Venn Diagrams</h2>
+<h3>What you need to know</h3><ul><li>Relationship diagrams: when one group is part of another, draw it inside. When two groups are separate but belong to a bigger one, draw two separate circles inside the big one. Overlapping circles mean some members belong to both.</li><li>Counting with two sets: at least one = A + B − both. Neither = total − at least one.</li><li>Counting with three sets: A + B + C − (AB + BC + CA) + ABC.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Fill the centre (all three) first, then the overlaps, then the single parts.</li><li>Examples: Dogs and Cats inside Animals (two separate circles in a big one). Doctors and Teachers can overlap, with Humans as the big circle around both.</li><li>Check whether the total includes people in none of the sets.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. In a class of 60, 35 play cricket, 30 play football, and 10 play both. How many play neither?</strong></p><p>At least one = 35 + 30 − 10 = 55. Neither = 60 − 55 = 5.</p></div>
+<div class="ex"><p><strong>Q. In a group of 100, 40 like Maths, 35 Physics, 30 Chemistry. Maths and Physics 10, Physics and Chemistry 8, Maths and Chemistry 6, all three 3. How many like at least one?</strong></p><p>40 + 35 + 30 − 10 − 8 − 6 + 3 = 84.</p></div>
+<h3>Practice questions</h3><ol><li>Which diagram suits Pen, Pencil, Stationery?<details><summary>Show answer</summary><p>Pen and Pencil are two separate circles inside the bigger Stationery circle.</p></details></li><li>Which diagram suits Boys, Students, Girls?<details><summary>Show answer</summary><p>Boys and Girls are separate circles inside the Students circle.</p></details></li><li>In a class of 50, 30 like tea and 25 like coffee and all like at least one. How many like both?<details><summary>Show answer</summary><p>30 + 25 − 50 = 5.</p></details></li></ol>
+</section>
+<section id="statement">
+<h2>12. Statements: Conclusions, Assumptions, Arguments, Course of Action</h2>
+<h3>What you need to know</h3><ul><li>Conclusion: take the statement as true and use no outside knowledge. It follows only if it must be true.</li><li>Assumption: something the statement takes for granted. Ask: 'Would the statement make sense without this?'</li><li>Argument: strong if it is relevant, factual and answers the question. Weak if it is vague, emotional, or based on one example.</li><li>Course of action: practical steps that help solve the problem described.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Look at keywords: 'all', 'only', 'always', 'never' usually make a conclusion too strong, unless the statement says so.</li><li>If neither conclusion follows but together they cover all possibilities, the answer is 'either I or II follows'.</li><li>For assumptions, a good assumption is quite obviously implied, not a new fact.</li><li>For arguments, pick the one that talks about the topic itself, not side issues.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. Statement: Please carry an umbrella; it may rain today. Assumptions: I. An umbrella protects from rain. II. It will certainly rain today.</strong></p><p>Only I is implied. 'May rain' does not mean 'will certainly rain'.</p></div>
+<div class="ex"><p><strong>Q. Statement: All metals conduct electricity. Copper is a metal. Conclusions: I. Copper conducts electricity. II. All conductors are metals.</strong></p><p>Only I follows. II reverses the statement.</p></div>
+<h3>Practice questions</h3><ol><li>Should plastic bags be banned? I. Yes, they pollute the environment. II. No, they are cheap.<details><summary>Show answer</summary><p>Only I is strong. II ignores the pollution issue.</p></details></li><li>Statement: Many workers slip on wet factory floors. I. Install anti-skid flooring and clean spills. II. Dismiss all workers.<details><summary>Show answer</summary><p>Only I follows.</p></details></li><li>Statement: Some roads are paved. Conclusion: All roads are paved.<details><summary>Show answer</summary><p>Does not follow.</p></details></li><li>Statement: All students who study regularly pass. Ravi studies regularly. Conclusion: Ravi will pass.<details><summary>Show answer</summary><p>Follows.</p></details></li></ol>
+</section>
+<section id="operations">
+<h2>13. Mathematical Operations</h2>
+<h3>What you need to know</h3><ul><li>Symbols are swapped with other operations. Replace each symbol exactly as told, then solve using BODMAS.</li><li>BODMAS order: Brackets, Orders (powers and roots), Division, Multiplication, Addition, Subtraction.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Write a small table first: 'given symbol → real operation'.</li><li>Rewrite the whole expression with real symbols, then solve step by step.</li><li>Do not change the numbers, only the signs.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. If + means −, − means ×, × means ÷, ÷ means +, find 18 ÷ 6 × 3 + 2 − 4.</strong></p><p>Replace: 18 + 6 ÷ 3 − 2 × 4 = 18 + 2 − 8 = 12.</p></div>
+<div class="ex"><p><strong>Q. If A means +, B means −, C means ×, D means ÷, find 20 D 4 A 3 C 2 B 5.</strong></p><p>20 ÷ 4 + 3 × 2 − 5 = 5 + 6 − 5 = 6.</p></div>
+<h3>Practice questions</h3><ol><li>If + means ×, − means +, × means ÷, ÷ means −, find 12 × 3 + 4 − 2 ÷ 1.<details><summary>Show answer</summary><p>12 ÷ 3 × 4 + 2 − 1 = 16 + 2 − 1 = 17.</p></details></li><li>If + means ×, × means −, find 5 + 3 × 2.<details><summary>Show answer</summary><p>5 × 3 − 2 = 13.</p></details></li><li>If − means ×, × means +, find 6 − 4 × 2.<details><summary>Show answer</summary><p>6 × 4 + 2 = 26.</p></details></li></ol>
+</section>
+<section id="inequality">
+<h2>14. Inequality (Symbol Reasoning)</h2>
+<h3>What you need to know</h3><ul><li>Chain symbols: < and ≤ point the same way, > and ≥ point the other way.</li><li>'=' keeps the other symbol: A > B = C gives A > C.</li><li>Combining a strict and a non-strict symbol gives strict: A ≥ B > C gives A > C.</li><li>If the symbols point in opposite directions (< and >), no relation can be found.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Write each conclusion as a mini chain and check if the chain runs in one direction.</li><li>A relation exists only when you can go from one letter to the other without a direction change.</li><li>'Either-or' applies when the two conclusions are 'X ≥ Y' and 'X < Y' type complements.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. P > Q ≥ R = S. Is P > S?</strong></p><p>P > Q ≥ R = S gives P > S. True.</p></div>
+<div class="ex"><p><strong>Q. A < B ≤ C > D. What is the relation of A and D?</strong></p><p>The chain changes direction (< then >), so no relation.</p></div>
+<h3>Practice questions</h3><ol><li>A > B ≥ C = D. Is A > D true?<details><summary>Show answer</summary><p>True.</p></details></li><li>X ≤ Y < Z ≥ W. Relation of X and W?<details><summary>Show answer</summary><p>None.</p></details></li><li>M = N ≥ O > P. Is M > P true?<details><summary>Show answer</summary><p>True (M = N ≥ O > P).</p></details></li><li>P ≥ Q > R ≤ S. Is R < P true?<details><summary>Show answer</summary><p>True (P ≥ Q > R).</p></details></li></ol>
+</section>
+<section id="missing">
+<h2>15. Missing Numbers (Matrix and Figure)</h2>
+<h3>What you need to know</h3><ul><li>Find the rule that links the numbers in each row, column or figure, then apply it to the incomplete one.</li><li>Common rules: product of two numbers, sum of two numbers, difference, square or cube relation.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Test rows first, then columns, then diagonals.</li><li>Try sum, product and difference of the first two numbers before squares and cubes.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. Rows: (2, 3, 6), (4, 5, 20), (6, 7, ?)</strong></p><p>2 × 3 = 6, 4 × 5 = 20, so 6 × 7 = 42.</p></div>
+<div class="ex"><p><strong>Q. Triangles: (4, 6, 10), (5, 8, 13), (7, 9, ?)</strong></p><p>The third number is the sum of the first two: 7 + 9 = 16.</p></div>
+<h3>Practice questions</h3><ol><li>(5, 6, 30), (4, 7, 28), (8, 3, ?)<details><summary>Show answer</summary><p>24 (product).</p></details></li><li>(2, 3, 5), (4, 5, 9), (6, 7, ?)<details><summary>Show answer</summary><p>13 (sum).</p></details></li><li>(1, 8, 2), (2, 27, 3), (3, 64, ?)<details><summary>Show answer</summary><p>4. The middle number is the cube of the third number (2³, 3³, 4³).</p></details></li><li>(7, 5, 2), (9, 4, 5), (12, 5, ?)<details><summary>Show answer</summary><p>7 (first − second).</p></details></li></ol>
+</section>
+<section id="puzzles">
+<h2>16. Puzzles</h2>
+<h3>What you need to know</h3><ul><li>A puzzle gives a set of people, items or days and a list of clues to match them.</li><li>Use a table with rows for people and columns for attributes (colour, day, floor and so on).</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Start with the most definite clue (a clue with 'is', not 'is not').</li><li>Mark X for impossible matches and tick for sure matches. When a row or column has one blank left, fill it.</li><li>Re-read all clues after each deduction.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. A, B, C, D like Red, Blue, Green, Yellow (one each). A does not like Red or Blue or Green. B likes Red. C does not like Yellow. D does not like Blue. Who likes Blue?</strong></p><p>A = Yellow (only left). B = Red. D is not Blue so D = Green. C = Blue. Answer: C.</p></div>
+<div class="ex"><p><strong>Q. Today is Wednesday. What day was it 100 days ago?</strong></p><p>100 ÷ 7 leaves remainder 2. Wednesday − 2 days = Monday.</p></div>
+<h3>Practice questions</h3><ol><li>Ravi is taller than Sam. Sam is taller than Tom. Who is the shortest?<details><summary>Show answer</summary><p>Tom.</p></details></li><li>Today is Saturday. What day will it be after 45 days?<details><summary>Show answer</summary><p>45 ÷ 7 leaves 3. Saturday + 3 = Tuesday.</p></details></li><li>Five people A to E: A is older than B, B is older than C, D is younger than C, E is the oldest. Who is second oldest?<details><summary>Show answer</summary><p>A. Order: E > A > B > C > D.</p></details></li></ol>
+</section>
+<section id="sufficiency">
+<h2>17. Data Sufficiency</h2>
+<h3>What you need to know</h3><ul><li>You get a question and two statements. Decide whether statement I alone, II alone, both together, either alone, or neither can answer it.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Check each statement alone first. Then combine them.</li><li>Do not use outside knowledge, only the given statements.</li><li>If a statement gives a range or two possible answers, it is not sufficient.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. What is Ravi's age? I. Ravi is 5 years older than Sita. II. Sita is 20.</strong></p><p>I alone gives no age. II alone does not give Ravi's age. Together: 20 + 5 = 25. Both are needed.</p></div>
+<div class="ex"><p><strong>Q. Is x even? I. x is a multiple of 4. II. x is greater than 10.</strong></p><p>I alone is enough (a multiple of 4 is always even). II alone is not enough.</p></div>
+<h3>Practice questions</h3><ol><li>What is the speed of a train? I. It covers 120 km. II. It takes 2 hours.<details><summary>Show answer</summary><p>Both together (120 ÷ 2 = 60 km/h).</p></details></li><li>Is Rahul older than Amit? I. Rahul is 5 years older than Sita. II. Sita is 3 years older than Amit.<details><summary>Show answer</summary><p>Both together. Rahul is 8 years older than Amit.</p></details></li><li>How many students are in the class? I. Raju is 5th from the top and 10th from the bottom.<details><summary>Show answer</summary><p>I alone is enough (5 + 10 − 1 = 14).</p></details></li></ol>
+</section>
+<section id="calendar">
+<h2>18. Calendar</h2>
+<h3>What you need to know</h3><ul><li>Odd days = extra days left after taking out complete weeks. Use 0 = Sunday, 1 = Monday ... 6 = Saturday.</li><li>An ordinary year has 365 days = 1 odd day. A leap year has 366 days = 2 odd days.</li><li>Leap year: divisible by 4. A century year is a leap year only if divisible by 400 (so 2000 is, 1900 and 2100 are not).</li><li>Odd days in centuries: 100 years = 5, 200 years = 3, 300 years = 1, 400 years = 0.</li><li>Odd days in months: Jan 3, Feb 0 (1 in a leap year), Mar 3, Apr 2, May 3, Jun 2, Jul 3, Aug 3, Sep 2, Oct 3, Nov 2, Dec 3.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>31-day month = 3 odd days, 30-day month = 2 odd days, February = 0 (1 in a leap year).</li><li>Easiest method: start from a known date and count odd days to the target.</li><li>A date moves one weekday forward each ordinary year and two in a leap year (when the leap day is passed).</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. 1 January 2024 was Monday. What day was 1 March 2024?</strong></p><p>Odd days: January 3 + February (leap) 1 = 4. Monday + 4 = Friday.</p></div>
+<div class="ex"><p><strong>Q. Find the day for 26 January 1950.</strong></p><p>Years up to 1900 = 1 odd day (1600 gives 0, 300 gives 1). Years 1901 to 1949: 49 years with 12 leap years gives 49 + 12 = 61 = 5 odd days. 26 days = 5 odd days. Total: 1 + 5 + 5 = 11 = 4 odd days. Thursday.</p></div>
+<h3>Practice questions</h3><ol><li>If 15 August 1947 was Friday, what day was 15 August 1948?<details><summary>Show answer</summary><p>1948 is a leap year but 29 February falls before 15 August, so 2 odd days. Friday + 2 = Sunday.</p></details></li><li>What day will 25 December 2026 be?<details><summary>Show answer</summary><p>Friday.</p></details></li><li>How many odd days are there in 200 years?<details><summary>Show answer</summary><p>3.</p></details></li><li>Is 2100 a leap year?<details><summary>Show answer</summary><p>No. It is a century year not divisible by 400.</p></details></li></ol>
+</section>
+<section id="clock">
+<h2>19. Clock</h2>
+<h3>What you need to know</h3><ul><li>The minute hand moves 6° per minute. The hour hand moves 0.5° per minute (30° per hour).</li><li>Angle between hands at H hours and M minutes = |30H − 5.5M| degrees. If the answer is above 180°, subtract it from 360°.</li><li>The hands coincide 11 times in 12 hours (22 in a day). They are in a straight line 11 times in 12 hours (22 in a day). They are at right angles 22 times in 12 hours (44 in a day).</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Learn '30H − 5.5M' once. It works for every time.</li><li>Hands coincide after H o'clock at 60H/11 minutes past H.</li><li>Mirror image of a clock: subtract the time from 11:60 (that is, 12:00 minus the time).</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. Find the angle between the hands at 4:20.</strong></p><p>|30 × 4 − 5.5 × 20| = |120 − 110| = 10°.</p></div>
+<div class="ex"><p><strong>Q. When do the hands first overlap after 4 o'clock?</strong></p><p>4 × 60 / 11 = 21 9/11 minutes past 4, that is 4:21 9/11.</p></div>
+<div class="ex"><p><strong>Q. What is the mirror image of 3:30?</strong></p><p>11:60 − 3:30 = 8:30.</p></div>
+<h3>Practice questions</h3><ol><li>Angle at 9:15?<details><summary>Show answer</summary><p>|270 − 82.5| = 187.5°, so the smaller angle is 360 − 187.5 = 172.5°.</p></details></li><li>Angle at 2:40?<details><summary>Show answer</summary><p>|60 − 220| = 160°.</p></details></li><li>How many times do the hands coincide in a day?<details><summary>Show answer</summary><p>22.</p></details></li><li>Mirror image of 7:20?<details><summary>Show answer</summary><p>11:60 − 7:20 = 4:40.</p></details></li><li>When do the hands overlap after 7 o'clock?<details><summary>Show answer</summary><p>7 × 60 / 11 = 38 2/11 minutes past 7.</p></details></li></ol>
+</section>
+<section id="cube">
+<h2>20. Cubes and Dice</h2>
+<h3>What you need to know</h3><ul><li>A cube painted on all faces and cut into n × n × n small cubes: corners (3 faces painted) = 8; edges (2 faces) = 12(n − 2); face centres (1 face) = 6(n − 2)²; inner cubes (no paint) = (n − 2)³.</li><li>Standard dice: opposite faces add to 7 (1-6, 2-5, 3-4).</li><li>Dice puzzles: faces that touch on an edge are adjacent. Two views showing one common face let you find the opposite faces.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Memorise: 8 corners and 12 edges for any cube with n ≥ 2.</li><li>Check your total: all four counts must add up to n³.</li><li>For dice, find the face that is common in two views and rotate the other faces in the same order.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. A cube is painted and cut into 4 × 4 × 4 small cubes. Count each type.</strong></p><p>3 faces: 8. 2 faces: 12 × 2 = 24. 1 face: 6 × 4 = 24. No paint: 8. Total 8 + 24 + 24 + 8 = 64 ✓.</p></div>
+<div class="ex"><p><strong>Q. A 3 × 3 × 3 painted cube. How many cubes have 2 faces painted?</strong></p><p>12 × (3 − 2) = 12.</p></div>
+<h3>Practice questions</h3><ol><li>A painted cube is cut into 27 equal cubes. How many have no paint?<details><summary>Show answer</summary><p>1.</p></details></li><li>How many of those have 3 faces painted?<details><summary>Show answer</summary><p>8.</p></details></li><li>5 × 5 × 5 cube: how many have exactly one face painted?<details><summary>Show answer</summary><p>6 × 3² = 54.</p></details></li><li>5 × 5 × 5 cube: how many have exactly 2 faces painted?<details><summary>Show answer</summary><p>12 × 3 = 36.</p></details></li></ol>
+</section>
+<section id="counting">
+<h2>21. Counting Figures</h2>
+<h3>What you need to know</h3><ul><li>Triangles: if lines from the top vertex divide the base into n parts, triangles = n(n + 1)/2.</li><li>Squares in an n × n grid = 1² + 2² + ... + n² = n(n + 1)(2n + 1)/6.</li><li>Rectangles in an m × n grid (including squares) = m(m + 1)n(n + 1)/4.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Count the smallest figures first, then groups of 2, 3, and so on.</li><li>Learn: 2 × 2 grid has 5 squares, 3 × 3 has 14, 4 × 4 has 30, 8 × 8 (chessboard) has 204.</li><li>Rectangles in a chessboard (8 × 8) = 1296.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. How many squares and rectangles in a 3 × 3 grid?</strong></p><p>Squares: 9 + 4 + 1 = 14. Rectangles: 3 × 4 × 3 × 4 / 4 = 36.</p></div>
+<div class="ex"><p><strong>Q. A triangle's base is split into 4 parts by lines from the top vertex. How many triangles?</strong></p><p>4 × 5 / 2 = 10.</p></div>
+<h3>Practice questions</h3><ol><li>Squares in a 4 × 4 grid?<details><summary>Show answer</summary><p>1 + 4 + 9 + 16 = 30.</p></details></li><li>Rectangles in a 2 × 2 grid?<details><summary>Show answer</summary><p>2 × 3 × 2 × 3 / 4 = 9.</p></details></li><li>Base split into 5 parts from the top vertex: triangles?<details><summary>Show answer</summary><p>5 × 6 / 2 = 15.</p></details></li><li>Squares on a chessboard (8 × 8)?<details><summary>Show answer</summary><p>204.</p></details></li></ol>
+</section>
+<section id="images">
+<h2>22. Mirror Image, Water Image and Paper Folding</h2>
+<h3>What you need to know</h3><ul><li>Mirror image: left and right swap, top and bottom stay. Water image: top and bottom swap, left and right stay.</li><li>Letters: mirror image swaps b and d, p and q. Water image of b is p.</li><li>Paper folding: each fold doubles the layers, and a hole punched in the folded paper appears in every layer. After unfolding, holes are symmetrical about each fold line.</li><li>Embedded figures: look for the simple figure inside the complex one, checking one line or angle at a time.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Clock mirror image: time = 11:60 − given time.</li><li>For paper folding, unfold in reverse order of folding and reflect the hole each time.</li><li>Count layers: a hole (not on the fold) after n folds gives 2ⁿ holes.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. Mirror image of a clock showing 2:15.</strong></p><p>11:60 − 2:15 = 9:45.</p></div>
+<div class="ex"><p><strong>Q. A sheet is folded twice and one hole is punched away from the folds. How many holes when unfolded?</strong></p><p>2 × 2 = 4 holes.</p></div>
+<h3>Practice questions</h3><ol><li>Mirror image of the letter b?<details><summary>Show answer</summary><p>d.</p></details></li><li>Water image of the letter b?<details><summary>Show answer</summary><p>p.</p></details></li><li>Mirror image of 4:45 on a clock?<details><summary>Show answer</summary><p>11:60 − 4:45 = 7:15.</p></details></li><li>A paper is folded once and a hole punched away from the fold. How many holes when unfolded?<details><summary>Show answer</summary><p>2.</p></details></li></ol>
+</section>
+<section id="order">
+<h2>23. Logical Order and Dictionary Order</h2>
+<h3>What you need to know</h3><ul><li>Logical order: arrange words in the natural sequence (life stages, process steps, time units).</li><li>Dictionary order: compare letter by letter from the left, using the alphabet. A shorter word comes first if the longer one starts with it.</li></ul>
+<div class="trick"><h3>Tricks and memory aids</h3><ul><li>Look for the first and last item, then place the middle ones.</li><li>In dictionary order, if the first letters match, compare the second letters, and so on.</li><li>Time sequence: second, minute, hour, day, week, month, year.</li></ul></div>
+<h3>Worked examples</h3>
+<div class="ex"><p><strong>Q. Arrange: Seed, Plant, Fruit, Flower, Sapling.</strong></p><p>Seed, Sapling, Plant, Flower, Fruit.</p></div>
+<div class="ex"><p><strong>Q. Dictionary order: Rose, Rise, Rice.</strong></p><p>Rice, Rise, Rose. Rice and Rise share R-i, and the third letters give c before s, so Rice comes first. Rose has o as its second letter, which comes after i, so it is last.</p></div>
+<h3>Practice questions</h3><ol><li>Arrange: Birth, Death, Marriage, Education.<details><summary>Show answer</summary><p>Birth, Education, Marriage, Death.</p></details></li><li>Dictionary order: Table, Tablet, Tab.<details><summary>Show answer</summary><p>Tab, Table, Tablet.</p></details></li><li>Arrange: Week, Day, Month, Year, Hour.<details><summary>Show answer</summary><p>Hour, Day, Week, Month, Year.</p></details></li><li>Arrange the letters of TRAIN alphabetically. What is the 3rd letter?<details><summary>Show answer</summary><p>A, I, N, R, T. The third is N.</p></details></li></ol>
+</section>
+<h2>How to attack the Reasoning section</h2>
+<ul><li>Group D has 30 Reasoning questions in 90 minutes for 100 questions overall, so aim for about 20 to 25 seconds per easy question and move on if stuck.</li><li>Do your strong topics first: series, coding, analogy, classification and direction sense are quick marks.</li><li>Leave puzzles and seating arrangements for the end if they look long.</li><li>Practise 20 questions a day by topic, then one full 30-question timed set a week.</li><li>Write the alphabet with positions at the top of your rough sheet the moment the paper starts.</li></ul></main>
+<footer>
+<p><strong>Railway Exam Hub</strong> is an independent educational platform. Not an official Railway Recruitment Board website.</p>
+<p><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></p>
+<p>© 2026 Railway Exam Hub</p>
+</footer>
+</body>
+</html>
