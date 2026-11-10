@@ -1,7 +1,7 @@
 {
   "website": "Railway Exam Hub",
   "date": "2026-11-10",
-  "updated": "2026-11-10T07:07:27.594156+05:30",
+  "updated": "2026-11-10T09:47:32.656908+05:30",
   "source": "PIB",
   "articles": [
     {
@@ -149,14 +149,14 @@
     "summary": [
       "Union Minister for Minority Affairs and Parliamentary Affairs Shri Kiren Rijiju visited Saudi Arabia.",
       "Prime Minister spoke with President Volodymyr Zelenskyy.",
-      "Union Home Minister and Minister of Cooperation Shri Amit Shah inaugurated and laid the foundation stone for development projects worth around Rs 1400 crore in Ahmedabad.",
+      "Union Home Minister and Minister of Cooperation Shri Amit Shah inaugurated and laid the foundation stone for development projects worth around Rs 1,400 crore in Ahmedabad.",
       "Indian Railways successfully completed Special Campaign 6, conducting over 1 lakh cleanliness campaigns.",
-      "Delhi is set to launch its first Yamuna river cruise service.",
-      "TRAI assessed mobile network quality on the rail route between New Tinsukia railway station and Guwahati railway station under Assam LSA.",
+      "Delhi is set to launch its first Yamuna River cruise service.",
+      "Indian Navy's largest batch of Agniveers to have a passing out parade at INS Chilka.",
+      "TRAI assessed the quality of mobile networks on the rail route between New Tinsukia railway station and Guwahati railway station under Assam LSA.",
       "INS Surat arrived at Muscat, Oman.",
       "President Droupadi Murmu will present the 10th Swachh Survekshan 2025-26 awards.",
-      "India-Myanmar first bilateral Tri-Service HADR exercise 'Rahat Mitra' concluded in Chennai.",
-      "Prices of 1,364 anti-cancer formulations became effective from today."
+      "The first India-Myanmar bilateral Tri-Services HADR exercise 'Rahat Mitra' concluded in Chennai."
     ],
     "questions": [
       {
@@ -172,19 +172,19 @@
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334477"
       },
       {
-        "question": "In which city did Union Home Minister Shri Amit Shah inaugurate and lay the foundation stone for development projects worth around Rs 1400 crore?",
+        "question": "Development projects worth approximately how much money were inaugurated and laid foundation stones for by Amit Shah in Ahmedabad?",
         "options": [
-          "New Delhi",
-          "Gandhinagar",
-          "Ahmedabad",
-          "Surat"
+          "Rs 1,000 crore",
+          "Rs 1,200 crore",
+          "Rs 1,400 crore",
+          "Rs 2,000 crore"
         ],
-        "answer": "Ahmedabad",
-        "explanation": "Union Home Minister and Minister of Cooperation Shri Amit Shah inaugurated and laid the foundation stone for development projects worth approximately Rs 1400 crore in Ahmedabad.",
+        "answer": "Rs 1,400 crore",
+        "explanation": "Union Home and Cooperation Minister Shri Amit Shah inaugurated and laid foundation stones for development projects worth approximately Rs 1,400 crore in Ahmedabad.",
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334428"
       },
       {
-        "question": "How many cleanliness campaigns were conducted by Indian Railways as part of the successful completion of Special Campaign 6?",
+        "question": "How many cleanliness campaigns were conducted by Indian Railways under Special Campaign 6?",
         "options": [
           "Over 50,000",
           "Over 75,000",
@@ -196,7 +196,7 @@
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334431"
       },
       {
-        "question": "Which city is set to start its first Yamuna river cruise service?",
+        "question": "Which city is set to launch its first Yamuna River cruise service?",
         "options": [
           "Agra",
           "Mathura",
@@ -204,31 +204,43 @@
           "Prayagraj"
         ],
         "answer": "Delhi",
-        "explanation": "Delhi is set to introduce its first Yamuna river cruise service.",
+        "explanation": "Delhi is set to introduce its first-ever Yamuna River cruise service.",
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334409"
       },
       {
-        "question": "TRAI assessed the mobile network quality on the rail route between which two railway stations under Assam LSA?",
+        "question": "At which naval establishment is the passing out parade of the largest batch of Agniveers scheduled to be held by the Indian Navy?",
         "options": [
-          "New Tinsukia and Guwahati",
-          "Dibrugarh and Guwahati",
-          "Silchar and Guwahati",
-          "Jorhat and Guwahati"
-        ],
-        "answer": "New Tinsukia and Guwahati",
-        "explanation": "TRAI assessed the mobile network quality on the rail route between New Tinsukia railway station and Guwahati railway station under Assam LSA.",
-        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334423"
-      },
-      {
-        "question": "Which Indian naval ship recently arrived at Muscat, Oman?",
-        "options": [
+          "INS Chilka",
           "INS Kochi",
-          "INS Kolkata",
           "INS Surat",
           "INS Visakhapatnam"
         ],
+        "answer": "INS Chilka",
+        "explanation": "The Indian Navy is organizing the passing out parade of the largest batch of Agniveers at INS Chilka.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334419"
+      },
+      {
+        "question": "TRAI assessed the quality of mobile networks on the rail route between New Tinsukia railway station and Guwahati railway station under which LSA?",
+        "options": [
+          "Bihar LSA",
+          "Assam LSA",
+          "West Bengal LSA",
+          "Meghalaya LSA"
+        ],
+        "answer": "Assam LSA",
+        "explanation": "TRAI assessed mobile network quality on the rail route between New Tinsukia and Guwahati under the Assam LSA.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334423"
+      },
+      {
+        "question": "Which Indian Naval Ship recently arrived at Muscat, Oman?",
+        "options": [
+          "INS Kochi",
+          "INS Surat",
+          "INS Chennai",
+          "INS Kolkata"
+        ],
         "answer": "INS Surat",
-        "explanation": "INS Surat arrived at Muscat, Oman.",
+        "explanation": "Indian Naval Ship INS Surat reached Muscat, Oman.",
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334358"
       },
       {
@@ -236,47 +248,35 @@
         "options": [
           "Prime Minister",
           "President Droupadi Murmu",
-          "Minister of Housing and Urban Affairs",
+          "Union Housing and Urban Affairs Minister",
           "Vice President"
         ],
         "answer": "President Droupadi Murmu",
-        "explanation": "President Droupadi Murmu will present the 10th Swachh Survekshan 2025-26 awards.",
+        "explanation": "President Droupadi Murmu is scheduled to present the 10th Swachh Survekshan 2025-26 awards.",
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334339"
       },
       {
-        "question": "Where did the first India-Myanmar bilateral Tri-Service HADR exercise 'Rahat Mitra' conclude?",
+        "question": "The first India-Myanmar bilateral Tri-Services HADR exercise 'Rahat Mitra' concluded in which city?",
         "options": [
           "Visakhapatnam",
-          "Kochi",
+          "Mumbai",
           "Chennai",
-          "Mumbai"
+          "Kochi"
         ],
         "answer": "Chennai",
-        "explanation": "The first India-Myanmar bilateral Tri-Service HADR exercise 'Rahat Mitra' concluded in Chennai.",
+        "explanation": "The first India-Myanmar bilateral Tri-Services HADR exercise 'Rahat Mitra' successfully concluded in Chennai.",
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334325"
       },
       {
-        "question": "How many anti-cancer formulations had their revised prices implemented recently?",
-        "options": [
-          "1,000",
-          "1,250",
-          "1,364",
-          "1,500"
-        ],
-        "answer": "1,364",
-        "explanation": "The revised prices of 1,364 anti-cancer formulations came into effect.",
-        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334323"
-      },
-      {
-        "question": "To which monastery did the holy relics of Lord Shakyamuni Buddha reach on November 8?",
+        "question": "Where did the holy relics of Lord Sakyamuni Buddha reach on November 8?",
         "options": [
           "Tawang Monastery",
-          "Thubchog Gatshel Ling (TGL) Monastery",
+          "Thubchog Gatshel Ling (TGL) Monastery in Bomdila",
           "Rumtek Monastery",
           "Hemis Monastery"
         ],
-        "answer": "Thubchog Gatshel Ling (TGL) Monastery",
-        "explanation": "The holy relics of Lord Shakyamuni Buddha reached the Thubchog Gatshel Ling (TGL) Monastery located in Bomdila.",
+        "answer": "Thubchog Gatshel Ling (TGL) Monastery in Bomdila",
+        "explanation": "The holy relics of Lord Sakyamuni Buddha reached the Thubchog Gatshel Ling (TGL) Monastery located at Bomdila on November 8.",
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334326"
       }
     ]
