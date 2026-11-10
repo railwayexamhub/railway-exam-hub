@@ -261,7 +261,57 @@ def save_data(articles, ai_content):
     )
 
     print("Daily data saved:", output_file)
+    
+# Save monthly archive
+    archive_folder = folder / "archive"
+    archive_folder.mkdir(exist_ok=True)
 
+    month_name = now.strftime("%Y-%m")
+    archive_file = archive_folder / f"{month_name}.json"
+
+    if archive_file.exists():
+        with open(archive_file, "r", encoding="utf-8") as f:
+            monthly_data = json.load(f)
+    else:
+        monthly_data = {
+            "month": month_name,
+            "days": []
+        }
+
+    daily_entry = output.copy()
+
+    monthly_data["days"] = [
+        day for day in monthly_data["days"]
+        if day.get("date") != output["date"]
+    ]
+
+    monthly_data["days"].append(daily_entry)
+
+    with open(archive_file, "w", encoding="utf-8") as f:
+        json.dump(
+            monthly_data,
+            f,
+            ensure_ascii=False,
+            indent=2
+        )
+
+    print("Monthly archive saved:", archive_file)
+
+    # Keep current month and previous five months
+    current_month = now.year * 12 + now.month - 1
+    oldest_month = current_month - 5
+
+    for old_file in archive_folder.glob("????-??.json"):
+        try:
+            year, month = map(int, old_file.stem.split("-"))
+            file_month = year * 12 + month - 1
+
+            if file_month < oldest_month:
+                old_file.unlink()
+                print("Deleted old archive:", old_file)
+
+        except (ValueError, OSError):
+            print("Could not process archive:", old_file)
 
 def main():
 
