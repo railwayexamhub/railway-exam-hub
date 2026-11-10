@@ -1,7 +1,7 @@
 {
   "website": "Railway Exam Hub",
   "date": "2026-11-10",
-  "updated": "2026-11-10T00:02:55.389239+05:30",
+  "updated": "2026-11-10T07:07:27.594156+05:30",
   "source": "PIB",
   "articles": [
     {
@@ -145,6 +145,141 @@
       "published": ""
     }
   ],
-  "ai_content": null,
+  "ai_content": {
+    "summary": [
+      "Union Minister for Minority Affairs and Parliamentary Affairs Shri Kiren Rijiju visited Saudi Arabia.",
+      "Prime Minister spoke with President Volodymyr Zelenskyy.",
+      "Union Home Minister and Minister of Cooperation Shri Amit Shah inaugurated and laid the foundation stone for development projects worth around Rs 1400 crore in Ahmedabad.",
+      "Indian Railways successfully completed Special Campaign 6, conducting over 1 lakh cleanliness campaigns.",
+      "Delhi is set to launch its first Yamuna river cruise service.",
+      "TRAI assessed mobile network quality on the rail route between New Tinsukia railway station and Guwahati railway station under Assam LSA.",
+      "INS Surat arrived at Muscat, Oman.",
+      "President Droupadi Murmu will present the 10th Swachh Survekshan 2025-26 awards.",
+      "India-Myanmar first bilateral Tri-Service HADR exercise 'Rahat Mitra' concluded in Chennai.",
+      "Prices of 1,364 anti-cancer formulations became effective from today."
+    ],
+    "questions": [
+      {
+        "question": "Which Union Minister recently visited Saudi Arabia?",
+        "options": [
+          "Shri Amit Shah",
+          "Shri Kiren Rijiju",
+          "Shri Narendra Modi",
+          "Dr. S. Jaishankar"
+        ],
+        "answer": "Shri Kiren Rijiju",
+        "explanation": "Union Minister for Minority Affairs and Parliamentary Affairs Shri Kiren Rijiju undertook a visit to Saudi Arabia.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334477"
+      },
+      {
+        "question": "In which city did Union Home Minister Shri Amit Shah inaugurate and lay the foundation stone for development projects worth around Rs 1400 crore?",
+        "options": [
+          "New Delhi",
+          "Gandhinagar",
+          "Ahmedabad",
+          "Surat"
+        ],
+        "answer": "Ahmedabad",
+        "explanation": "Union Home Minister and Minister of Cooperation Shri Amit Shah inaugurated and laid the foundation stone for development projects worth approximately Rs 1400 crore in Ahmedabad.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334428"
+      },
+      {
+        "question": "How many cleanliness campaigns were conducted by Indian Railways as part of the successful completion of Special Campaign 6?",
+        "options": [
+          "Over 50,000",
+          "Over 75,000",
+          "Over 1 lakh",
+          "Over 2 lakh"
+        ],
+        "answer": "Over 1 lakh",
+        "explanation": "Indian Railways successfully completed Special Campaign 6 by conducting over 1 lakh cleanliness campaigns.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334431"
+      },
+      {
+        "question": "Which city is set to start its first Yamuna river cruise service?",
+        "options": [
+          "Agra",
+          "Mathura",
+          "Delhi",
+          "Prayagraj"
+        ],
+        "answer": "Delhi",
+        "explanation": "Delhi is set to introduce its first Yamuna river cruise service.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334409"
+      },
+      {
+        "question": "TRAI assessed the mobile network quality on the rail route between which two railway stations under Assam LSA?",
+        "options": [
+          "New Tinsukia and Guwahati",
+          "Dibrugarh and Guwahati",
+          "Silchar and Guwahati",
+          "Jorhat and Guwahati"
+        ],
+        "answer": "New Tinsukia and Guwahati",
+        "explanation": "TRAI assessed the mobile network quality on the rail route between New Tinsukia railway station and Guwahati railway station under Assam LSA.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334423"
+      },
+      {
+        "question": "Which Indian naval ship recently arrived at Muscat, Oman?",
+        "options": [
+          "INS Kochi",
+          "INS Kolkata",
+          "INS Surat",
+          "INS Visakhapatnam"
+        ],
+        "answer": "INS Surat",
+        "explanation": "INS Surat arrived at Muscat, Oman.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334358"
+      },
+      {
+        "question": "Who will present the 10th Swachh Survekshan 2025-26 awards?",
+        "options": [
+          "Prime Minister",
+          "President Droupadi Murmu",
+          "Minister of Housing and Urban Affairs",
+          "Vice President"
+        ],
+        "answer": "President Droupadi Murmu",
+        "explanation": "President Droupadi Murmu will present the 10th Swachh Survekshan 2025-26 awards.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334339"
+      },
+      {
+        "question": "Where did the first India-Myanmar bilateral Tri-Service HADR exercise 'Rahat Mitra' conclude?",
+        "options": [
+          "Visakhapatnam",
+          "Kochi",
+          "Chennai",
+          "Mumbai"
+        ],
+        "answer": "Chennai",
+        "explanation": "The first India-Myanmar bilateral Tri-Service HADR exercise 'Rahat Mitra' concluded in Chennai.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334325"
+      },
+      {
+        "question": "How many anti-cancer formulations had their revised prices implemented recently?",
+        "options": [
+          "1,000",
+          "1,250",
+          "1,364",
+          "1,500"
+        ],
+        "answer": "1,364",
+        "explanation": "The revised prices of 1,364 anti-cancer formulations came into effect.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334323"
+      },
+      {
+        "question": "To which monastery did the holy relics of Lord Shakyamuni Buddha reach on November 8?",
+        "options": [
+          "Tawang Monastery",
+          "Thubchog Gatshel Ling (TGL) Monastery",
+          "Rumtek Monastery",
+          "Hemis Monastery"
+        ],
+        "answer": "Thubchog Gatshel Ling (TGL) Monastery",
+        "explanation": "The holy relics of Lord Shakyamuni Buddha reached the Thubchog Gatshel Ling (TGL) Monastery located in Bomdila.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334326"
+      }
+    ]
+  },
   "review_status": "needs_review"
 }
