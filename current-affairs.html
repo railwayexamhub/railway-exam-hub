@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Current Affairs | Railway Exam Hub</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f3f6fb;color:#202b3c}
+header{background:#123c70;color:white;padding:22px 16px;text-align:center}
+header h1{margin:0 0 8px}
+nav{background:#092b50;padding:12px;text-align:center}
+nav a{color:white;text-decoration:none;margin:8px}
+main{max-width:900px;margin:24px auto;padding:16px}
+.card{background:white;padding:20px;margin:16px 0;border-radius:10px;box-shadow:0 2px 8px #0001}
+h2{color:#123c70}
+.item{border-bottom:1px solid #ddd;padding:12px 0}
+.item:last-child{border:0}
+footer{text-align:center;padding:20px;color:#666}
+button{background:#123c70;color:white;border:0;padding:11px 18px;border-radius:6px;cursor:pointer}
+.small{color:#666;font-size:14px}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Daily Current Affairs</h1>
+<p>Railway Exam Hub | Prepare. Practise. Succeed.</p>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="group-d.html">RRB Group D</a>
+<a href="ntpc-graduate.html">RRB NTPC</a>
+<a href="station-master.html">Station Master</a>
+</nav>
+
+<main>
+<div class="card">
+<h2>Today's Current Affairs</h2>
+<p id="date">Loading date...</p>
+<button onclick="loadNews()">Refresh News</button>
+<p id="status" class="small">Loading daily study material...</p>
+</div>
+
+<div class="card">
+<h2>Daily Study Material and MCQs</h2>
+<div id="content">Loading...</div>
+</div>
+</main>
+
+<footer>
+<p>© Railway Exam Hub | Daily Railway Exam Preparation</p>
+</footer>
+
+<script>
+async function loadNews(){
+ const status=document.getElementById("status");
+ const content=document.getElementById("content");
+ status.textContent="Loading latest data...";
+ content.textContent="Please wait...";
+
+ try{
+  const response=await fetch(
+   "current-affairs-data/daily.json?t="+Date.now()
+  );
+  if(!response.ok) throw new Error("Daily data not found");
+
+  const data=await response.json();
+  document.getElementById("date").textContent=
+   "Date: "+(data.date || "Latest update");
+
+  const ai=data.ai_content;
+
+  if(!ai){
+   content.textContent=
+    "English study material is not available yet. Please check again after the daily update.";
+  }else{
+   content.innerHTML="";
+   displayData(ai,content);
+  }
+
+  status.textContent="Daily data loaded successfully.";
+ }catch(error){
+  status.textContent="Unable to load current affairs.";
+  content.textContent=
+   "Please try again later. The daily data file may not have been published yet.";
+ }
+}
+
+function displayData(value,parent,key){
+ if(value===null || value===undefined) return;
+
+ if(typeof value==="object"){
+  if(Array.isArray(value)){
+   value.forEach((item,index)=>{
+    const section=document.createElement("div");
+    section.className="item";
+    displayData(item,section,"Question "+(index+1));
+    parent.appendChild(section);
+   });
+  }else{
+   Object.entries(value).forEach(([name,item])=>{
+    const section=document.createElement("div");
+    section.className="item";
+    displayData(item,section,name);
+    parent.appendChild(section);
+   });
+  }
+  return;
+ }
+
+ const heading=document.createElement("h3");
+ heading.textContent=key || "Information";
+ parent.appendChild(heading);
+
+ const paragraph=document.createElement("p");
+ paragraph.textContent=String(value);
+ parent.appendChild(paragraph);
+}
+
+loadNews();
+</script>
+</body>
+</html>
