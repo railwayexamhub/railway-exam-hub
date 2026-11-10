@@ -87,35 +87,127 @@ async function loadNews(){
  }
 }
 
-function displayData(value,parent,key){
- if(value===null || value===undefined) return;
+function displayData(value, parent, key) {
+    if (value === null || value === undefined) return;
 
- if(typeof value==="object"){
-  if(Array.isArray(value)){
-   value.forEach((item,index)=>{
-    const section=document.createElement("div");
-    section.className="item";
-    displayData(item,section,"Question "+(index+1));
-    parent.appendChild(section);
-   });
-  }else{
-   Object.entries(value).forEach(([name,item])=>{
-    const section=document.createElement("div");
-    section.className="item";
-    displayData(item,section,name);
-    parent.appendChild(section);
-   });
-  }
-  return;
- }
+    // Render arrays of questions as interactive MCQs
+    if (Array.isArray(value)) {
+        value.forEach((item, index) => {
+            const section = document.createElement("div");
+            section.className = "item";
 
- const heading=document.createElement("h3");
- heading.textContent=key || "Information";
- parent.appendChild(heading);
+            if (item && typeof item === "object" &&
+                item.question && item.options) {
+                renderQuestion(item, section, index);
+            } else {
+                displayData(item, section, "Question " + (index + 1));
+            }
 
- const paragraph=document.createElement("p");
- paragraph.textContent=String(value);
- parent.appendChild(paragraph);
+            parent.appendChild(section);
+        });
+        return;
+    }
+
+    if (typeof value === "object") {
+        Object.entries(value).forEach(([name, item]) => {
+            const section = document.createElement("div");
+            section.className = "item";
+            displayData(item, section, name);
+            parent.appendChild(section);
+        });
+        return;
+    }
+
+    const heading = document.createElement("h3");
+    heading.textContent = key || "Information";
+    parent.appendChild(heading);
+
+    const paragraph = document.createElement("p");
+    paragraph.textContent = String(value);
+    parent.appendChild(paragraph);
+}
+
+function renderQuestion(question, parent, index) {
+    const title = document.createElement("h3");
+    title.textContent = "Question " + (index + 1) +
+        ": " + question.question;
+    parent.appendChild(title);
+
+    const options = Array.isArray(question.options)
+        ? question.options
+        : Object.values(question.options);
+
+    const group = document.createElement("div");
+    const feedback = document.createElement("p");
+    const explanation = document.createElement("p");
+    const submit = document.createElement("button");
+
+    let selected = null;
+    let checked = false;
+
+    options.forEach((option, i) => {
+        const label = document.createElement("label");
+        label.style.display = "block";
+        label.style.padding = "10px";
+        label.style.margin = "6px 0";
+        label.style.border = "1px solid #ccc";
+        label.style.borderRadius = "6px";
+        label.style.cursor = "pointer";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "current-affairs-" + index;
+        radio.value = String(i);
+
+        const optionText = typeof option === "object"
+            ? (option.text || option.option || option.value || "")
+            : option;
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(
+            " " + String.fromCharCode(65 + i) + ". " + optionText
+        ));
+
+        radio.addEventListener("change", () => {
+            if (!checked) selected = i;
+        });
+
+        group.appendChild(label);
+    });
+
+    submit.textContent = "Submit Answer";
+    submit.addEventListener("click", () => {
+        if (selected === null || checked) return;
+
+        checked = true;
+
+        const answer = String(question.answer || "").trim();
+        const selectedOption = options[selected];
+        const selectedText = typeof selectedOption === "object"
+            ? String(selectedOption.text || selectedOption.option ||
+                selectedOption.value || "")
+            : String(selectedOption);
+
+        const correct = answer.toLowerCase() ===
+                String.fromCharCode(65 + selected).toLowerCase() ||
+            answer.toLowerCase() === selectedText.toLowerCase();
+
+        feedback.textContent = correct
+            ? "Correct answer!"
+            : "Incorrect. Correct answer: " + answer;
+        feedback.style.color = correct ? "green" : "red";
+
+        explanation.textContent =
+            "Explanation: " +
+            (question.explanation || "No explanation provided.");
+
+        submit.disabled = true;
+    });
+
+    parent.appendChild(group);
+    parent.appendChild(submit);
+    parent.appendChild(feedback);
+    parent.appendChild(explanation);
 }
 
 loadNews();
