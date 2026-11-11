@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Monthly Railway Current Affairs and MCQ archive.">
+<title>Monthly Current Affairs | Railway Exam Hub</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:Arial,sans-serif;margin:0;background:#f3f6fb;color:#202b3c;line-height:1.65}
+header{background:#123c70;color:white;padding:24px 16px;text-align:center}
+header h1{margin:0 0 8px}
+nav{background:#092b50;padding:12px;text-align:center}
+nav a{color:white;text-decoration:none;margin:8px}
+main{max-width:950px;margin:24px auto;padding:16px}
+.card{background:white;padding:20px;margin:16px 0;border-radius:10px;box-shadow:0 2px 8px #0001}
+h2,h3{color:#123c70}
+select,button{padding:11px 15px;border:1px solid #ccd5e1;border-radius:6px;font-size:15px}
+button{background:#123c70;color:white;border:0;cursor:pointer}
+button:disabled{opacity:.5}
+select{min-width:190px}
+.item{border-bottom:1px solid #ddd;padding:12px 0}
+.item:last-child{border:0}
+.day{border:1px solid #dfe7f0;border-radius:9px;padding:15px;margin:15px 0}
+.question{background:#f5f8fc;padding:14px;border-radius:8px;margin:12px 0}
+.question label{display:block;padding:7px}
+.feedback{font-weight:bold}
+.small{color:#666;font-size:14px}
+footer{text-align:center;padding:20px;color:#666}
+@media(max-width:600px){nav a{display:inline-block;margin:5px}}
+</style>
+</head>
+<body>
+<header>
+<h1>Monthly Current Affairs</h1>
+<p>Railway Exam Hub | Prepare. Practise. Succeed.</p>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="current-affairs.html">Daily Current Affairs</a>
+<a href="group-d.html">RRB Group D</a>
+<a href="ntpc-graduate.html">RRB NTPC</a>
+</nav>
+
+<main>
+<section class="card">
+<h2>Monthly Current Affairs Archive</h2>
+<p>Select a month to view saved news and daily study material.</p>
+<select id="monthSelect" aria-label="Select month"></select>
+<button id="loadButton" onclick="loadMonth()">View Month</button>
+<p class="small">Archive retention: latest six months.</p>
+<p id="status" class="small">Loading available months...</p>
+</section>
+
+<section class="card">
+<h2 id="archiveTitle">Monthly Study Material</h2>
+<div id="archiveContent">Select a month to begin.</div>
+</section>
+</main>
+
+<footer>
+<p>© Railway Exam Hub | Monthly Railway Exam Preparation</p>
+<a href="index.html">Back to Home</a>
+</footer>
+
+<script>
+const select=document.getElementById("monthSelect");
+const statusBox=document.getElementById("status");
+const content=document.getElementById("archiveContent");
+const title=document.getElementById("archiveTitle");
+
+function getMonths(){
+ const months=[];
+ const now=new Date();
+ for(let i=0;i<6;i++){
+  const d=new Date(now.getFullYear(),now.getMonth()-i,1);
+  const key=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");
+  months.push({
+   key,
+   label:d.toLocaleString("en-IN",{month:"long",year:"numeric"})
+  });
+ }
+ return months;
+}
+
+function setupMonths(){
+ getMonths().forEach((m,i)=>{
+  const option=document.createElement("option");
+  option.value=m.key;
+  option.textContent=m.label;
+  select.appendChild(option);
+ });
+ loadMonth();
+}
+
+async function loadMonth(){
+ const month=select.value;
+ if(!month)return;
+
+ statusBox.textContent="Loading monthly archive...";
+ content.textContent="Please wait...";
+ title.textContent="Monthly Study Material – "+month;
+
+ try{
+  const response=await fetch(
+   "current-affairs-data/archive/"+month+".json?t="+Date.now()
+  );
+  if(!response.ok)throw new Error("Archive not available");
+
+  const data=await response.json();
+  content.innerHTML="";
+
+  if(!Array.isArray(data.days)||data.days.length===0){
+   content.textContent="No saved daily records are available for this month.";
+  }else{
+   data.days.slice().reverse().forEach(day=>{
+    const box=document.createElement("div");
+    box.className="day";
+
+    const heading=document.createElement("h3");
+    heading.textContent="Date: "+(day.date||"Daily Update");
+    box.appendChild(heading);
+
+    if(day.ai_content){
+     const material=document.createElement("div");
+     material.className="item";
+     const sub=document.createElement("h3");
+     sub.textContent="Study Material and MCQs";
+     material.appendChild(sub);
+     renderData(day.ai_content,material);
+     box.appendChild(material);
+    }
+
+    if(Array.isArray(day.articles)&&day.articles.length){
+     const news=document.createElement("div");
+     const newsTitle=document.createElement("h3");
+     newsTitle.textContent="News Articles";
+     news.appendChild(newsTitle);
+
+     day.articles.forEach(article=>{
+      const item=document.createElement("div");
+      item.className="item";
+      const h=document.createElement("h3");
+      h.textContent=article.title||"News";
+      item.appendChild(h);
+      if(article.description){
+       const p=document.createElement("p");
+       p.textContent=article.description;
+       item.appendChild(p);
+      }
+      if(article.source){
+       const p=document.createElement("p");
+       p.className="small";
+       p.textContent="Source: "+article.source;
+       item.appendChild(p);
+      }
+      if(article.url){
+       const a=document.createElement("a");
+       a.href=article.url;
+       a.target="_blank";
+       a.rel="noopener";
+       a.textContent="Read original article";
+       item.appendChild(a);
+      }
+      news.appendChild(item);
+     });
+     box.appendChild(news);
+    }
+
+    content.appendChild(box);
+   });
+  }
+
+  statusBox.textContent="Monthly archive loaded successfully.";
+ }catch(error){
+  content.textContent="No published archive found for "+month+". The monthly archive will appear after the daily automation saves and publishes it.";
+  statusBox.textContent="Archive file is not available yet.";
+ }
+}
+
+function renderData(value,parent,key){
+ if(value===null||value===undefined)return;
+
+ if(Array.isArray(value)){
+  value.forEach((item,index)=>{
+   const box=document.createElement("div");
+   box.className="item";
+   if(item&&typeof item==="object"&&item.question&&item.options){
+    renderQuestion(item,box,index);
+   }else{
+    renderData(item,box,"Question "+(index+1));
+   }
+   parent.appendChild(box);
+  });
+  return;
+ }
+
+ if(typeof value==="object"){
+  Object.entries(value).forEach(([name,item])=>{
+   const box=document.createElement("div");
+   box.className="item";
+   renderData(item,box,name);
+   parent.appendChild(box);
+  });
+  return;
+ }
+
+ const h=document.createElement("h3");
+ h.textContent=key||"Information";
+ parent.appendChild(h);
+ const p=document.createElement("p");
+ p.textContent=String(value);
+ parent.appendChild(p);
+}
+
+function renderQuestion(question,parent,index){
+ const box=document.createElement("div");
+ box.className="question";
+ const h=document.createElement("h3");
+ h.textContent="Question "+(index+1)+": "+question.question;
+ box.appendChild(h);
+
+ const options=Array.isArray(question.options)
+  ?question.options:Object.values(question.options);
+ let selected=null;
+ let checked=false;
+
+ options.forEach((option,i)=>{
+  const label=document.createElement("label");
+  const radio=document.createElement("input");
+  radio.type="radio";
+  radio.name="monthly-"+Math.random()+"-"+index;
+  radio.value=i;
+  const text=typeof option==="object"
+   ?(option.text||option.option||option.value||"")
+   :option;
+  label.appendChild(radio);
+  label.appendChild(document.createTextNode(
+   " "+String.fromCharCode(65+i)+". "+text
+  ));
+  radio.addEventListener("change",()=>{if(!checked)selected=i;});
+  box.appendChild(label);
+ });
+
+ const feedback=document.createElement("p");
+ feedback.className="feedback";
+ const explanation=document.createElement("p");
+ const button=document.createElement("button");
+ button.textContent="Submit Answer";
+
+ button.addEventListener("click",()=>{
+  if(selected===null||checked)return;
+  checked=true;
+  const answer=String(question.answer||"").trim();
+  const chosen=options[selected];
+  const chosenText=typeof chosen==="object"
+   ?String(chosen.text||chosen.option||chosen.value||"")
+   :String(chosen);
+  const correct=answer.toLowerCase()===
+   String.fromCharCode(65+selected).toLowerCase()||
+   answer.toLowerCase()===chosenText.toLowerCase();
+
+  feedback.textContent=correct?"Correct answer!":
+   "Incorrect. Correct answer: "+answer;
+  feedback.style.color=correct?"green":"red";
+  explanation.textContent="Explanation: "+
+   (question.explanation||"No explanation provided.");
+  button.disabled=true;
+ });
+
+ box.appendChild(button);
+ box.appendChild(feedback);
+ box.appendChild(explanation);
+ parent.appendChild(box);
+}
+
+setupMonths();
+</script>
+</body>
+</html>
