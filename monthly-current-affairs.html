@@ -132,41 +132,7 @@ async function loadMonth(){
      box.appendChild(material);
     }
 
-    if(Array.isArray(day.articles)&&day.articles.length){
-     const news=document.createElement("div");
-     const newsTitle=document.createElement("h3");
-     newsTitle.textContent="News Articles";
-     news.appendChild(newsTitle);
-
-     day.articles.forEach(article=>{
-      const item=document.createElement("div");
-      item.className="item";
-      const h=document.createElement("h3");
-      h.textContent=article.title||"News";
-      item.appendChild(h);
-      if(article.description){
-       const p=document.createElement("p");
-       p.textContent=article.description;
-       item.appendChild(p);
-      }
-      if(article.source){
-       const p=document.createElement("p");
-       p.className="small";
-       p.textContent="Source: "+article.source;
-       item.appendChild(p);
-      }
-      if(article.url){
-       const a=document.createElement("a");
-       a.href=article.url;
-       a.target="_blank";
-       a.rel="noopener";
-       a.textContent="Read original article";
-       item.appendChild(a);
-      }
-      news.appendChild(item);
-     });
-     box.appendChild(news);
-    }
+  }
 
     content.appendChild(box);
    });
