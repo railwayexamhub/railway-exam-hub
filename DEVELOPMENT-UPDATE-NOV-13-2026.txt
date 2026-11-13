@@ -1,0 +1,23 @@
+RAILWAY EXAM HUB – DEVELOPMENT UPDATE
+Date: 13 November 2026
+
+Completed in this update:
+1. Replaced the generic Section Controller page with the CEN 04/2025-specific syllabus and selection pattern.
+2. Added the notified CBT distribution: Analytical and Mathematical Capability 60, Logical Capability 20, Mental Reasoning 20; 100 questions, 120 minutes, one-third negative marking.
+3. Added CBAT qualifying rules and 70:30 CBT/CBAT merit weightage.
+4. Restored the missing study-guide destination pages for all 13 exam categories. Each guide links to the corresponding exam syllabus page and available subject resources.
+5. Fixed missing subject-note destinations in Study Materials by connecting them to existing relevant pages. Computer Awareness is clearly marked as not yet available rather than linking to unrelated material.
+6. Added a Previous Year Papers archive landing page that clearly distinguishes verified previous-year papers from model papers and practice sets.
+7. Fixed the broken Maths full-syllabus link.
+
+QA RESULT:
+- HTML pages scanned: 114
+- Local links scanned: 639
+- Broken local links: 0
+- Existing mock tests, model papers, current affairs, chapter-wise practice, science and maths resources retained in this package.
+
+IMPORTANT:
+- The Previous Year Papers page is an archive placeholder; it does not claim that model papers are actual past RRB papers.
+- Computer Awareness is not yet populated with lessons.
+- Official recruitment notices/corrigenda always take precedence over this independent study website.
+- The Python RRB updates automation still requires repository setup and a live GitHub Actions run to prove scheduled refresh works in production.

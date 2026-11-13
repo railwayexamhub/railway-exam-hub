@@ -1,0 +1,13 @@
+RAILWAY EXAM HUB — RRB NOTICE AUTOMATION
+
+The repository includes scripts/fetch_rrb_updates.py and .github/workflows/update-rrb-notices.yml.
+
+To enable scheduled updates after uploading this project to GitHub:
+1. Open the repository on GitHub.
+2. Open Settings → Actions → General.
+3. Under Workflow permissions, allow read and write permissions if the workflow needs to commit generated updates.html and data files.
+4. Open the Actions tab and enable workflows if GitHub prompts you.
+5. Run “Update RRB recruitment notices” once manually using Run workflow.
+6. Check the workflow log and the generated updates.html before considering the feed live.
+
+The workflow is scheduled daily at 09:00 IST. Scraping depends on the source websites' page structure and availability. The script publishes only titles and URLs it can read; it does not invent dates or summaries. If a source changes its page structure, the scraper must be updated.
