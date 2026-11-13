@@ -1,7 +1,7 @@
 {
   "website": "Railway Exam Hub",
-  "date": "2026-11-12",
-  "updated": "2026-11-12T22:16:40.664139+05:30",
+  "date": "2026-11-13",
+  "updated": "2026-11-13T07:13:09.194187+05:30",
   "source": "PIB",
   "articles": [
     {
@@ -12,10 +12,24 @@
       "published": ""
     },
     {
+      "title": "57वां इफ्फी: 20 से 28 नवंबर 2026 तक गोवा में दुनिया भर के सिनेमा और रचनात्मक आवाज़ों का संगम",
+      "description": "",
+      "source": "PIB",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335660",
+      "published": ""
+    },
+    {
       "title": "राष्ट्रीय जनजातीय साहित्य महोत्सव 2026 का दूसरा संस्करण नई दिल्ली में शुरू: “मौखिक परंपरा से समकालीन जनजातीय साहित्य तक”",
       "description": "",
       "source": "PIB",
       "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335655",
+      "published": ""
+    },
+    {
+      "title": "केंद्रीय जल शक्ति मंत्री श्री सी. आर. पाटिल ने तिरुचिरापल्ली में जेजेएम 2.0 पर आयोजित पहले क्षेत्रीय सम्मेलन को संबोधित किया",
+      "description": "",
+      "source": "PIB",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335662",
       "published": ""
     },
     {
@@ -129,75 +143,105 @@
       "source": "PIB",
       "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335503",
       "published": ""
-    },
-    {
-      "title": "अक्टूबर 2026 के लिए आधार वर्ष 2024=100 पर उपभोक्ता मूल्य सूचकांक की प्रेस विज्ञप्ति",
-      "description": "",
-      "source": "PIB",
-      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335581",
-      "published": ""
-    },
-    {
-      "title": "छठे विशेष अभियान के तहत आवास और शहरी विकास निगम लिमिटेड-हुडको ने स्वच्छता, संसाधनों के बेहतर उपयोग और कर्मचारियों के कल्याण को बढ़ावा दिया",
-      "description": "",
-      "source": "PIB",
-      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335476",
-      "published": ""
     }
   ],
   "ai_content": {
     "summary": [
       "Prime Minister addressed the Kisan Tak Bharat Agriculture Conference.",
-      "The 2nd edition of the National Tribal Literature Festival 2026 commenced in New Delhi with the theme 'From Oral Tradition to Contemporary Tribal Literature'.",
-      "Andhra Pradesh is monitoring its status as a global maritime hub with a major focus on ports and shipbuilding.",
-      "Bhagini Nivedita Hostel inaugurated in Tripura.",
-      "The Ministry of Tribal Affairs launched a national initiative to promote the conservation of medicinal plants and sustainable livelihoods in 16 tribal hotspots spread across 13 states/union territories.",
-      "DRI busted a red sanders smuggling syndicate at Chennai Port, seizing nearly 13,000 kg of red sanders valued at Rs 7.72 crore and arresting three persons.",
-      "Directorate of Revenue Intelligence (DRI) officers seized 22 kg of cocaine from a woman passenger arriving in New Delhi from Sierra Leone.",
-      "The President of India interacted with meritorious students of Eklavya Model Residential School at Rashtrapati Bhavan.",
-      "Union Minister of State for Defence Shri Sanjay Seth launched the revised Gallantry Awards portal.",
-      "The Ministry of Heavy Industries received 22 bids for 10 GWh advanced chemistry cell manufacturing capacity under the PLI ACC scheme.",
-      "Nasha Mukt Bharat Abhiyan has reached over 35.88 crore people through awareness campaigns, sensitizing over 14.35 crore youth and 11.33 crore women."
+      "The 57th IFFI is scheduled to be held in Goa from November 20 to 28, 2026.",
+      "The second edition of the National Tribal Literature Festival 2026 commenced in New Delhi with the theme 'From Oral Tradition to Contemporary Tribal Literature'.",
+      "Union Jal Shakti Minister C.R. Patil addressed the first regional conference on JJM 2.0 held in Tiruchirappalli.",
+      "Andhra Pradesh is monitoring its position as a global maritime hub with a major focus on ports and shipbuilding.",
+      "A Bhagini Nivedita Hostel has been established in Tripura.",
+      "The Ministry of Tribal Affairs launched a national initiative to promote the conservation of medicinal plants and sustainable livelihoods in 16 tribal hotspots spread across 13 states/UTs.",
+      "DRI busted a red sandalwood smuggling syndicate at Chennai port, seizing approximately 13,000 kg of red sandalwood valued at Rs 7.72 crore and arresting three people.",
+      "Directorate of Revenue Intelligence officials seized 22 kg of cocaine from a female passenger arriving in New Delhi from Sierra Leone.",
+      "The President of India interacted with meritorious students of Eklavya Model Residential Schools at Rashtrapati Bhavan.",
+      "The Union Environment Minister interacted with LeadIT industry members and project partners.",
+      "A research scholar completed a PhD in Genetics and Plant Breeding under the National Fellowship for Scheduled Caste Students.",
+      "CCRAS-CARI and Delhi University signed a MoU to document the diversity of medicinal plants in DU's North Campus.",
+      "Minister of State for Defence Sanjay Seth launched the modified Gallantry Awards portal.",
+      "The Ministry of Heavy Industries received 22 bids for 10 GW of advanced chemistry cell manufacturing capacity under the PLI ACC scheme.",
+      "Dr. P.K. Mishra addressed the 22nd Foundation Day of PPVFRA and the Plant Genome Saviour Awards ceremony.",
+      "Under the 'Nasha Mukt Bharat Abhiyan', over 35.88 crore people have benefited from awareness campaigns, including over 14.35 crore youth and 11.33 crore women.",
+      "Union Minister of Commerce and Industry Piyush Goyal inaugurated the 45th India International Trade Fair on November 13.",
+      "Union Minister Dr. Jitendra Singh began his Italy visit, emphasizing the advancement of the special strategic partnership agreed upon during Prime Minister Narendra Modi's visit in May 2026."
     ],
     "questions": [
       {
-        "question": "The second edition of the National Tribal Literature Festival 2026 started in which city?",
+        "question": "Where is the 57th IFFI scheduled to be held from November 20 to 28, 2026?",
         "options": [
-          "Mumbai",
+          "Goa",
           "New Delhi",
-          "Kolkata",
+          "Mumbai",
           "Chennai"
         ],
-        "answer": "New Delhi",
-        "explanation": "The second edition of the National Tribal Literature Festival 2026 commenced in New Delhi with the theme “From Oral Tradition to Contemporary Tribal Literature”.",
+        "answer": "Goa",
+        "explanation": "The 57th IFFI is scheduled to be held in Goa from November 20 to 28, 2026.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335660"
+      },
+      {
+        "question": "What is the theme of the second edition of the National Tribal Literature Festival 2026 held in New Delhi?",
+        "options": [
+          "From Oral Tradition to Contemporary Tribal Literature",
+          "Tribal Heritage and Modern Society",
+          "Voices of the Forest and Hills",
+          "Preserving Indigenous Roots"
+        ],
+        "answer": "From Oral Tradition to Contemporary Tribal Literature",
+        "explanation": "The National Tribal Literature Festival 2026 commenced in New Delhi with the theme 'From Oral Tradition to Contemporary Tribal Literature'.",
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335655"
       },
       {
-        "question": "The Ministry of Tribal Affairs launched a national initiative to promote medicinal plants and sustainable livelihoods in how many tribal hotspots?",
+        "question": "Union Jal Shakti Minister C.R. Patil addressed the first regional conference on JJM 2.0 in which city?",
         "options": [
-          "10 tribal hotspots",
-          "16 tribal hotspots",
-          "22 tribal hotspots",
-          "25 tribal hotspots"
+          "Tiruchirappalli",
+          "Chennai",
+          "Hyderabad",
+          "Bengaluru"
         ],
-        "answer": "16 tribal hotspots",
-        "explanation": "The Ministry of Tribal Affairs launched a national initiative in 16 tribal hotspots spread across 13 states/union territories to promote medicinal plants conservation and sustainable livelihoods.",
+        "answer": "Tiruchirappalli",
+        "explanation": "Union Jal Shakti Minister C.R. Patil addressed the first regional conference on JJM 2.0 held in Tiruchirappalli.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335662"
+      },
+      {
+        "question": "Which state is monitoring its position as a global maritime hub focusing on ports and shipbuilding?",
+        "options": [
+          "Andhra Pradesh",
+          "Gujarat",
+          "Maharashtra",
+          "Tamil Nadu"
+        ],
+        "answer": "Andhra Pradesh",
+        "explanation": "Andhra Pradesh is monitoring its position as a global maritime hub with a major focus on ports and shipbuilding.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335606"
+      },
+      {
+        "question": "How many tribal hotspots across 13 states/UTs are covered under the Ministry of Tribal Affairs' initiative for medicinal plants?",
+        "options": [
+          "16",
+          "10",
+          "22",
+          "25"
+        ],
+        "answer": "16",
+        "explanation": "The Ministry of Tribal Affairs launched a national initiative in 16 tribal hotspots spread across 13 states/UTs to promote medicinal plants and sustainable livelihoods.",
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335614"
       },
       {
-        "question": "At which port did the DRI bust a red sanders smuggling syndicate, seizing nearly 13,000 kg of red sanders?",
+        "question": "At which port did the DRI bust a red sandalwood smuggling syndicate, seizing approximately 13,000 kg of red sandalwood?",
         "options": [
-          "Mumbai Port",
           "Chennai Port",
           "Visakhapatnam Port",
-          "Kandla Port"
+          "Kandla Port",
+          "Mumbai Port"
         ],
         "answer": "Chennai Port",
-        "explanation": "DRI busted a red sanders smuggling syndicate at Chennai Port, seizing 7.72 crore rupees worth of red sanders weighing approximately 13,000 kilograms.",
+        "explanation": "DRI busted a red sandalwood smuggling syndicate at Chennai port, seizing approximately 13,000 kg of red sandalwood valued at Rs 7.72 crore.",
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335556"
       },
       {
-        "question": "Revenue Intelligence officers seized 22 kg of cocaine from a woman passenger who arrived in New Delhi from which country?",
+        "question": "Directorate of Revenue Intelligence officials seized 22 kg of cocaine from a female passenger arriving in New Delhi from which country?",
         "options": [
           "Sierra Leone",
           "Nigeria",
@@ -205,80 +249,80 @@
           "Uganda"
         ],
         "answer": "Sierra Leone",
-        "explanation": "Directorate of Revenue Intelligence officers seized 22 kilograms of cocaine from a woman passenger arriving in New Delhi from Sierra Leone.",
+        "explanation": "Revenue Intelligence officials seized 22 kg of cocaine from a female passenger who arrived in New Delhi from Sierra Leone.",
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335557"
       },
       {
-        "question": "Who launched the revised Gallantry Awards portal?",
+        "question": "Who launched the modified Gallantry Awards portal?",
         "options": [
-          "Prime Minister Shri Narendra Modi",
-          "Defence Minister Rajnath Singh",
-          "Minister of State for Defence Shri Sanjay Seth",
-          "Home Minister Amit Shah"
+          "Sanjay Seth",
+          "Rajnath Singh",
+          "Narendra Modi",
+          "Amit Shah"
         ],
-        "answer": "Minister of State for Defence Shri Sanjay Seth",
-        "explanation": "Defence Minister of State Shri Sanjay Seth launched the revised Gallantry Awards portal.",
+        "answer": "Sanjay Seth",
+        "explanation": "Minister of State for Defence Shri Sanjay Seth launched the modified Gallantry Awards portal.",
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335517"
       },
       {
-        "question": "How many bids did the Ministry of Heavy Industries receive for 10 GWh advanced chemistry cell manufacturing capacity under the PLI ACC scheme?",
+        "question": "Under the PLI ACC scheme, how many gigawatts (GW) of advanced chemistry cell manufacturing capacity received 22 bids from the Ministry of Heavy Industries?",
         "options": [
-          "10 bids",
-          "15 bids",
-          "22 bids",
-          "30 bids"
+          "10 GW",
+          "5 GW",
+          "15 GW",
+          "20 GW"
         ],
-        "answer": "22 bids",
-        "explanation": "The Ministry of Heavy Industries received 22 bids for 10 gigawatt advanced chemistry cell manufacturing capacity under the PLI ACC scheme.",
+        "answer": "10 GW",
+        "explanation": "The Ministry of Heavy Industries received 22 bids for 10 GW of advanced chemistry cell manufacturing capacity under the PLI ACC scheme.",
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335618"
       },
       {
-        "question": "Under the Nasha Mukt Bharat Abhiyan, approximately how many people have been reached through awareness campaigns so far?",
+        "question": "According to the 'Nasha Mukt Bharat Abhiyan' update, approximately how many people have benefited from the awareness campaigns so far?",
         "options": [
-          "10.50 crore",
-          "20.15 crore",
-          "35.88 crore",
-          "45.20 crore"
+          "Over 35.88 crore",
+          "Over 10.50 crore",
+          "Over 50.20 crore",
+          "Over 20.15 crore"
         ],
-        "answer": "35.88 crore",
-        "explanation": "Under the Nasha Mukt Bharat Abhiyan, over 35.88 crore people have benefited from the awareness campaigns, including over 14.35 crore youth and 11.33 crore women.",
+        "answer": "Over 35.88 crore",
+        "explanation": "Under Nasha Mukt Bharat Abhiyan, more than 35.88 crore people have benefited from the awareness campaigns.",
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335521"
       },
       {
-        "question": "In which state/UT was the Bhagini Nivedita Hostel set up?",
+        "question": "Which organization signed a MoU with Delhi University to document the diversity of medicinal plants in DU's North Campus?",
         "options": [
-          "Assam",
-          "Tripura",
-          "Meghalaya",
-          "Manipur"
+          "CCRAS-CARI",
+          "ICAR",
+          "CSIR",
+          "AYUSH Ministry"
         ],
-        "answer": "Tripura",
-        "explanation": "The news highlights the establishment of the Bhagini Nivedita Hostel in Tripura.",
-        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335611"
-      },
-      {
-        "question": "CCRAS-CARI signed a Memorandum of Understanding with which university to document the diversity of medicinal plants in its North Campus?",
-        "options": [
-          "Jawaharlal Nehru University",
-          "Delhi University",
-          "Jamia Millia Islamia",
-          "Banaras Hindu University"
-        ],
-        "answer": "Delhi University",
-        "explanation": "CCRAS-CARI and Delhi University signed an MoU to document the diversity of medicinal plants at DU's North Campus.",
+        "answer": "CCRAS-CARI",
+        "explanation": "CCRAS-CARI and Delhi University signed a MoU to document the diversity of medicinal plants in DU's North Campus.",
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335523"
       },
       {
-        "question": "Union Minister Shri Piyush Goyal inaugurated the 45th India International Trade Fair starting on which date?",
+        "question": "Who inaugurated the 45th India International Trade Fair?",
         "options": [
-          "10 November",
-          "13 November",
-          "15 November",
-          "20 November"
+          "Piyush Goyal",
+          "Narendra Modi",
+          "Nirmala Sitharaman",
+          "Pralhad Joshi"
         ],
-        "answer": "13 November",
-        "explanation": "Union Minister of Commerce and Industry Shri Piyush Goyal inaugurated the 45th India International Trade Fair on 13 November.",
+        "answer": "Piyush Goyal",
+        "explanation": "Union Minister of Commerce and Industry Shri Piyush Goyal inaugurated the 45th India International Trade Fair.",
         "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335475"
+      },
+      {
+        "question": "Union Minister Dr. Jitendra Singh began his visit to which country to advance the special strategic partnership agreed upon in May 2026?",
+        "options": [
+          "Italy",
+          "France",
+          "Germany",
+          "Japan"
+        ],
+        "answer": "Italy",
+        "explanation": "Union Minister Dr. Jitendra Singh began his Italy visit to advance the special strategic partnership agreed upon during Prime Minister Narendra Modi's visit in May 2026.",
+        "source_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2335503"
       }
     ]
   },
