@@ -1,0 +1,25 @@
+RAILWAY EXAM HUB – 5,000 QUESTION BANK
+
+NEW FILES
+- questions.csv: master source dataset (5,000 supplied practice questions)
+- scripts/build_question_bank.py: regenerates browser-ready question data
+- data/question-bank.json: generated data used by the website
+- question-bank.html: interactive practice page
+
+WEBSITE FEATURES
+- Filter by exam, subject, topic and difficulty
+- Choose 10, 20, 50, 100 or all matching questions
+- Four answer options, instant checking and explanations
+- Score, accuracy and answer review
+
+REGENERATE AFTER EDITING questions.csv
+1. Open a terminal in the repository root.
+2. Run: python scripts/build_question_bank.py
+3. Commit and push questions.csv, data/question-bank.json and the other changed files.
+4. GitHub Pages serves the generated static JSON; Python does not need to run on the live website.
+
+IMPORTANT
+- This question bank is labelled as practice material, not official previous-year questions.
+- The existing Chapter-wise Practice page and its 453-question feature are retained.
+- The existing homepage and other project pages are retained. A link to the new question bank is added.
+- Structural checks do not establish factual correctness of every question or explanation.
