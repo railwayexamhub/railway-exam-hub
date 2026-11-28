@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CBAT Practice: Aptitude Test Battery | Railway Exam Hub</title>
+<style>
+:root{--navy:#0b1f4b;--navy2:#14306b;--yellow:#ffc928;--paper:#f6f7fb;--ink:#0d1630;--ok:#1b8a4b;--bad:#c0392b}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Roboto,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.5}
+header{background:var(--navy);color:#fff;padding:14px 18px;border-bottom:4px solid var(--yellow)}
+header b{font-size:1.1rem}header span{opacity:.75;font-size:.9rem;margin-left:8px}
+main{max-width:780px;margin:0 auto;padding:18px}
+h1{font-size:1.5rem;margin:.2em 0 .4em}h2{font-size:1.15rem;margin:1.4em 0 .2em;color:var(--navy2);border-bottom:2px solid var(--yellow);padding-bottom:2px}
+.card{background:#fff;border:1px solid #d8dcea;border-radius:10px;padding:16px;margin:10px 0}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+button{font:inherit;cursor:pointer;border-radius:8px;border:2px solid var(--navy);background:#fff;color:var(--navy);padding:10px 16px;font-weight:600}
+button:hover{background:#eef1fb}button:focus-visible,input:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+button.go{background:var(--yellow);border-color:var(--yellow)}
+input[type=number]{width:76px;font:inherit;padding:6px;border:1px solid #9aa3bd;border-radius:6px}
+.bar{display:flex;justify-content:space-between;background:var(--navy);color:#fff;padding:10px 14px;border-radius:10px;font-weight:600}
+.timer.low{color:var(--yellow)}
+.q{text-align:center;padding:22px 8px}
+.num{font-family:"Courier New",monospace;font-size:clamp(1.5rem,6vw,2.3rem);letter-spacing:.08em;margin:8px 0}
+.grp{font-family:"Courier New",monospace;font-size:clamp(1.1rem,4.6vw,1.6rem);letter-spacing:.06em;text-align:left;margin:6px auto;max-width:420px}
+.grp i{display:inline-block;width:2em;font-style:normal;font-weight:700;color:var(--navy2)}
+.opts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.opts button{min-width:64px;font-size:1.1rem;display:flex;align-items:center;gap:6px}
+.ot{font-weight:500}
+.pairs{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;font-size:1.7rem}
+.pairs span{border:1px solid #cfd5e8;border-radius:8px;padding:6px 12px}
+.big{font-size:3rem}.qt{font-size:1.1rem}
+.g{margin:0 auto 10px;border-collapse:collapse}.g td,.g th{border:1px solid #cfd5e8;padding:6px 12px;text-align:center}
+.sg{display:grid;grid-template-columns:repeat(3,46px);gap:4px;font-size:1.6rem}.sg span{border:1px solid #cfd5e8;border-radius:4px}
+.two{display:flex;gap:28px;justify-content:center;flex-wrap:wrap}
+.map,.iso{max-width:100%;border:1px solid #cfd5e8;border-radius:8px;background:#fff}
+table.rv{width:100%;border-collapse:collapse;font-size:.9rem}table.rv td,table.rv th{border-bottom:1px solid #e1e5f2;padding:6px;text-align:left;vertical-align:top}
+.mini{zoom:.5}.ok{color:var(--ok);font-weight:700}.bad{color:var(--bad);font-weight:700}
+.note{font-size:.85rem;color:#4a5575}.stat{font-size:2rem;font-weight:700;color:var(--navy)}
+</style>
+</head>
+<body>
+<header><b>Railway Exam Hub</b><span>CBAT practice: aptitude test battery</span></header>
+<main id="app"><p class="note"><a href="alp.html">ALP</a> · <a href="station-master.html">Station Master</a> · <a href="index.html">All Railway Exams</a></p>
+</main>
+<script>
+const R=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=R(0,i);[a[i],a[j]]=[a[j],a[i]]}return a};
+const sample=(a,k)=>shuffle([...a]).slice(0,k);
+const $=id=>document.getElementById(id),app=$("app");
+const E=["🚂","🔔","🚦","🔑","🎒","🕐","🔦","🧲","📻","🚲","⚓","🔧","🧭","🪣"];
+const SH=["▲","■","●","★","◆","✚","⬟","⬢"];
+const CODES=["DEL","MUM","KOL","CHN","NGP","BPL","LKO","JPR","PUN","SBC","HYB","ADI","PNB","GHY"];
+const num=(len,avoid)=>{let s="";for(let i=0;i<len;i++){let d;do d=R(0,9);while(d===avoid);s+=d}return s};
+const uniq2=ex=>{let v;do v=String(R(10,99));while(ex.includes(v));return v};
+
+/* ---------- 1. Memory ---------- */
+function g1b(){return[0,1].map(()=>{
+ const em=sample(E,6),ns=[];while(ns.length<6){const v=String(uniq2(ns));ns.push(v)}
+ const study=`<div class="pairs">${em.map((e,i)=>`<span>${e} <b>${ns[i]}</b></span>`).join("")}</div>`;
+ const qs=shuffle([0,1,2,3,4,5]).map(i=>{const c=ns[i];let o=[c];
+  [c[1]+c[0],ns[(i+1)%6]].forEach(x=>{if(!o.includes(x))o.push(x)});
+  while(o.length<4)o.push(uniq2(o));o=shuffle(o);
+  return{h:`<div class="big">${em[i]}</div>`,l:["A","B","C","D"],t:o,a:"ABCD"[o.indexOf(c)]}});
+ return{study,qs}})}
+function g1d(){return[0,1].map(()=>{
+ const em=sample(E,6),sy=sample(SH,6);
+ const study=`<div class="pairs">${em.map((e,i)=>`<span>${e} ↔ ${sy[i]}</span>`).join("")}</div>`;
+ const qs=shuffle([0,1,2,3,4,5]).map(i=>{const o=shuffle([sy[i],...sample(SH.filter(s=>s!==sy[i]),3)]);
+  return{h:`<div class="big">${em[i]}</div>`,l:["A","B","C","D"],t:o,a:"ABCD"[o.indexOf(sy[i])]}});
+ return{study,qs}})}
+function g1e(){return[0,1].map(()=>{
+ const sets=[];while(sets.length<3){const s=sample(SH,3).join(" ");if(!sets.includes(s))sets.push(s)}
+ const study=`<div class="pairs">${sets.map(s=>`<span>${s}</span>`).join("")}</div>`;
+ const qs=shuffle([0,1,2]).map(i=>{const s=sets[i],o=[s];
+  while(o.length<5){const a=s.split(" ");
+   if(R(0,1)){const j=R(0,2);a[j]=sample(SH.filter(x=>!a.includes(x)),1)[0]}else{const j=R(0,1);[a[j],a[j+1]]=[a[j+1],a[j]]}
+   const v=a.join(" ");if(!o.includes(v)&&!sets.includes(v))o.push(v)}
+  const sh=shuffle(o);return{h:`<p class="qt">Which set did you see?</p>`,l:["A","B","C","D","E"],t:sh,a:"ABCDE"[sh.indexOf(s)]}});
+ return{study,qs}})}
+const PTS=[[25,150],[75,60],[125,140],[175,50],[225,135],[275,45],[325,120],[205,175]];
+function g1c(){return[0,1].map(()=>{
+ const ix=sample([0,1,2,3,4,5,6,7],5),nm=sample(CODES,5),lt=shuffle(["A","B","C","D","E"]);
+ const line=`<polyline points="${PTS.map(p=>p.join(",")).join(" ")}" fill="none" stroke="#6b7aa8" stroke-width="3"/>`;
+ const svg=f=>`<svg class="map" viewBox="0 0 350 200">${line}${ix.map((k,j)=>`<circle cx="${PTS[k][0]}" cy="${PTS[k][1]}" r="6" fill="#0b1f4b"/><text x="${PTS[k][0]}" y="${PTS[k][1]-12}" text-anchor="middle" font-size="15" font-weight="700" fill="#0b1f4b">${f(j)}</text>`).join("")}</svg>`;
+ const study=svg(j=>nm[j]),test=svg(j=>lt[j]);
+ const qs=shuffle([0,1,2,3,4]).map(j=>({h:test+`<p class="qt">Which letter marks station <b>${nm[j]}</b>?</p>`,l:["A","B","C","D","E"],a:lt[j]}));
+ return{study,qs}})}
+
+/* ---------- 2. Following directions ---------- */
+const gridH=g=>`<table class="g"><tr><th></th>${[1,2,3,4,5].map(c=>`<th>${c}</th>`).join("")}</tr>${g.map((r,i)=>`<tr><th>Row ${i+1}</th>${r.map(x=>`<td>${x}</td>`).join("")}</tr>`).join("")}</table>`;
+const g2=(L,W)=>n=>{const qs=[];let g,gh;
+ for(let i=0;i<n;i++){
+  if(i%5===0){const p=shuffle([...L]),sh=shuffle([0,1,2,3,4]);g=sh.map(s=>p.map((_,c)=>p[(c+s)%5]));gh=gridH(g)}
+  const t=R(1,4);let q,a;
+  if(t===1){const r=R(0,4),c=R(0,3);q=`In Row ${r+1}, which ${W} is to the right of <b>${g[r][c]}</b>?`;a=g[r][c+1]}
+  else if(t===2){const r=R(0,3),c=R(0,4);q=`In Row ${r+1}, which ${W} is directly below <b>${g[r][c]}</b>?`;a=g[r+1][c]}
+  else if(t===3){const x=R(0,4);let y;do y=R(0,4);while(y===x);const h=g.map(r=>[...r]);[h[x],h[y]]=[h[y],h[x]];const k=R(1,4),c=R(0,4);
+   q=`If Row ${x+1} and Row ${y+1} are swapped, which ${W} is directly above <b>${h[k][c]}</b> in Row ${k+1}?`;a=h[k-1][c]}
+  else{const r=R(0,4),h=[...g[r]].reverse(),c=R(1,4);q=`If Row ${r+1} is written backwards, which ${W} is to the left of <b>${h[c]}</b> in Row ${r+1}?`;a=h[c-1]}
+  qs.push({h:gh+`<p class="qt">${q}</p>`,l:L,a})}
+ return[{qs}]};
+
+/* ---------- 3. Depth perception (hidden blocks) ---------- */
+function iso(h){const N=h.length,W=26,H=13,V=26,ox=110,oy=125,cs=[];
+ const P=(x,y,z)=>(ox+(x-y)*W)+","+(oy+(x+y)*H-z*V);
+ const poly=(p,f)=>`<polygon points="${p.map(q=>P(...q)).join(" ")}" fill="${f}" stroke="#0b1f4b" stroke-width="1"/>`;
+ for(let x=0;x<N;x++)for(let y=0;y<N;y++)for(let z=0;z<h[x][y];z++)cs.push([x,y,z]);
+ cs.sort((a,b)=>(a[0]+a[1])-(b[0]+b[1])||a[2]-b[2]);
+ return`<svg class="iso" viewBox="0 0 220 215" width="260">${cs.map(([x,y,z])=>
+  poly([[x,y,z+1],[x+1,y,z+1],[x+1,y+1,z+1],[x,y+1,z+1]],"#ffd966")+poly([[x+1,y,z],[x+1,y+1,z],[x+1,y+1,z+1],[x+1,y,z+1]],"#2f4b8c")+poly([[x,y+1,z],[x+1,y+1,z],[x+1,y+1,z+1],[x,y+1,z+1]],"#4f6fb3")).join("")}</svg>`}
+function g3b(n){const qs=[],N=3;
+ for(let i=0;i<n;i++){
+  const h=Array.from({length:N},()=>Array.from({length:N},()=>R(1,4)));
+  const ex=(x,y,z)=>x<N&&y<N&&h[x][y]>z;let a=0;
+  for(let x=0;x<N;x++)for(let y=0;y<N;y++)for(let z=0;z<h[x][y];z++)if(ex(x,y,z+1)&&ex(x+1,y,z)&&ex(x,y+1,z))a++;
+  const o=[a];for(const v of shuffle([a-2,a-1,a+1,a+2,a+3]))if(v>=0&&o.length<4)o.push(v);
+  const sh=shuffle(o).map(String);
+  qs.push({h:iso(h)+`<p class="qt">How many blocks are completely hidden by other blocks?</p>`,l:["A","B","C","D"],t:sh,a:"ABCD"[sh.indexOf(String(a))]})}
+ return[{qs}]}
+
+/* ---------- 4. Power of observation ---------- */
+function g4a(n){return[{qs:Array.from({length:n},()=>{
+ const len=R(3,9),x=num(len);let y=x,a="Y";
+ if(R(0,1)){a="N";if(R(0,1)){const i=R(0,len-2);if(x[i]!==x[i+1])y=x.slice(0,i)+x[i+1]+x[i]+x.slice(i+2)}
+  if(y===x){const i=R(0,len-1);let d;do d=R(0,9);while(String(d)===x[i]);y=x.slice(0,i)+d+x.slice(i+1)}}
+ return{h:`<div class="num">${x}</div><div class="num">${y}</div>`,l:["Y","N"],a}})}]}
+const g4=dg=>n=>[{qs:Array.from({length:n},()=>{
+ const k=[1,1,1,1,1,2,2,3][R(0,7)],idx=sample([0,1,2,3],k),g=[];
+ for(let i=0;i<4;i++){const len=R(6,11);let s=num(len,dg);if(idx.includes(i)){const p=R(0,len-1);s=s.slice(0,p)+dg+s.slice(p+1)}g.push(s)}
+ return{h:g.map((s,j)=>`<div class="grp"><i>${"ABCD"[j]}</i>${s}</div>`).join(""),l:["A","B","C","D","E"],a:k===1?"ABCD"[idx[0]]:"E"}})}];
+function g4d(n){const gr=a=>`<div class="sg">${a.map(s=>`<span>${s}</span>`).join("")}</div>`;
+ return[{qs:Array.from({length:n},()=>{
+  const A=Array.from({length:9},()=>SH[R(0,7)]),d=[0,2,3,4][R(0,3)],B=[...A];
+  sample([0,1,2,3,4,5,6,7,8],d).forEach(j=>{let s;do s=SH[R(0,7)];while(s===A[j]);B[j]=s});
+  return{h:`<div class="two"><div><p class="note">Set A</p>${gr(A)}</div><div><p class="note">Set B</p>${gr(B)}</div></div>`,l:["A","B","C","D"],t:["no difference","2 differences","3 differences","4 differences"],a:"ABCD"[[0,2,3,4].indexOf(d)]}})}]}
+
+/* ---------- 5. Perceptual speed ---------- */
+function g5a(n){const fig=(p,w)=>`<svg viewBox="0 0 60 60" width="${w}" height="${w}"><polygon points="${p.map(q=>q.join(",")).join(" ")}" fill="none" stroke="#0b1f4b" stroke-width="2.2" stroke-linejoin="round"/></svg>`;
+ return[{qs:Array.from({length:n},()=>{
+  const pts=Array.from({length:6},()=>[R(8,52),R(8,52)]);
+  const ds=sample([0,1,2,3,4,5],4).map(j=>{const p=pts.map(q=>[...q]);
+   p[j][0]+=p[j][0]<30?R(9,14):-R(9,14);p[j][1]+=p[j][1]<30?R(9,14):-R(9,14);return p});
+  const os=shuffle([pts,...ds]),ai=os.indexOf(pts);
+  return{h:`<div class="big">${fig(pts,96)}</div><p class="qt">Which figure is identical?</p>`,l:["A","B","C","D","E"],t:os.map(o=>fig(o,56)),a:"ABCDE"[ai]}})}]}
+
+
+/* ---------- 1a. Building-map memory ---------- */
+function g1a(){return [0,1].map(()=>{
+ const names=sample(["BANK","SCHOOL","HOSPITAL","STATION","MARKET","PARK","POST","TEMPLE"],5);
+ const cells=sample(Array.from({length:16},(_,i)=>i),5);
+ const coords=cells.map(i=>[i%4,Math.floor(i/4)]);
+ const map=(labels)=>`<div style="display:grid;grid-template-columns:repeat(4,minmax(48px,1fr));gap:4px;max-width:340px;margin:10px auto">${Array.from({length:16},(_,i)=>{const j=cells.indexOf(i);return `<div style="border:1px solid #9aa3bd;background:#f7f9fd;min-height:52px;display:grid;place-items:center;font-weight:700;font-size:.85rem">${j<0?"":labels?names[j]:String.fromCharCode(65+j)}</div>`}).join("")}</div>`;
+ const study=map(true),test=map(false);
+ const qs=shuffle(names.map((name,j)=>({h:test+`<p class="qt">Which letter marks the <b>${name}</b>?</p>`,l:["A","B","C","D","E"],a:"ABCDE"[j]})));
+ return {study,qs};
+});}
+
+/* ---------- 2b. Compass circle ---------- */
+function g2b(n){return [{qs:Array.from({length:n},()=>{
+ const dirs=["N","NE","E","SE","S","SW","W","NW"],start=R(0,7),turns=[-3,-2,-1,1,2,3][R(0,5)],end=(start+turns+8)%8;
+ const arrow=(d)=>{const deg=d*45;return `<svg viewBox="0 0 220 190" width="min(100%,300px)" role="img" aria-label="Compass showing a direction"><circle cx="110" cy="95" r="72" fill="#fff" stroke="#0b1f4b" stroke-width="2"/><g font-size="13" font-weight="700" text-anchor="middle" fill="#0b1f4b"><text x="110" y="15">N</text><text x="190" y="99">E</text><text x="110" y="184">S</text><text x="30" y="99">W</text></g><g transform="rotate(${deg} 110 95)"><path d="M110 32 L99 98 L110 88 L121 98 Z" fill="#c0392b" stroke="#0b1f4b"/><circle cx="110" cy="95" r="5" fill="#0b1f4b"/></g></svg>`};
+ const choices=shuffle([end,(end+1)%8,(end+3)%8,(end+5)%8]);
+ return {h:`${arrow(start)}<p class="qt">You are facing <b>${dirs[start]}</b>. Turn ${Math.abs(turns)*45}° ${turns>0?"clockwise":"anticlockwise"}. Which direction are you facing now?</p>`,l:["A","B","C","D"],t:choices.map(x=>dirs[x]),a:"ABCD"[choices.indexOf(end)]};
+})}];}
+
+/* ---------- 3a. Brick-touching count ---------- */
+function g3a(n){const qs=[];for(let i=0;i<n;i++){
+ const blocks=[];for(let x=0;x<3;x++)for(let y=0;y<3;y++)for(let z=0;z<3;z++)if(Math.random()<.68)blocks.push([x,y,z]);
+ if(blocks.length<8)continue;const target=blocks[R(0,blocks.length-1)];
+ const key=(a)=>a.join(","),set=new Set(blocks.map(key));
+ const dirs=[[1,0,0],[-1,0,0],[0,1,0],[0,-1,0],[0,0,1],[0,0,-1]];
+ const ans=dirs.filter(d=>set.has(key(target.map((v,j)=>v+d[j])))).length;
+ const P=(x,y,z)=>[110+(x-y)*24,150+(x+y)*13-z*25];
+ const poly=(pts,fill)=>`<polygon points="${pts.map(q=>q.join(",")).join(" ")}" fill="${fill}" stroke="#0b1f4b" stroke-width="1"/>`;
+ const sorted=[...blocks].sort((a,b)=>(a[0]+a[1]+a[2])-(b[0]+b[1]+b[2]));
+ const svg=`<svg viewBox="0 0 220 220" width="min(100%,300px)">${sorted.map(([x,y,z])=>{const top=[[x,y,z+1],[x+1,y,z+1],[x+1,y+1,z+1],[x,y+1,z+1]].map(q=>P(...q)),right=[[x+1,y,z],[x+1,y+1,z],[x+1,y+1,z+1],[x+1,y,z+1]].map(q=>P(...q)),front=[[x,y+1,z],[x+1,y+1,z],[x+1,y+1,z+1],[x,y+1,z+1]].map(q=>P(...q));const hi=x===target[0]&&y===target[1]&&z===target[2],c=hi?"#ffc928":"#dce6f5";return poly(top,c)+poly(right,hi?"#d49c00":"#5576ad")+poly(front,hi?"#e8b51c":"#7894c4")}).join("")}</svg>`;
+ const opts=shuffle([ans,...shuffle([0,1,2,3,4,5,6].filter(v=>v!==ans)).slice(0,3)]);
+ qs.push({h:`${svg}<p class="qt">How many other bricks are directly touching the highlighted brick?</p>`,l:["A","B","C","D"],t:opts.map(String),a:"ABCD"[opts.indexOf(ans)]});
+ }return [{qs}];}
+
+/* ---------- 5c. Object matching ---------- */
+function g5c(n){const objects=["🚂","🔔","🚦","🔑","🎒","🕐","🔦","🧲","📻","🚲","⚓","🔧","🧭","🪣","✈️","🚗"];
+ return [{qs:Array.from({length:n},()=>{const target=objects[R(0,objects.length-1)],opts=shuffle([target,...sample(objects.filter(x=>x!==target),4)]);return {h:`<p class="qt">Find the object identical to the target.</p><div class="big">${target}</div>`,l:["A","B","C","D","E"],t:opts,a:"ABCDE"[opts.indexOf(target)]};})}];}
+
+/* ---------- registry ---------- */
+const L5=["A","B","C","D","E"],D5=["1","2","3","4","5"];
+const T={
+"1a":{g:"1. Memory",title:"Building-map memory",mem:1,sec:30,gen:g1a,how:"Study the building locations on the map. On the test page, identify the letter for each building."},
+"1b":{g:"1. Memory",title:"Picture and number pairs",mem:1,sec:25,gen:g1b,how:"Study pictures paired with numbers. On the test page, pick the number that goes with each picture."},
+"1c":{g:"1. Memory",title:"Railway map and stations",mem:1,sec:25,gen:g1c,how:"Study where each station sits on the railway map. On the test page the names are replaced by letters A to E. Pick the letter for the station asked."},
+"1d":{g:"1. Memory",title:"Picture pairs",mem:1,sec:25,gen:g1d,how:"Study pairs of pictures and shapes. On the test page, pick the shape that was paired with the picture."},
+"1e":{g:"1. Memory",title:"Sets of shapes",mem:1,sec:20,gen:g1e,how:"Study the sets of shapes. On the test page, pick the option that shows exactly the same set, in the same order."},
+"2a":{g:"2. Following directions",title:"Letter grid",n:20,min:10,gen:g2(L5,"letter"),how:"Read the grid, then answer by applying the rule in each question (right of, below, rows swapped, row reversed). The answer is one of the letters."},
+"2b":{g:"2. Following directions",title:"Compass circle",n:20,min:8,gen:g2b,how:"Read the starting compass direction and turn by the stated angle. Select the final direction."},
+"2c":{g:"2. Following directions",title:"Number grid",n:20,min:10,gen:g2(D5,"number"),how:"Same as the letter grid, but the grid holds numbers 1 to 5. The answer is one of the numbers."},
+"3a":{g:"3. Depth perception",title:"Brick-touching count",n:20,min:8,gen:g3a,how:"Count how many other bricks share a face with the highlighted brick."},
+"3b":{g:"3. Depth perception",title:"Hidden blocks",n:15,min:8,gen:g3b,how:"A pile of equal blocks is shown. Count the blocks that are completely hidden: no side or corner is visible."},
+"4a":{g:"4. Power of observation",title:"Compare two numbers",n:30,min:5,gen:g4a,how:"Click Y if the two numbers are exactly the same, N if they differ."},
+"4b":{g:"4. Power of observation",title:"Find the digit 6",n:40,min:8,gen:g4(6),how:"Click the group (A to D) that contains the digit 6. If more than one group has a 6, click E."},
+"4c":{g:"4. Power of observation",title:"Find the digit 9",n:75,min:12,gen:g4(9),how:"Click the group (A to D) that contains the digit 9. If more than one group has a 9, click E."},
+"4d":{g:"4. Power of observation",title:"Compare two sets of figures",n:20,min:6,gen:g4d,how:"Compare the placement of the figures in Set A and Set B. Answer A for no difference, B for two, C for three and D for four differences."},
+"5a":{g:"5. Perceptual speed",title:"Figure matching",n:24,min:5,gen:g5a,how:"Find the one figure on the right that matches the figure shown. Work fast."},
+"5c":{g:"5. Perceptual speed",title:"Object matching",n:30,min:6,gen:g5c,how:"Find the option that shows exactly the same object as the target."}
+};
+const cfg={};for(const k in T)cfg[k]={n:T[k].n,min:T[k].min,sec:T[k].sec};
+let S={};
+
+function home(){
+ clearInterval(S.tm);clearInterval(S.st);document.onkeydown=null;S={};
+ let h=`<h1>CBAT practice</h1><p>Practice tests in the style of the RRB aptitude test battery. Pick a test, adjust the settings, and start. There is no negative marking.</p>`,last="";
+ for(const k in T){const t=T[k],c=cfg[k];
+  if(t.g!==last){h+=`<h2>${t.g}</h2>`;last=t.g}
+  h+=`<div class="card"><b>${k}. ${t.title}</b><p class="note">${t.how}</p><div class="row">`+
+   (t.mem?`<label>Study seconds <input type="number" id="s${k}" min="5" max="120" value="${c.sec}"></label>`
+    :`<label>Questions <input type="number" id="n${k}" min="5" max="150" value="${c.n}"></label><label>Minutes <input type="number" id="m${k}" min="1" max="60" value="${c.min}"></label>`)+
+   `<button class="go" onclick="start('${k}')">Start</button></div></div>`}
+ app.innerHTML=h+`<p class="note">Question counts, minutes and study seconds are your own settings. RRB announces the real limits during the exam session and says the pattern can change without notice, so check the official notice for your exam. This is unofficial practice based on the RRB aptitude test guidelines (rrbsecunderabad.gov.in, "ALPs Guidelines for Aptitude Test").</p>`;
+}
+function start(k){
+ const t=T[k],o=cfg[k],v=id=>$(id+k)?+$(id+k).value:0;
+ if(v("n"))o.n=Math.max(5,v("n"));if(v("m"))o.min=Math.max(1,v("m"));if(v("s"))o.sec=Math.max(5,v("s"));
+ const rounds=t.gen(o.n);
+ S={k,t,rounds,r:0,i:0,res:[],nq:rounds.reduce((s,r)=>s+r.qs.length,0),total:(o.min||0)*60,done:0,studied:0};
+ app.innerHTML=`<h1>${k}. ${t.title}</h1><div class="card"><p>${t.how}</p><p>${t.mem?`${rounds.length} parts, ${S.nq} questions in all. You get ${o.sec} seconds to study each page.`:`${S.nq} questions, ${o.min} minutes.`} Click an answer, or press its key on the keyboard.</p>
+ <div class="row"><button class="go" onclick="run()">Begin</button><button onclick="home()">Back</button></div></div>`;
+}
+function run(){
+ S.t0=Date.now();
+ if(!S.t.mem)S.tm=setInterval(tick,250);
+ document.onkeydown=e=>{const c=e.key.toUpperCase();if(S.cur&&!S.done&&S.cur.l.includes(c))ans(c)};
+ go();
+}
+const left=()=>Math.max(0,S.total-Math.floor((Date.now()-S.t0)/1000));
+const fmt=s=>Math.floor(s/60)+":"+String(s%60).padStart(2,"0");
+function tick(){const l=left(),e=$("tm");if(e){e.textContent=fmt(l);e.className="timer"+(l<=30?" low":"")}if(l<=0)finish()}
+function go(){
+ if(S.done)return;
+ const rd=S.rounds[S.r];if(!rd)return finish();
+ if(rd.study&&!S.studied){
+  let s=cfg[S.k].sec;S.cur=null;clearInterval(S.st);
+  app.innerHTML=`<div class="bar"><span>Study page ${S.r+1} of ${S.rounds.length}. Memorise it.</span><span class="timer" id="st">${s}</span></div><div class="card q">${rd.study}</div><div class="row"><button onclick="endStudy()">I'm ready</button></div>`;
+  S.st=setInterval(()=>{s--;if($("st"))$("st").textContent=s;if(s<=0)endStudy()},1000);return}
+ if(S.i>=rd.qs.length){S.r++;S.i=0;S.studied=0;return go()}
+ show(rd.qs[S.i]);
+}
+function endStudy(){clearInterval(S.st);S.studied=1;go()}
+function show(q){
+ S.cur=q;
+ app.innerHTML=`<div class="bar"><span>Question ${S.res.length+1} of ${S.nq}</span><span class="timer" id="tm">${S.t.mem?"":fmt(left())}</span></div>
+ <div class="card q">${q.h}<div class="opts">${q.l.map((l,j)=>`<button onclick="ans('${l}')">${l}${q.t?`<span class="ot">${q.t[j]}</span>`:""}</button>`).join("")}</div></div>`;
+}
+function ans(c){if(S.done||!S.cur)return;S.res.push({q:S.cur,a:c});S.cur=null;S.i++;go()}
+function finish(){
+ if(S.done)return;S.done=1;clearInterval(S.tm);clearInterval(S.st);document.onkeydown=null;S.cur=null;
+ const n=S.nq,att=S.res.length,ok=S.res.filter(r=>r.a===r.q.a).length,secs=Math.round((Date.now()-S.t0)/1000);
+ const txt=(q,l)=>q.t?q.t[q.l.indexOf(l)]:"";
+ const rows=S.res.map((r,i)=>({r,i})).filter(x=>x.r.a!==x.r.q.a).slice(0,20).map(({r,i})=>
+  `<tr><td>${i+1}</td><td><div class="mini">${r.q.h}</div></td><td class="bad">${r.a}</td><td class="ok">${r.q.a}</td></tr>`).join("");
+ app.innerHTML=`<h1>Result: ${S.k}. ${S.t.title}</h1>
+ <div class="card"><div class="row"><div><div class="stat">${ok} / ${n}</div>correct</div><div><div class="stat">${att?Math.round(ok/att*100):0}%</div>accuracy on ${att} attempted</div><div><div class="stat">${att?(secs/att).toFixed(1):"-"}s</div>per question${S.t.mem?" (includes study time)":""}</div></div>
+ <p class="note">This is a raw score. The real exam gives a normalized T-score (qualifying mark 42 in each test), which depends on all candidates and can't be calculated here.</p></div>
+ ${rows?`<div class="card"><b>Questions to review</b><table class="rv"><tr><th>#</th><th>Question</th><th>Yours</th><th>Right</th></tr>${rows}</table></div>`:`<div class="card ok">All attempted answers were correct.</div>`}
+ <div class="row"><button class="go" onclick="start('${S.k}')">Try again</button><button onclick="home()">All tests</button></div>`;
+}
+home();
+</script></body></html>
